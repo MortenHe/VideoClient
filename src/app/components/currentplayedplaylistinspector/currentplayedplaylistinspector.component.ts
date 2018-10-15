@@ -13,7 +13,7 @@ export class CurrentplayedplaylistinspectorComponent implements OnInit {
   time: string = "";
 
   //Liste der Dateien, die abgespielt werden
-  files: any[];
+  files: any[] = [];
 
   //aktueller Index in Titelliste
   position: number;

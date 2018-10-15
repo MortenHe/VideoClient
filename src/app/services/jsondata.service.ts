@@ -22,7 +22,7 @@ export class JsondataService {
       //ForkJoin Array, damit auslesen der einzelnen Unter-JSONs (bibi-tina.json, bobo.json) parallel erfolgen kann
       let modeDataFileArr: Observable<any>[] = [];
 
-      //Ueber Modes gehen (htp, kindermusik, musikmh)
+      //Ueber Modes gehen (kinder, jahresvideo)
       for (let [mode, modeData] of Object.entries(jsonObj)) {
 
         //merken, welche Filter geloescht werden sollen
@@ -94,7 +94,7 @@ export class JsondataService {
           //Ueber Daten gehen
           result["data"].forEach(modeItem => {
 
-            //Wenn Playlist / Video ist
+            //Wenn Video aktiv ist
             if (modeItem["active"]) {
 
               //Feld "active" loeschen
@@ -102,6 +102,9 @@ export class JsondataService {
 
               //Modus einfuegen (damit Filterung in Oberflaeche geht)
               modeItem["mode"] = result["filterID"];
+
+              //Pfad zu Datei
+              modeItem["file"] = result["mode"] + "/" + modeItem["mode"] + "/" + modeItem["file"];
 
               //Playlist- / Video-Objekt in Ausgabe Objekt einfuegen
               jsonObj[result["mode"]]["items"].push(modeItem);

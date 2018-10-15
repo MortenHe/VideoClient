@@ -9,7 +9,7 @@ export class FileNamePipe implements PipeTransform {
   transform(value: string, args?: any): any {
 
     //Datei kommt als kompletter Pfad: nur Dateiname ausgeben
-    let fileName = value.split(/[\\/]/).pop();
+    let fileName = value["name"].split(/[\\/]/).pop();
 
     //Datei-Endung mp3, mp4 entfernen
     fileName = fileName.replace(/.mp3/i, '');

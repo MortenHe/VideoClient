@@ -2,37 +2,41 @@
 <div *ngFor="let item of items$ | async"
      class="row no-gutters align-items-center items">
 
-  <!-- Enque-Symbol -->
-  <button (click)="addToPlaylist(item, false)"
-          class="fa button-clean add-item fa-plus"> </button>
+  <!-- Video nur anzeigen, wenn es nicht schon in der Playlist ist -->
+  <ng-container *ngIf="!isInPlaylist(item)">
 
-  <!-- Button um einzelnes Item direkt zu starten -->
-  <button (click)="addToPlaylist(item, true)"
-          class="box col text-left pl-2"
-          [class.active-item]="item.mode + '/' + item.file === activeItem">
+    <!-- Enque-Symbol -->
+    <button (click)="addToPlaylist(item, false)"
+            class="fa button-clean add-item fa-plus"> </button>
 
-    <!-- Zeile mit (hover-) Playsymbol, Name der Playlist und Laenge -->
-    <div class="row no-gutters align-items-center">
+    <!-- Button um einzelnes Item direkt zu starten -->
+    <button (click)="addToPlaylist(item, true)"
+            class="box col text-left pl-2"
+            [class.active-item]="item.mode + '/' + item.file === activeItem">
 
-      <!-- Play-Symbol bei hover und active angezeigt -->
-      <i class="fa fa-play mr-2"></i>
+      <!-- Zeile mit (hover-) Playsymbol, Name der Playlist und Laenge -->
+      <div class="row no-gutters align-items-center">
 
-      <!-- Itemname -->
-      <span class="col">{{item.name}}</span>
+        <!-- Play-Symbol bei hover und active angezeigt -->
+        <i class="fa fa-play mr-2"></i>
 
-      <!-- formattierte Laenge des Items -->
-      <div class="item-length item-length-video text-right ml-1 mr-1">
-        {{item.length | timeformatter}}
+        <!-- Itemname -->
+        <span class="col">{{item.name}}</span>
+
+        <!-- formattierte Laenge des Items -->
+        <div class="item-length item-length-video text-right ml-1 mr-1">
+          {{item.length | timeformatter}}
+        </div>
       </div>
-    </div>
 
-    <!-- Wenn Tracks angezeigt werden sollen -->
-    <ul *ngIf="showTracks$ | async">
+      <!-- Wenn Tracks angezeigt werden sollen -->
+      <ul *ngIf="showTracks$ | async">
 
-      <!-- Tracks ausgeben -->
-      <li *ngFor="let track of item.tracks">
-        {{track}}
-      </li>
-    </ul>
-  </button>
+        <!-- Tracks ausgeben -->
+        <li *ngFor="let track of item.tracks">
+          {{track}}
+        </li>
+      </ul>
+    </button>
+  </ng-container>
 </div>
