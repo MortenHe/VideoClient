@@ -5,7 +5,6 @@ import { ResultfilterService } from '../../services/resultfilter.service';
 import { Observable } from 'rxjs/Observable';
 import { environment } from '../../../environments/environment';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-import { ViewControlService } from '../../services/view-control.service';
 
 @Component({
   selector: 'resultlist',
@@ -14,9 +13,6 @@ import { ViewControlService } from '../../services/view-control.service';
 })
 
 export class ResultlistComponent {
-
-  //audio vs. video
-  appMode = environment.appMode;
 
   //Modus kindervideos vs. jahresvideo
   mode: string;
@@ -37,7 +33,7 @@ export class ResultlistComponent {
   files: any[] = [];
 
   //Services injecten
-  constructor(private bs: BackendService, private fs: ResultfilterService, private vcs: ViewControlService) { }
+  constructor(private bs: BackendService, private fs: ResultfilterService) { }
 
   //beim Init
   ngOnInit() {
@@ -80,5 +76,4 @@ export class ResultlistComponent {
       }
     });
   }
-
 }

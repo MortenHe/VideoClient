@@ -11,10 +11,10 @@ export class JsondataService {
   constructor(private http: Http) { }
 
   //JSON-Daten aus files laden
-  loadJson(appMode) {
+  loadJson() {
 
-    //per HTTP JSON Hauptfile holen (audiolist.json vs. videolist.json)
-    return this.http.get("assets/json/" + appMode + "/" + appMode + "list.json").map(data => {
+    //per HTTP JSON Hauptfile holen
+    return this.http.get("assets/json/videolist.json").map(data => {
 
       //JSON-Objekt laden. Dieses wird angepasst (gewisse Merkmale entfernt, items einfgefuegt)
       let jsonObj = data.json();
@@ -44,7 +44,7 @@ export class JsondataService {
               delete jsonObj[mode]["filter"][index]["active"];
 
               //Request erstellen, der JSON dieses Filters holt (z.B. bibi-tina.json)
-              let request = this.http.get("assets/json/" + appMode + "/" + mode + "/" + filterID + ".json").map(response => {
+              let request = this.http.get("assets/json/" + mode + "/" + filterID + ".json").map(response => {
 
                 //filterID (bibi-tina) und Modus (hsp) merken, da Info sonst spaeter ueberschrieben wurde
                 let filterIDFile = (response.url).split(/[\\/]/).pop();
@@ -91,7 +91,7 @@ export class JsondataService {
         //Ueber die Treffer (JSON-files) gehen
         results.forEach((result, index) => {
 
-          //Ueber Daten (z.B. einzelne Audio-Playlists) gehen
+          //Ueber Daten gehen
           result["data"].forEach(modeItem => {
 
             //Wenn Playlist / Video ist

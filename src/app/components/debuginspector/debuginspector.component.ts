@@ -26,7 +26,6 @@ export class DebuginspectorComponent implements OnInit {
   allowRandom$: Observable<boolean>;
 
   //Env-Werte
-  appMode = environment.appMode;
   domainModes = environment.domainModes;
   envName = environment.envName;
   production = environment.production;

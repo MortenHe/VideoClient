@@ -3,8 +3,6 @@ import { BackendService } from '../../services/backend.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from '../../../environments/environment'
 import { ResultfilterService } from '../../services/resultfilter.service';
-import { ViewControlService } from '../../services/view-control.service';
-import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-search',
@@ -13,9 +11,6 @@ import { BehaviorSubject } from 'rxjs';
 })
 
 export class SearchComponent {
-
-  //video vs. audio
-  appMode = environment.appMode;
 
   //Name der App fuer Ueberschrift (z.B. Video Player (dev))
   envName = environment.envName;
@@ -42,7 +37,7 @@ export class SearchComponent {
   countdownTime: number;
 
   //Services und Router injecten
-  constructor(private bs: BackendService, private route: ActivatedRoute, private router: Router, private fs: ResultfilterService, private vcs: ViewControlService) {
+  constructor(private bs: BackendService, private route: ActivatedRoute, private router: Router, private fs: ResultfilterService) {
   }
 
   //Beim Init
@@ -96,10 +91,5 @@ export class SearchComponent {
         value: ""
       });
     }, 1500);
-  }
-
-  //Zwischen Views umschalten (Playlist, Search)
-  setActive(view) {
-    this.vcs.setView(view);
   }
 }

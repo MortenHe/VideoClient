@@ -11,7 +11,6 @@ import { MatSliderModule } from '@angular/material/slider';
 import { BackendService } from './services/backend.service';
 import { ResultfilterService } from './services/resultfilter.service';
 import { JsondataService } from './services/jsondata.service';
-import { ViewControlService } from './services/view-control.service';
 
 //eigenes Pipes
 import { ModeFilterPipe } from './pipes/mode-filter.pipe';
@@ -34,12 +33,9 @@ import { SelectmodeComponent } from './components/selectmode/selectmode.componen
 import { CurrentplayedplaylistinspectorComponent } from './components/currentplayedplaylistinspector/currentplayedplaylistinspector.component';
 import { PlayercontrolComponent } from './components/playercontrol/playercontrol.component';
 import { PicontrolComponent } from './components/picontrol/picontrol.component';
-import { ResultlistinspectorComponent } from './components/resultlistinspector/resultlistinspector.component';
 import { DebuginspectorComponent } from './components/debuginspector/debuginspector.component';
 import { ToggletrackviewComponent } from './components/toggletrackview/toggletrackview.component';
-import { RandomPlaybackComponent } from './components/random-playback/random-playback.component';
 import { VolumeControlComponent } from './components/volume-control/volume-control.component';
-import { VolumeSliderComponent } from './components/volume-slider/volume-slider.component';
 
 @NgModule({
   declarations: [
@@ -54,16 +50,13 @@ import { VolumeSliderComponent } from './components/volume-slider/volume-slider.
     CurrentplayedplaylistinspectorComponent,
     PlayercontrolComponent,
     PicontrolComponent,
-    ResultlistinspectorComponent,
     DebuginspectorComponent,
     ToggletrackviewComponent,
     ModeFilterPipe,
     SearchFilterPipe,
     OrderByPipe,
     ToggleCheckboxDirective,
-    RandomPlaybackComponent,
     VolumeControlComponent,
-    VolumeSliderComponent,
     FileNamePipe
   ],
   imports: [
@@ -76,7 +69,14 @@ import { VolumeSliderComponent } from './components/volume-slider/volume-slider.
       { path: '**', redirectTo: '/search/default', pathMatch: 'full' }
     ]),
   ],
-  providers: [BackendService, ResultfilterService, JsondataService, ViewControlService, ModeFilterPipe, SearchFilterPipe, OrderByPipe],
+  providers: [
+    BackendService,
+    ResultfilterService,
+    JsondataService,
+    ModeFilterPipe,
+    SearchFilterPipe,
+    OrderByPipe
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

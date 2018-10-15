@@ -6,7 +6,6 @@
 export const environment = {
   envName: 'dev',
   production: false,
-  appMode: '',
   proxyUrl: '',
   wssUrl: '',
   domainModes: []

@@ -25,9 +25,6 @@ export class BackendService {
     //WebSocket
     socket: Subject<any>;
 
-    //audio vs. video
-    appMode = environment.appMode;
-
     //produktiv-System?
     production = environment.production;
 
@@ -108,7 +105,7 @@ export class BackendService {
     loadFullItemlist() {
 
         //Itemlist holen per HTTP-Request
-        this.jds.loadJson(this.appMode).switchMap(fullList => {
+        this.jds.loadJson().switchMap(fullList => {
             return fullList;
         }).subscribe(itemList => {
 

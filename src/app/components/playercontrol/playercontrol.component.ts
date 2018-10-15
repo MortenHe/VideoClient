@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { BackendService } from '../../services/backend.service';
 import { environment } from '../../../environments/environment';
-import { ViewControlService } from '../../services/view-control.service';
 
 @Component({
     selector: 'playercontrol',
@@ -10,9 +9,6 @@ import { ViewControlService } from '../../services/view-control.service';
 })
 
 export class PlayercontrolComponent {
-
-    //video vs. audio
-    appMode = environment.appMode;
 
     //aktueller Pausenzustand
     paused: boolean;
@@ -24,7 +20,7 @@ export class PlayercontrolComponent {
     files: any[] = [];
 
     //Services injecten
-    constructor(private bs: BackendService, private vcs: ViewControlService) { }
+    constructor(private bs: BackendService) { }
 
     //Beim Init
     ngOnInit() {
@@ -61,8 +57,5 @@ export class PlayercontrolComponent {
 
         //Stop-Befehl an Server schicken
         this.bs.sendMessage({ type: "stop", value: "" });
-
-        //Ansicht auf Suche umstellen
-        this.vcs.setView('search');
     }
 }

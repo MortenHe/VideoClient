@@ -24,7 +24,7 @@ export class SearchFilterPipe implements PipeTransform {
       //Items filtern
       return item.filter(item => {
 
-        //Titel (video) / Ordnername (audio) des Items soll durchsucht werden
+        //Titel (video) des Items soll durchsucht werden
         let haystack = item.name;
 
         //Wenn auch Tracks durchsucht werden sollen

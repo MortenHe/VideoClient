@@ -1,4 +1,4 @@
-//Struktur eines Multimedia-Items (Video, Audio)
+//Struktur eines Multimedia-Items (Video)
 export class Item {
     mode: string;
     name: string;
