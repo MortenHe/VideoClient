@@ -1,0 +1,6 @@
+<!-- Wenn Items vorhanden sind -->
+<ng-container *ngIf="(items$ | async) as items">
+
+    <!-- Anzahl der Items in Trefferliste -->
+    {{items.length}} Treffer
+</ng-container>

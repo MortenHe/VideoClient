@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Das Phantom der Oper (Hamburg)",
+        "file": "pdo-hamburg",
+        "length": "01:00:47",
+        "active": true,
+        "tracks": [
+            "Ouvertüre",
+            "Hannibal",
+            "Denk an mich",
+            "Engel der Muse",
+            "Das Phantom der Oper",
+            "Die Musik der Nacht",
+            "Briefe vom Phantom, Primadonna",
+            "Ballett aus ''Il Muto''",
+            "Mehr will ich nicht von dir",
+            "Maskenball",
+            "Könntest du doch wieder bei mir sein",
+            "Von nun an gibt es kein Zurück",
+            "Das unterirdische Labyrinth"
+        ]
+    },
+    {
+        "name": "Sunset Boulevard (LA Highlights)",
+        "file": "sunset-la-hightlight",
+        "length": "01:16:03",
+        "active": true,
+        "tracks": [
+            "Overture, I Guess It Was 5 A.M.",
+            "Let's Have Lunch",
+            "Car Chase",
+            "Surrender",
+            "With One Look",
+            "The Greatest Star of All",
+            "Every Movie's a Circus",
+            "Girl Meets Boy",
+            "New Ways to Dream",
+            "The Lady's Paying",
+            "The Perfect Year",
+            "This Time Next Year",
+            "New Year's Eve",
+            "Sunset Boulevard",
+            "As If We Never Said Goodbye",
+            "Eternal Youth is Worth a Little Suffering",
+            "Too Much in Love to Care",
+            "New Ways to Dream  (reprise)",
+            "The Final Scene"
+        ]
+    }
+]

@@ -1,0 +1,67 @@
+[
+    {
+        "name": "Fredrik Vahle - Anne Kaffeekanne",
+        "file": "anne-kaffekanne",
+        "length": "00:39:33",
+        "active": true,
+        "tracks": [
+            "Lied vom Wecken",
+            "Vom Laufenlernen",
+            "Das Katzentatzentanzspiel",
+            "Zehn kleine Fledermäuse",
+            "Schlaflied für Anne",
+            "Pinguin-Lied",
+            "Anne Kaffekanne",
+            "Higgelty, Piggelty, Pop und Pu",
+            "Leni Tanzbein",
+            "Wem gibt der Elefant die Hand",
+            "Kawuras - der Krebs",
+            "Lioliola - Lied"
+        ]
+    },
+    {
+        "name": "Fredrik Vahle - Die Hits vom Fritz",
+        "file": "hits-fritz",
+        "length": "00:52:52",
+        "active": true,
+        "tracks": [
+            "Die Rübe",
+            "Der Cowboy Jim aus Texas",
+            "Der Hase Augustin",
+            "Das Omnibuslied",
+            "Frosch und Maus",
+            "Schweinelied",
+            "Das kleine bunte Trampeltier",
+            "Paule Puhmanns Paddelboot",
+            "Dracula-Rock",
+            "Der Friedensmaler",
+            "Anne Kaffeekanne",
+            "Das Katzentatzentanzspiel",
+            "Von den Bremer Stadtmusikanten",
+            "Lied vom Weihnachtsmann",
+            "Das Eierlied",
+            "Schornsteinfeger ging spazieren"
+        ]
+    },
+    {
+        "name": "Fredrik Vahle - Der Spatz",
+        "file": "spatz",
+        "length": "00:35:26",
+        "active": true,
+        "tracks": [
+            "Das Würmchen",
+            "Das kleine bunte Trampeltier",
+            "Das schnelle Lied",
+            "Der Hühnerhof",
+            "Der Spatz",
+            "Die Katze Musulunga",
+            "Die Krähe",
+            "Die Tante",
+            "Die Zwerge",
+            "Die zwei Flöhe",
+            "Hau-mich-nicht-Lied",
+            "Kitzelsteinlied ",
+            "Schweinelied"
+        ]
+    }
+]

@@ -1,0 +1,100 @@
+{
+    "hsp": {
+        "filter": [
+            {
+                "id": "all",
+                "icon": "all",
+                "active": true
+            },
+            {
+                "id": "bibi-tina",
+                "icon": "bibi-tina",
+                "active": true
+            },
+            {
+                "id": "bobo",
+                "icon": "bobo",
+                "active": true
+            },
+            {
+                "id": "conni",
+                "icon": "conni",
+                "active": true
+            },
+            {
+                "id": "janosch",
+                "icon": "janosch",
+                "active": true
+            },
+            {
+                "id": "leo-lausemaus",
+                "icon": "leo-lausemaus",
+                "active": true
+            }
+        ],
+        "items": [],
+        "allowRandom": false
+    },
+    "kindermusik": {
+        "filter": [
+            {
+                "id": "all",
+                "label": "Alle",
+                "active": true
+            },
+            {
+                "id": "fredrik-vahle",
+                "label": "Fredrik Vahle",
+                "active": true
+            },
+            {
+                "id": "rz",
+                "label": "Rolf Zuckowski",
+                "active": true
+            },
+            {
+                "id": "kinderhits",
+                "label": "Kinderhits",
+                "active": true
+            },
+            {
+                "id": "misc",
+                "label": "Sontige",
+                "active": true
+            }
+        ],
+        "items": [],
+        "allowRandom": true
+    },
+    "musikmh": {
+        "filter": [
+            {
+                "id": "all",
+                "label": "Alle",
+                "active": true
+            },
+            {
+                "id": "beatles",
+                "label": "Beatles",
+                "active": true
+            },
+            {
+                "id": "jahre",
+                "label": "Jahre",
+                "active": true
+            },
+            {
+                "id": "musical",
+                "label": "Musical",
+                "active": true
+            },
+            {
+                "id": "misc",
+                "label": "Sonstige",
+                "active": true
+            }
+        ],
+        "items": [],
+        "allowRandom": true
+    }
+}

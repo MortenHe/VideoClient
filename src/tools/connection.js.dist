@@ -1,0 +1,12 @@
+module.exports = {
+        pi: {
+            host: '',
+            user: '',
+            password: ''
+        },
+        vb: {
+            host: '',
+            user: '',
+            password: ''
+        }
+};

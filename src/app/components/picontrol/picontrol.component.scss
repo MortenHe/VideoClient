@@ -1,0 +1,17 @@
+:host {
+    position: absolute;
+    right: 0px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+button {
+    cursor: pointer;
+    background: white;
+    width: 40px;
+    height: 40px;
+    opacity: .3;
+    &.active {
+        opacity: 1;
+    }
+}

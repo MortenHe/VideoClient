@@ -1,0 +1,79 @@
+{
+    "kinder": {
+        "filter": [
+            {
+                "id": "all",
+                "icon": "all",
+                "active": true
+            },
+            {
+                "id": "bebl",
+                "icon": "bebl",
+                "active": true
+            },
+            {
+                "id": "bibi-tina",
+                "icon": "bibi-tina",
+                "active": true
+            },
+            {
+                "id": "bobo",
+                "icon": "bobo",
+                "active": true
+            },
+            {
+                "id": "conni",
+                "icon": "conni",
+                "active": true
+            },
+            {
+                "id": "heidi",
+                "icon": "heidi",
+                "active": true
+            },
+            {
+                "id": "janosch",
+                "icon": "janosch",
+                "active": true
+            },
+            {
+                "id": "maulwurf",
+                "icon": "maulwurf",
+                "active": true
+            },
+            {
+                "id": "maja",
+                "icon": "maja",
+                "active": true
+            },
+            {
+                "id": "misc",
+                "icon": "misc",
+                "active": true
+            }
+        ],
+        "items": [],
+        "allowRandom": false
+    },
+    "jahresvideo": {
+        "filter": [
+            {
+                "id": "all",
+                "label": "Alle",
+                "active": true
+            },
+            {
+                "id": "2014",
+                "label": "2014",
+                "active": true
+            },
+            {
+                "id": "2015",
+                "label": "2015",
+                "active": true
+            }
+        ],
+        "items": [],
+        "allowRandom": false
+    }
+}

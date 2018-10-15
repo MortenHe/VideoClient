@@ -1,0 +1,9 @@
+<!-- leiser -->
+<button (click)="changeVolume(false)"
+        [disabled]="volume === 0"
+        class="ripple fa fa-volume-down button-clean"></button>
+
+<!-- lauter -->
+<button (click)="changeVolume(true)"
+        [disabled]="volume === 100"
+        class="ml-2 ripple fa fa-volume-up button-clean"></button>

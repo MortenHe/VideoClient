@@ -1,0 +1,133 @@
+[
+    {
+        "name": "Rolf Zuckowski - Die Jahresuhr",
+        "file": "jahresuhr",
+        "length": "00:38:34",
+        "active": true,
+        "tracks": [
+            "Die Jahresuhr",
+            "Es ist nicht leicht, ein Narr zu sein",
+            "Niemand ist ein Niemand",
+            "Immer wieder kommt ein neuer Frühling",
+            "Ich bin sauer",
+            "Meine Heimat ist ein kleiner blauer Stern",
+            "Danke",
+            "Kommt, wir wolln Laterne laufen",
+            "Das Wetter",
+            "Ein Schmetterling im Tannenbaum",
+            "Wieviel Farben hat die Welt"
+        ]
+    },
+    {
+        "name": "Rolf Zuckowski - Frag mir doch kein Loch in'n Bauch",
+        "file": "loch-bauch",
+        "length": "00:40:42",
+        "active": true,
+        "tracks": [
+            "Frag' mir doch kein Loch in 'n Bauch",
+            "Im Kindergarten",
+            "Ich bau' mir eine Höhle",
+            "Kinder sind das Größte",
+            "Papa bist du müde",
+            "Ohne Dich",
+            "Du gehörst zu uns",
+            "Ich hab' einen Walkman",
+            "Wenn der Sommer kommt",
+            "Mama ist in Panik",
+            "Ich schaff' das schon",
+            "Drachen im Wind",
+            "Kinder brauchen Träume"
+        ]
+    },
+    {
+        "name": "Rolf Zuckowski - Radio Lollipop",
+        "file": "lollipip",
+        "length": "00:36:03",
+        "active": true,
+        "tracks": [
+            "Auf Sendersuche",
+            "Papi, wach auf",
+            "Tweety",
+            "Verkehrsstudio",
+            "Schulbus",
+            "Die Lollipop-Melodie",
+            "Das Brummi-Lied",
+            "Verkehrsstudio",
+            "Uns're Schule hat keine Segel",
+            "Du da im Radio",
+            "Stups, der kleine Osterhase",
+            "Das Mittagskonzert",
+            "Wenn ich krank bin",
+            "Wie schön das Du geboren bist",
+            "Der Morgenmuffel",
+            "Die Lollipop-Melodie",
+            "Es macht Spaß",
+            "Die Büchermaus",
+            "Die Lollipo-Melodie"
+        ]
+    },
+    {
+        "name": "Rolf Zuckowski - Rolfs Schulweghitparade",
+        "file": "schulweghitparade",
+        "length": "00:48:38",
+        "active": true,
+        "tracks": [
+            "Mein Weg zur Schule",
+            "Hallo, siehst du mich",
+            "Schulbus",
+            "Alle machen Fehler",
+            "Rot und Grün",
+            "Es ist rot Elfriede",
+            "Was zieh' ich an",
+            "Aus der Traum",
+            "Ich hab' mich verlaufen",
+            "Mein Platz im Auto ist hinten",
+            "Zebrastreifen",
+            "Zwischen den Autos",
+            "An meinem Fahrrad ist alles dran",
+            "Wo kein Gehweg ist",
+            "Heute bleibt das Auto stehn",
+            "Linker Schuh - rechter Schuh",
+            "Deine Welt - meine Welt"
+        ]
+    },
+    {
+        "name": "Rolf Zuckowski - Starke Kinder",
+        "file": "starke-kinder",
+        "length": "00:38:59",
+        "active": true,
+        "tracks": [
+            "Starke Kinder",
+            "Kleine Europäer",
+            "So wie Du bist",
+            "Die Monster kommen",
+            "Manchmal wär' ich gerne wieder klein",
+            "Tip Tap",
+            "Riesenglück",
+            "Die Kinder des Rock 'n' Roll",
+            "Ich glaub' ich hab' Dich lieb",
+            "Ryrksnglynks",
+            "Kinder macht Euch startbereit"
+        ]
+    },
+    {
+        "name": "Rolf Zuckowski - Rolfs Vogelhochzeit",
+        "file": "vogelhochzeit",
+        "length": "00:27:53",
+        "active": true,
+        "tracks": [
+            "Ein Vogel wollte Hochzeit machen",
+            "Hoch in der Luft",
+            "Guten Tag, guten Tag",
+            "Vöglein, Vöglein, tanz mit mir",
+            "Du und ich",
+            "Immer nur brüten",
+            "Tick, tick, tick",
+            "Hallo Mama, hallo Papa",
+            "Ein Vogelbaby wird niemals satt",
+            "Sieh nur die Sterne",
+            "Immer wenn ein Vogelbaby größer wird",
+            "Ein Vogel wollte Hochzeit machen (2)"
+        ]
+    }
+]

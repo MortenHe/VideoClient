@@ -1,0 +1,12 @@
+<!-- Form fuer Mode-Select -->
+<form [formGroup]="selectModeForm">
+
+    <!-- Auswahl der Audio- / Videolisten (Kindervideos, Jahresvideo) -->
+    <select formControlName="select-mode"
+            class="width-auto form-control">
+
+        <!-- auswaehlbare Optionen ausgeben -->
+        <option *ngFor="let mode of modes"
+                [value]="mode.id">{{mode.label}}</option>
+    </select>
+</form>

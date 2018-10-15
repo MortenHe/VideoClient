@@ -1,0 +1,31 @@
+[
+    {
+        "name": "Bobo Siebenschläfer - Verschiedene Geschichten",
+        "file": "01",
+        "length": "00:38:03",
+        "active": true,
+        "tracks": [
+            "Bobo geht in den Zoo",
+            "Bobo baut eine Höhle",
+            "Bobo geht in den Supermarkt",
+            "Bobo geht auf den Kinderbauernhof",
+            "Bobo feiert Geburtstag",
+            "Bobo im Freibad"
+        ]
+    },
+    {
+        "name": "Bobo Siebenschläfer - Willkommen im Kindergarten",
+        "file": "kindergarten",
+        "length": "00:40:53",
+        "active": true,
+        "tracks": [
+            "Bobo geht einkaufen",
+            "Besser geht es mit Musik",
+            "Der erste Kindergarten-Tag",
+            "Kleiner Mann will tanzen",
+            "Das neue Kind",
+            "Farbenlied",
+            "Der Ausflug"
+        ]
+    }
+]

@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Benjamin Blümchen - Der Bananendieb",
+        "file": "bebl-bananendieb.mp4",
+        "length": "00:26:00",
+        "active": true
+    },
+    {
+        "name": "Benjamin Blümchen - Die blauen Elefanten",
+        "file": "bebl-blaue-elefanten.mp4",
+        "length": "00:26:00",
+        "active": true
+    },
+    {
+        "name": "Benjamin Blümchen - Der Flaschengeist",
+        "file": "bebl-flaschengeist.mp4",
+        "length": "00:26:00",
+        "active": true
+    },
+    {
+        "name": "Benjamin Blümchen - Ein Freund für Winni Waschbär",
+        "file": "bebl-winni-waschbaer.mp4",
+        "length": "00:26:00",
+        "active": true
+    },
+    {
+        "name": "Benjamin Blümchen - Als Babysitter",
+        "file": "bebl-babysitter.mp4",
+        "length": "00:26:00",
+        "active": true
+    }
+]

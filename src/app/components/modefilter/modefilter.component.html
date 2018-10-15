@@ -1,0 +1,25 @@
+<!-- Form fuer Filter-Buttons -->
+<form [formGroup]="modeFilterForm">
+
+      <!-- Ueber Filter-Optionen gehen -->
+      <label *ngFor="let singleModeFilter of modeFilter$ | async"
+             class="mode-filter cursor-pointer mt-2 mr-2"
+             [class.active]="singleModeFilter.id === modeFilterForm.controls.mode.value">
+
+            <!-- Vorschaubild des Filters (sofern definiert) -->
+            <img *ngIf="singleModeFilter.icon"
+                 height="50"
+                 width="50"
+                 src="assets/images/{{singleModeFilter.icon}}.png" />
+
+            <!-- Name des Filters (sofern definiert) -->
+            <span *ngIf="singleModeFilter.label">{{singleModeFilter.label}}</span>
+
+            <!-- Usichtbare radio box -->
+            <input class="d-none"
+                   type="radio"
+                   [value]="singleModeFilter.id"
+                   name="mode"
+                   formControlName="mode">
+      </label>
+</form>

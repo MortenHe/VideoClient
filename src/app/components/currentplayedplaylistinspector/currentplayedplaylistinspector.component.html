@@ -1,0 +1,17 @@
+<!-- Info ueber aktuell laufende Playlist -->
+<ng-container *ngFor="let file of files; let i = index">
+
+  <!-- Titel. Fett anzeigen (bei >=10 Titel fuehrende 0 bei Zaehlung) -->
+  <div (click)="jumpTo(i)"
+       class="item"
+       [class.waiting]="i === jumpPosition"
+       [class.font-weight-bold]="i === position">{{(i + 1).toString().padStart(files.length.toString().length, "0")}})&nbsp;{{file|fileName}}
+
+    <!-- aktuelle Laufzeit, wenn das der gerade aktuelle Titel ist-->
+    <ng-container *ngIf="i === position && time !== ''"> ({{time|timeformatter}})</ng-container>
+
+    <!-- Spinner anzeigen, wenn zu diesem Titel gesprungen werden soll -->
+    <i class="fa fa-spinner fa-spin"
+       *ngIf="i === jumpPosition"></i>
+  </div>
+</ng-container>

@@ -1,0 +1,24 @@
+//Variable importerein
+@import '~scss/variables.scss';
+//eigenes styles
+.mode-filter {
+    border: 3px solid $color-grey;
+    border-radius: $border-radius;
+    padding: 5px;
+    user-select: none;
+    img {
+        filter: grayscale(1);
+    }
+    &:hover:not(.active) {
+        border: 3px solid $color-light-bg-hover;
+        img {
+            filter: grayscale(.3);
+        }
+    }
+    &.active {
+        border: 3px solid $color-light-bg-active;
+        img {
+            filter: grayscale(0);
+        }
+    }
+}

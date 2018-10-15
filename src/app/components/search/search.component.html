@@ -1,0 +1,79 @@
+<!-- Inspektor mit den moeglichen Werten, wird nur bei dev angezeigt -->
+<!-- <debuginspector class="d-flex"></debuginspector> -->
+
+<!--Wrapper fuer sichtbare Elemte, waehrend Anwendung laueft: Nav links, Main, Shutdown rechts -->
+<div *ngIf="!(shutdown$ | async); else shutdownTemp"
+     class="d-flex position-relative col no-gutters p-0">
+
+  <!-- Steuerelemente links -->
+  <nav>
+
+    <!-- Elemente wandern mit Seite mit (fixed) -->
+    <div class="wrap">
+
+      <!-- Ansicht der Infos zu toggeln -->
+      <toggletrackview class="d-flex"></toggletrackview>
+
+      <!-- Sortierbuttons -->
+      <sortfilter class="d-block mt-4"></sortfilter>
+    </div>
+  </nav>
+
+  <!-- Pi-Kontrolle zum Herunterfahren -->
+  <picontrol class="d-flex shadow"></picontrol>
+
+  <!-- Zustand ueber Verbindung zu WSS -->
+  <div class="connection"><i class="fa fa-wifi"
+       [ngClass]='{
+     "text-danger": !connected,
+     "text-success": connected
+    }'></i></div>
+
+  <!-- Countdown -->
+  <div [class.hidden]="countdownTime >= 180"
+       class="countdown">{{countdownTime}}</div>
+
+  <!-- auesserer Container -->
+  <div class="app-content container no-gutters p-0 shadow">
+
+    <!-- Zeile fuer Ueberschrift, Mode-Select und Shutdown-Button -->
+    <div class="header-{{appMode}} row no-gutters align-items-center pt-2 pb-2 pl-3 pr-3">
+
+      <!-- Ueberschrift z.B. "Web Video Player (dev)" -->
+      <h1 class="col">{{envName}}</h1>
+
+      <!-- Lautstaerke Kontrolle -->
+      <volume-control class="col d-flex justify-content-end"></volume-control>
+    </div>
+
+    <!-- Steuerelemente (play, stop, seek) fuer Item-Wiedergabe -->
+    <playercontrol [class.hidden]="!files.length"
+                   class="pl-3 pr-3 col d-flex justify-content-between"></playercontrol>
+
+    <!-- Suchbereich View -->
+    <div>
+
+      <!-- Anischt der aktuellen laufenden Playlist -->
+      <currentplayedplaylistinspector class="d-block"></currentplayedplaylistinspector>
+
+      <!-- Umschalter fuer Modus (Kindervideos vs. Jahresvideos) -->
+      <selectmode class="d-flex ml-2 mr-2 mt-2"></selectmode>
+
+      <!-- Filter-Buttons -->
+      <modefilter class="d-flex ml-2 mr-2"></modefilter>
+
+      <!-- Suchfeld fuer Filterung -->
+      <searchfilter class="d-flex ml-2 mr-2 mt-2"></searchfilter>
+
+      <!-- Trefferliste -->
+      <resultlist class="mt-2 d-block"></resultlist>
+    </div>
+  </div>
+</div>
+
+<!-- Anzeigen, wenn Pi heruntergefahren wurde -->
+<ng-template #shutdownTemp>
+  <div class="container mr-0 ml-0 no-gutters">
+    Die Anwendung wurde beendet.
+  </div>
+</ng-template>

@@ -1,0 +1,65 @@
+[
+    {
+        "name": "The Beatles - A Hard Day's Night",
+        "file": "hard-days-night",
+        "length": "00:30:12",
+        "active": true,
+        "tracks": [
+            "A Hard Day's Night",
+            "I Should Have Know Better",
+            "If I Fell",
+            "I'm Just Happy To Dance With You",
+            "And I Love her",
+            "Tell Me Why",
+            "Can't Buy Me Love",
+            "Any Time at all",
+            "I'll Cry Instead",
+            "Things We Said Today",
+            "When I Get Home",
+            "You Can't Do That",
+            "I'll Be Back"
+        ]
+    },
+    {
+        "name": "The Beatles - Help",
+        "file": "help",
+        "length": "00:33:57",
+        "active": true,
+        "tracks": [
+            "Help",
+            "The Night Before",
+            "You've Got To Hide Your Love Away",
+            "I Need You",
+            "Another Girl",
+            "You're Going To Loose That Girl",
+            "Ticket To Ride",
+            "Act Naturally",
+            "It's Only Love",
+            "You Like Me Too Much",
+            "Tell We What You See",
+            "I've Just Seen A Face",
+            "Yesterday",
+            "Dizzy Miss Lizzy"
+        ]
+    },
+    {
+        "name": "The Beatles - Let It Be",
+        "file": "let-it-be",
+        "length": "00:35:11",
+        "active": true,
+        "tracks": [
+            "Tow Of Us",
+            "Dig A Pony",
+            "Across The Universe",
+            "I Me Mine",
+            "Dig It",
+            "Let It Be",
+            "Maggie Mae",
+            "I've Got A Felling",
+            "One After 909",
+            "The Long And Winding Road",
+            "For You Blue",
+            "Get Back"
+        ]
+    }
+]

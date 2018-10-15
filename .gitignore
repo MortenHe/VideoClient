@@ -1,0 +1,12 @@
+/src/tools/connection.php
+/nbproject/private/
+/nbproject/project.properties
+/nbproject/project.xml
+/package-lock.json
+/node_modules
+/.vscode
+/dist-audio
+/dist-video
+/dist
+/myDist.zip
+/src/tools/connection.js

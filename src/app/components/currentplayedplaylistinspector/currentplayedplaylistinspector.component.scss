@@ -1,0 +1,21 @@
+//MH Variablen importieren
+@import '~scss/variables.scss';
+.item {
+    padding-left: 5px;
+    cursor: pointer;
+    user-select: none;
+    &:hover:not(.active-item) {
+        background: $color-light-bg-hover;
+    }
+    &.waiting {
+        background: $color-light-bg-hover;
+    }
+}
+
+@media (hover: none) {
+    .item {
+        &:hover:not(.active-item):not(.waiting) {
+            background: white;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+//MH Variablen importieren
+@import '~scss/variables.scss';
+:host {
+    font-size: 25px;
+}
+
+button {
+    color: $color-white;
+}

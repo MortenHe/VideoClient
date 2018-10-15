@@ -1,0 +1,52 @@
+//MH Variablen importieren
+@import '~scss/variables.scss';
+:host {
+    position: relative;
+    display: flex;
+    flex: 1;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.app-content {
+    background: $color-white;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.item-count {
+    width: 69px;
+    font-size: 14px;
+}
+
+.mode-filter-hr {
+    margin-bottom: 10px;
+}
+
+.header-audio,
+.header-video {
+    background: $color-info-blue;
+    color: $color-white;
+}
+
+.connection {
+    position: absolute;
+    right: 0px;
+    top: 55px;
+    width: 40px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.countdown {
+    position: absolute;
+    right: 0px;
+    top: 85px;
+    width: 40px;
+    text-align: center;
+}

@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Test 1",
+        "file": "test1.mp4",
+        "length": "00:00:05",
+        "active": true
+    },
+    {
+        "name": "Test 2",
+        "file": "test2.mp4",
+        "length": "00:00:05",
+        "active": true
+    },
+    {
+        "name": "Test 3",
+        "file": "test3.mp4",
+        "length": "00:00:05",
+        "active": true
+    },
+    {
+        "name": "The Snowman",
+        "file": "the-snowman.mp4",
+        "length": "00:25:38",
+        "active": true
+    },
+    {
+        "name": "Rolfs neue Vogelhochzeit",
+        "file": "rolfs-neue-vogelhochzeit.mp4",
+        "length": "00:22:43",
+        "active": true
+    },
+    {
+        "name": "Der Zauberer von Oz - We're off to see the wizard (long mix)",
+        "file": "wizard-off-long.mp4",
+        "length": "00:02:45",
+        "active": true
+    },
+    {
+        "name": "Der Zauberer von Oz - We're off to see the wizard",
+        "file": "wizard-off.mp4",
+        "length": "00:01:10",
+        "active": true
+    },
+    {
+        "name": "Der Zauberer von Oz - Somewhere Over The Rainbow",
+        "file": "over-the-rainbow.mp4",
+        "length": "00:02:09",
+        "active": true
+    },
+    {
+        "name": "Laili auf der Rutsche",
+        "file": "laila-rutsche.mp4",
+        "length": "00:00:46",
+        "active": true
+    },
+    {
+        "name": "Die Opas singen 'Poor Boy'",
+        "file": "poor-boy.mp4",
+        "length": "00:00:34",
+        "active": true
+    }
+]
