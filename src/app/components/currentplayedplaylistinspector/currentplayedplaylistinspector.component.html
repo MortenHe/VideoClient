@@ -1,5 +1,6 @@
 <!-- Info ueber aktuell laufende Playlist -->
-<ng-container *ngFor="let file of files; let i = index">
+<ng-container *ngFor="let file of files; let i = index"
+              class="row no-gutters">
 
   <!-- Titel. Fett anzeigen (bei >=10 Titel fuehrende 0 bei Zaehlung) -->
   <div (click)="jumpTo(i)"
@@ -7,12 +8,13 @@
        [class.waiting]="i === jumpPosition"
        [class.font-weight-bold]="i === position">
 
-    <!-- Gesamtzeit des videos -->
-    <ng-container>{{file.length|timeformatter}}</ng-container>
+    <!-- Gesamtzeit des Videos -->
+    <div class="item-length text-right mr-2">{{file.length|timeformatter}}</div>
 
-    &nbsp;{{file|fileName}}
+    <!-- Name es Videos -->
+    <div class="col">{{file|fileName}}</div>
 
-    <!-- aktuelle Laufzeit, wenn das der gerade aktuelle Titel ist-->
+    <!-- aktuelle Laufzeit, wenn es das gerade aktuelle Vieo ist-->
     <ng-container *ngIf="i === position && time !== ''"> ({{time|timeformatter}})</ng-container>
 
     <!-- Spinner anzeigen, wenn zu diesem Titel gesprungen werden soll -->
@@ -21,6 +23,11 @@
   </div>
 </ng-container>
 
-<ng-container *ngIf="files.length > 1">
+<!-- Laenge der Playlist -->
+<div *ngIf="files.length > 1"
+     class="row no-gutters cursor-pointer mt-3"
+     (click)="startPlaylist()">
 
-</ng-container>
+  <!-- formattierte Laenge der gesamten Playlist -->
+  <div class="item-length text-right mr-2">{{filesTotalTime | timeformatter}}</div>
+</div>

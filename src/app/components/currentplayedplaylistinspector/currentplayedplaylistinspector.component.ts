@@ -15,6 +15,9 @@ export class CurrentplayedplaylistinspectorComponent implements OnInit {
   //Liste der Dateien, die abgespielt werden
   files: any[] = [];
 
+  //Gesamtlaenge der Playlist
+  filesTotalTime: string = "";
+
   //aktueller Index in Titelliste
   position: number;
 
@@ -40,6 +43,9 @@ export class CurrentplayedplaylistinspectorComponent implements OnInit {
       //temp. Sprungwert (fuer optische Darstellung) wieder zuruecksetzen
       this.jumpPosition = -1;
     });
+
+    //Laenge der Playlist abbonieren
+    this.bs.getFilesTotalTime().subscribe(filesTotalTime => this.filesTotalTime = filesTotalTime);
   }
 
   //zu gewissem Titel in Playlist springen

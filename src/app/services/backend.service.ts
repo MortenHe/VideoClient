@@ -70,6 +70,9 @@ export class BackendService {
     //Die Dateien, die gerade abgespielt werden
     files$: Subject<any[]> = new Subject<any[]>();
 
+    //Die Gesamtspielzeit der Playlist, die gerade abgespielt werden
+    filesTotalTime$: Subject<string> = new Subject<string>();
+
     //Aktueller Index in Titelliste
     position$: Subject<number> = new Subject<number>();
 
@@ -275,6 +278,10 @@ export class BackendService {
                     this.files$.next(value);
                     break;
 
+                case "set-files-total-time":
+                    this.filesTotalTime$.next(value);
+                    break;
+
                 case "toggle-random":
                     this.random$.next(value);
                     break;
@@ -317,6 +324,11 @@ export class BackendService {
     //Files liefern
     getFiles() {
         return this.files$;
+    }
+
+    //Gesamtlaenge der Playlist liefern
+    getFilesTotalTime() {
+        return this.filesTotalTime$;
     }
 
     //Position liefern
