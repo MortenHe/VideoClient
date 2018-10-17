@@ -21,9 +21,6 @@ export class SearchComponent {
   //Zustand ob Verbindung zu WSS existiert
   connected: boolean;
 
-  //ist random playback erlaubt bei laufender Playlist?
-  allowRandomRunning$;
-
   //Position in Playlist
   position: number = -1;
 
@@ -32,6 +29,9 @@ export class SearchComponent {
 
   //Aktuelle Playlist
   files: string[] = [];
+
+  //Wurde Playlist schon gestartet?
+  playlistStarted: boolean = false;
 
   //Anzahl der Sekunden bis Shutdown
   countdownTime: number;
@@ -45,9 +45,6 @@ export class SearchComponent {
 
     //Komplettliste der Items in Service laden
     this.bs.loadFullItemlist();
-
-    //AllowRandom abonnieren (fuer Anzeige gewisser Komponenten)
-    this.allowRandomRunning$ = this.bs.getAllowRandomRunning();
 
     //immer wenn sich die Route /serach/kinder -> /search/jahresvideo aendert
     this.route.paramMap.subscribe(params => {
@@ -83,6 +80,9 @@ export class SearchComponent {
 
     //Zustand abbonieren, ob Verbindung zu WSS besteht
     this.bs.getConnected().subscribe(connected => this.connected = connected);
+
+    //Abbonieren, ob Playlist gestartet wurde
+    this.bs.getPlaylistStarted().subscribe(playlistStarted => this.playlistStarted = playlistStarted);
 
     //Regelmassieg eine Nachricht an WSS schicken, damit ggf. die Verbindung wieder aufgebaut wird
     setInterval(() => {

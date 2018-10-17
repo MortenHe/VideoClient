@@ -58,9 +58,6 @@ export class BackendService {
     //Liste der Mode Filter dieses Modus als BS, das abboniert werden kann
     modeFilterListSB = new BehaviorSubject([]);
 
-    //Random Playback erlaubt als BS, das abboniert werden kann
-    allowRandomBS = new BehaviorSubject(false);
-
     //Lautstaerke
     volume$: Subject<number> = new Subject<number>();
 
@@ -79,20 +76,14 @@ export class BackendService {
     //aktueller Pause-Zustand
     paused$: Subject<boolean> = new Subject<boolean>();
 
-    //aktueller Random-Zustand
-    random$: Subject<boolean> = new Subject<boolean>();
-
-    //aktives Item
-    activeItem$: Subject<string> = new Subject<string>();
+    //wurde Playlist schon gestartet?
+    playlistStarted$: Subject<boolean> = new Subject<boolean>();
 
     //Anzahl der Sekunden bis Shutdown
     countdownTime$: Subject<number> = new Subject<number>();
 
     //wurde Server heruntergefahren?
     shutdown$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
-
-    //ist Random bei der aktuell laufenden Playlist erlaubt?
-    allowRandomRunning$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
     //Ist die App gerade mit dem WSS verbunden?
     connected$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
@@ -120,9 +111,6 @@ export class BackendService {
 
                 //Modus in Variable speichern (fuer Start Playlist Funktion)
                 this.mode = mode;
-
-                //Wert in BS setzen, ob Random in diesem Modus erlaubt ist
-                this.allowRandomBS.next(this.itemListFull[mode].allowRandom);
 
                 //Filter-Modus-Liste des aktuellen Modus setzen
                 this.modeFilterListSB.next(this.itemListFull[mode].filter);
@@ -187,11 +175,6 @@ export class BackendService {
     //Modus setzen
     setMode(mode) {
         this.modeBS.next(mode);
-    }
-
-    //Random erlaubt liefern
-    getAllowRandom() {
-        return this.allowRandomBS;
     }
 
     //gefilterte und sortierte Itemliste liefern
@@ -274,24 +257,16 @@ export class BackendService {
                     this.paused$.next(value);
                     break;
 
+                case "set-playlist-started":
+                    this.playlistStarted$.next(value);
+                    break;
+
                 case "set-files":
                     this.files$.next(value);
                     break;
 
                 case "set-files-total-time":
                     this.filesTotalTime$.next(value);
-                    break;
-
-                case "toggle-random":
-                    this.random$.next(value);
-                    break;
-
-                case "active-item":
-                    this.activeItem$.next(value);
-                    break;
-
-                case "allow-random":
-                    this.allowRandomRunning$.next(value);
                     break;
 
                 case "set-countdown-time":
@@ -311,67 +286,46 @@ export class BackendService {
         this.socket.next(messageObj);
     }
 
-    //Volume liefern
     getVolume() {
         return this.volume$;
     }
 
-    //Zeit liefern
     getTime() {
         return this.time$;
     }
 
-    //Files liefern
     getFiles() {
         return this.files$;
     }
 
-    //Gesamtlaenge der Playlist liefern
     getFilesTotalTime() {
         return this.filesTotalTime$;
     }
 
-    //Position liefern
     getPosition() {
         return this.position$;
     }
 
-    //Position setzen
     setPosition(position) {
         this.position$.next(position);
     }
 
-    //Pause liefern
+    getPlaylistStarted() {
+        return this.playlistStarted$;
+    }
+
     getPaused() {
         return this.paused$;
     }
 
-    //Random liefern
-    getRandom() {
-        return this.random$;
-    }
-
-    //ActiveItem liefern
-    getActiveItem() {
-        return this.activeItem$;
-    }
-
-    //Anzahl der Sekunden bis Countdown liefern
     getCountdownTime() {
         return this.countdownTime$;
     }
 
-    //Shutdown Zustand liefern
     getShutdown() {
         return this.shutdown$;
     }
 
-    //AllowRandom Zustand liefern
-    getAllowRandomRunning() {
-        return this.allowRandomRunning$;
-    }
-
-    //Verbindungszustand mit WSS liefern
     getConnected() {
         return this.connected$;
     }

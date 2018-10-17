@@ -3,7 +3,6 @@ import { Item } from '../../config/main-config';
 import { BackendService } from '../../services/backend.service';
 import { ResultfilterService } from '../../services/resultfilter.service';
 import { Observable } from 'rxjs/Observable';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Component({
   selector: 'resultlist',
@@ -22,16 +21,8 @@ export class ResultlistComponent {
   //Flag ob Tracks angezeigt werden sollen
   showTracks$: Observable<boolean>;
 
-  //Ist Random erlaubt?
-  allowRandom$: BehaviorSubject<boolean>;
-
-  //welches Item in der Liste wurde angeklickt?
-  activeItem: string = "";
-
   //Aktuelle Playlist (kommt von Server)
-  files: any[] = [{
-    "file": "kinder/bebl/bebl-babysitter.mp4"
-  }];
+  files: any[] = [];
 
   //Services injecten
   constructor(private bs: BackendService, private fs: ResultfilterService) { }
@@ -47,14 +38,6 @@ export class ResultlistComponent {
 
     //Modus abbonieren
     this.bs.getMode().subscribe(mode => this.mode = mode);
-
-    //AllowRandom abbonieren
-    this.allowRandom$ = this.bs.getAllowRandom();
-
-    //ActiveItem abbonieren
-    this.bs.getActiveItem().subscribe(activeItem => {
-      this.activeItem = activeItem;
-    });
 
     //Laufende Playlist abbonieren
     this.bs.getFiles().subscribe(files => this.files = files);

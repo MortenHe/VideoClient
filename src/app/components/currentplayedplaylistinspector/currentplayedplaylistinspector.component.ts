@@ -9,9 +9,6 @@ import { BackendService } from '../../services/backend.service';
 
 export class CurrentplayedplaylistinspectorComponent implements OnInit {
 
-  //aktuelle Zeit des laufenden Items
-  time: string = "";
-
   //Liste der Dateien, die abgespielt werden
   files: any[] = [];
 
@@ -19,10 +16,16 @@ export class CurrentplayedplaylistinspectorComponent implements OnInit {
   filesTotalTime: string = "";
 
   //aktueller Index in Titelliste
-  position: number;
+  position: number = 0;
+
+  //aktuelle Zeit des laufenden Items
+  time: string = "";
 
   //temp. Wert, wohin gerade gesprungen werden soll
   jumpPosition: number = -1;
+
+  //Wurde Playlist schon gestartet?
+  playlistStarted: boolean = false;
 
   //Service injecten
   constructor(private bs: BackendService) { }
@@ -46,6 +49,9 @@ export class CurrentplayedplaylistinspectorComponent implements OnInit {
 
     //Laenge der Playlist abbonieren
     this.bs.getFilesTotalTime().subscribe(filesTotalTime => this.filesTotalTime = filesTotalTime);
+
+    //Abbonieren, ob Playlist gestartet wurde
+    this.bs.getPlaylistStarted().subscribe(playlistStarted => this.playlistStarted = playlistStarted);
   }
 
   //zu gewissem Titel in Playlist springen

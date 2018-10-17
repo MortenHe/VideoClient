@@ -22,8 +22,6 @@ export class DebuginspectorComponent implements OnInit {
   reverseOrder$: Observable<boolean>;
   showTracks$: Observable<boolean>;
   playlist$: Observable<any[]>;
-  randomPlayback$: Observable<boolean>;
-  allowRandom$: Observable<boolean>;
 
   //Env-Werte
   domainModes = environment.domainModes;
@@ -45,7 +43,5 @@ export class DebuginspectorComponent implements OnInit {
     this.orderField$ = this.fs.getOrderField();
     this.reverseOrder$ = this.fs.getReverseOrder();
     this.showTracks$ = this.fs.getShowTracks();
-    this.randomPlayback$ = this.bs.getRandom();
-    this.allowRandom$ = this.bs.getAllowRandom();
   }
 }

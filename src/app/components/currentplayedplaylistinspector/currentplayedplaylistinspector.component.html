@@ -1,33 +1,38 @@
-<!-- Info ueber aktuell laufende Playlist -->
-<ng-container *ngFor="let file of files; let i = index"
-              class="row no-gutters">
+<!-- Playlist starten -->
+<div *ngIf="files.length && !playlistStarted"
+     class="text-center mt-2 mb-2">
+  <button class="button-clean">
+    <i class="fa fa-play mr-2"></i>Playlist starten</button>
+</div>
 
-  <!-- Titel. Fett anzeigen (bei >=10 Titel fuehrende 0 bei Zaehlung) -->
-  <div (click)="jumpTo(i)"
-       class="item"
-       [class.waiting]="i === jumpPosition"
-       [class.font-weight-bold]="i === position">
+<!-- Info ueber Playlist -->
+<div *ngFor="let file of files; let i = index, let first = first"
+     (click)="jumpTo(i)"
+     class="row no-gutters item"
+     [class.waiting]="i === jumpPosition"
+     [class.playing]="i === position && playlistStarted"
+     [class.first]="first">
 
-    <!-- Gesamtzeit des Videos -->
-    <div class="item-length text-right mr-2">{{file.length|timeformatter}}</div>
-
-    <!-- Name es Videos -->
-    <div class="col">{{file|fileName}}</div>
-
-    <!-- aktuelle Laufzeit, wenn es das gerade aktuelle Vieo ist-->
-    <ng-container *ngIf="i === position && time !== ''"> ({{time|timeformatter}})</ng-container>
-
-    <!-- Spinner anzeigen, wenn zu diesem Titel gesprungen werden soll -->
-    <i class="fa fa-spinner fa-spin"
-       *ngIf="i === jumpPosition"></i>
+  <!-- Play-/ Spiner-Symbol-->
+  <div class="fa fa-fw"
+       [ngClass]="{
+        'fa-play': i === position && playlistStarted,
+        'fa-spinner fa-spin': i === jumpPosition
+         }">
   </div>
-</ng-container>
+
+  <!-- Name es Videos -->
+  <div class="col pl-1">{{file|fileName}}</div>
+
+  <!-- Zeitinfo des Videos -->
+  <div class="item-length text-right">
+    <ng-container *ngIf="i < position">0:00</ng-container>
+    <ng-container *ngIf="i === position && time !== '' && playlistStarted">{{time|timeformatter}}</ng-container>
+    <ng-container *ngIf="i > position || !playlistStarted">{{file.length|timeformatter}}</ng-container>
+  </div>
+</div>
 
 <!-- Laenge der Playlist -->
 <div *ngIf="files.length > 1"
-     class="row no-gutters cursor-pointer mt-3"
-     (click)="startPlaylist()">
-
-  <!-- formattierte Laenge der gesamten Playlist -->
-  <div class="item-length text-right mr-2">{{filesTotalTime | timeformatter}}</div>
+     class="filesTotalTime">{{filesTotalTime | timeformatter}}
 </div>
