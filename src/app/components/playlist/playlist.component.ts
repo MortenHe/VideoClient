@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { BackendService } from '../../services/backend.service';
 
 @Component({
-  selector: 'currentplayedplaylistinspector',
-  templateUrl: './currentplayedplaylistinspector.component.html',
-  styleUrls: ['./currentplayedplaylistinspector.component.scss']
+  selector: 'playlist',
+  templateUrl: './playlist.component.html',
+  styleUrls: ['./playlist.component.scss']
 })
 
-export class CurrentplayedplaylistinspectorComponent implements OnInit {
+export class PlaylistComponent implements OnInit {
 
   //Liste der Dateien, die abgespielt werden
   files: any[] = [];

@@ -30,7 +30,7 @@ import { ModefilterComponent } from './components/modefilter/modefilter.componen
 import { SearchfilterComponent } from './components/searchfilter/searchfilter.component';
 import { SortfilterComponent } from './components/sortfilter/sortfilter.component';
 import { SelectmodeComponent } from './components/selectmode/selectmode.component';
-import { CurrentplayedplaylistinspectorComponent } from './components/currentplayedplaylistinspector/currentplayedplaylistinspector.component';
+import { PlaylistComponent } from './components/playlist/playlist.component';
 import { PlayercontrolComponent } from './components/playercontrol/playercontrol.component';
 import { PicontrolComponent } from './components/picontrol/picontrol.component';
 import { DebuginspectorComponent } from './components/debuginspector/debuginspector.component';
@@ -47,7 +47,7 @@ import { VolumeControlComponent } from './components/volume-control/volume-contr
     SearchfilterComponent,
     SortfilterComponent,
     SelectmodeComponent,
-    CurrentplayedplaylistinspectorComponent,
+    PlaylistComponent,
     PlayercontrolComponent,
     PicontrolComponent,
     DebuginspectorComponent,
