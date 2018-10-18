@@ -51,7 +51,7 @@ var ssh = new SSH2Promise({
 //SSH Session erzeugen
 ssh.connect().then(() => {
 
-    //Folder auf Server liefern
+    //Files auf Server liefern
     ssh.exec("find " + videoPath + " -mindepth 3 -maxdepth 3 -type f").then((data) => {
 
         //Listen-String trimmen und Array erzeugen (Zeilenumbruch als Trenner)
