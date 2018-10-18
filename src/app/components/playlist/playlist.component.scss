@@ -1,5 +1,10 @@
 //MH Variablen importieren
 @import '~scss/variables.scss';
+.start-playlist:hover {
+    background: $color-info-green;
+    border-radius: $border-radius;
+}
+
 .item {
     padding-left: 5px;
     background: $color-light-bg;
@@ -28,6 +33,7 @@
 .filesTotalTime {
     text-align: right;
     padding: 5px;
+    padding-bottom: 0px;
 }
 
 @media (hover: none) {

@@ -1,9 +1,8 @@
 <!-- Playlist starten -->
-<div *ngIf="files.length && !playlistStarted"
-     class="mt-2 mb-2">
-  <button class="button-clean">
-    <i class="fa fa-play mr-2"></i>Playlist starten</button>
-</div>
+<button class="button-clean ml-2 mt-2 mb-2 start-playlist"
+        *ngIf="files.length && !playlistStarted"
+        (click)="jumpTo(0)">
+  <i class="fa fa-play mr-2"></i>Playlist starten</button>
 
 <!-- Info ueber Playlist -->
 <div *ngFor="let file of files; let i = index, let first = first"
@@ -21,10 +20,10 @@
          }">
   </div>
 
-  <!-- Name es Videos -->
+  <!-- Name des Videos -->
   <div class="col pl-1">{{file|fileName}}</div>
 
-  <!-- Zeitinfo des Videos -->
+  <!-- Zeitinfo des Videos: Gesamtlaufzeit, gerade herunterlaufende Zeit oder 0:00 wenn Video schon gespielt wurde -->
   <div class="item-length text-right">
     <ng-container *ngIf="i < position">0:00</ng-container>
     <ng-container *ngIf="i === position && time !== '' && playlistStarted">{{time|timeformatter}}</ng-container>
