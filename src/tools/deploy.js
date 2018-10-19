@@ -8,13 +8,13 @@ console.log("build and deploy video to " + runMode);
 //Unter welchem Unterpfad wird die App auf dem Server laufen?
 const base_href = "wvp";
 
-//pi (production) vs. vb (dev)
-const production = runMode === "pi" ? "prod" : "dev";
+//pi (production) vs. vb ("")
+const stage = runMode === "pi" ? "production" : "";
 
 //Projekt bauen
 const { execSync } = require('child_process');
 console.log("start build");
-execSync("ng build --configuration=video-" + production + " --base-href=/" + base_href + "/ --prod");
+execSync("ng build --configuration=" + stage + " --base-href=/" + base_href + "/ --prod");
 console.log("build done");
 
 //htacces Schablone in dist Ordner kopieren

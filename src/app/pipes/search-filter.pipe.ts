@@ -9,20 +9,20 @@ import { Item } from '../config/main-config';
 export class SearchFilterPipe implements PipeTransform {
 
   //Suchstring wird uebergeben
-  transform(item: Item[], searchString: string, includeTracks: boolean): any {
+  transform(items: Item[], searchString: string, includeTracks: boolean): any {
 
     //Wenn Suchfeld leer ist
     if (!searchString) {
 
       //Treffer anzeigen
-      return item;
+      return items;
     }
 
     //Filtersuchbegriff ausgewaehlt
     else {
 
       //Items filtern
-      return item.filter(item => {
+      return items.filter(item => {
 
         //Titel (video) des Items soll durchsucht werden
         let haystack = item.name;

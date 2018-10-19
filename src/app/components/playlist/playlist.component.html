@@ -8,9 +8,11 @@
 <div *ngFor="let file of files; let i = index, let first = first"
      (click)="jumpTo(i)"
      class="row no-gutters item"
-     [class.waiting]="i === jumpPosition"
-     [class.playing]="i === position"
-     [class.first]="first">
+     [ngClass]="{
+       'waiting': i === jumpPosition,
+       'playing': i === position,
+       'first': first
+     }">
 
   <!-- Play-/ Spiner-Symbol-->
   <div class="fa fa-fw"

@@ -11,7 +11,7 @@ import { environment } from '../../../environments/environment';
 })
 export class SelectmodeComponent implements OnInit {
 
-  //Liste der Modes
+  //Liste der Modes (kindervideo, jahresvideo)
   modes: any[];
 
   //Form fuer Auswahl des Modus

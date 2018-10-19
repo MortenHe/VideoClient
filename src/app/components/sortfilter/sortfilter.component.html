@@ -1,23 +1,35 @@
 <!-- Sortierung nach Name aufsteigend -->
 <div class="tag shadow d-flex align-items-center justify-content-center"
-     [class.activeFilter]="orderField + '-' + reverseOrder === 'name-false'"
+     [class.activeFilter]="orderField === 'name' && reverseOrder === false"
      (click)="setOrder('name', false)">
+
+  <!-- Buchstaben-Symbol -->
   <i class="fa fa-font"></i>
+
+  <!-- Aufsteigend sortieren Symbol -->
   <i class="ml-1 fa fa-sort-up"></i>
 </div>
 
 <!-- Sortierung nach Dauer aufsteigend -->
 <div class="tag shadow d-flex align-items-center justify-content-center"
-     [class.activeFilter]="orderField + '-' + reverseOrder === 'length-false'"
+     [class.activeFilter]="orderField === 'length' && reverseOrder === false"
      (click)="setOrder('length', false)">
+
+  <!-- Uhrensymbol-->
   <i class="fa fa-clock-o"></i>
+
+  <!-- Aufsteigend sortieren Symbol -->
   <i class="ml-1 fa fa-sort-up"></i>
 </div>
 
 <!-- Sortierung nach Dauer absteigend -->
 <div class="tag shadow d-flex align-items-center justify-content-center"
-     [class.activeFilter]="orderField + '-' + reverseOrder === 'length-true'"
+     [class.activeFilter]="orderField === 'length' && reverseOrder === true"
      (click)="setOrder('length', true)">
+
+  <!-- Uhrensymbol-->
   <i class="fa fa-clock-o"></i>
+
+  <!-- Absteigend sortieren Symbol -->
   <i class="ml-1 fa fa-sort-down"></i>
 </div>

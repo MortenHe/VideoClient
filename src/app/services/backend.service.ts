@@ -25,9 +25,6 @@ export class BackendService {
     //WebSocket
     socket: Subject<any>;
 
-    //produktiv-System?
-    production = environment.production;
-
     //Komplette Itemliste wird nur 1 Mal geholt
     itemListFull;
 
@@ -164,26 +161,6 @@ export class BackendService {
         this.itemListFilteredBS.next(filteredItemList);
     }
 
-    //Modus liefern
-    getMode() {
-        return this.modeBS;
-    }
-
-    //Modus setzen
-    setMode(mode) {
-        this.modeBS.next(mode);
-    }
-
-    //gefilterte und sortierte Itemliste liefern
-    getFilteredItemlist() {
-        return this.itemListFilteredBS;
-    }
-
-    //Liste der Filter-Optionen liefern
-    getModeFilterList() {
-        return this.modeFilterListSB;
-    }
-
     //Verbindung zu WSS herstellen
     public createWebsocket() {
 
@@ -277,6 +254,22 @@ export class BackendService {
     sendMessage(messageObj) {
         //console.log(messageObj);
         this.socket.next(messageObj);
+    }
+
+    getMode() {
+        return this.modeBS;
+    }
+
+    setMode(mode) {
+        this.modeBS.next(mode);
+    }
+
+    getFilteredItemlist() {
+        return this.itemListFilteredBS;
+    }
+
+    getModeFilterList() {
+        return this.modeFilterListSB;
     }
 
     getVolume() {

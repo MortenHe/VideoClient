@@ -57,5 +57,9 @@ Promise.all(videoPromises).then(() => {
 
     //ts-Datei nach mp4 konvertieren
     execSync("ffmpeg -i " + downloadDir + "/joined_files.ts -acodec copy -vcodec copy " + downloadDir + "/../done/" + mode + "-" + name + ".mp4");
-    console.log("creating mp4 file done")
+    console.log("creating mp4 file done");
+
+    //Download-Dir leeren
+    fs.emptyDirSync(downloadDir);
+    console.log("removing downloaded files done");
 });

@@ -15,9 +15,6 @@ export class SearchComponent {
   //Name der App fuer Ueberschrift (z.B. Video Player (dev))
   envName = environment.envName;
 
-  //dev vs. produktiv
-  production = environment.production;
-
   //Zustand ob Verbindung zu WSS existiert
   connected: boolean;
 
@@ -27,14 +24,11 @@ export class SearchComponent {
   //Shutdown Status
   shutdown$;
 
-  //Aktuelle Playlist
-  files: string[] = [];
-
   //Anzahl der Sekunden bis Shutdown
   countdownTime: number;
 
   //Services und Router injecten
-  constructor(private bs: BackendService, private route: ActivatedRoute, private router: Router, private fs: ResultfilterService) {
+  constructor(private bs: BackendService, private route: ActivatedRoute, private router: Router) {
   }
 
   //Beim Init
@@ -65,9 +59,6 @@ export class SearchComponent {
 
     //Position in Playlist abbonieren
     this.bs.getPosition().subscribe(position => this.position = position);
-
-    //files (=Playlist) abonnieren
-    this.bs.getFiles().subscribe(files => this.files = files);
 
     //Anzahl der Sekunden bis Shutdown abbonieren
     this.bs.getCountdownTime().subscribe(countdownTime => this.countdownTime = countdownTime);
