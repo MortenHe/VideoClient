@@ -24,9 +24,6 @@ export class PlaylistComponent implements OnInit {
   //temp. Wert, wohin gerade gesprungen werden soll
   jumpPosition: number = -1;
 
-  //Wurde Playlist schon gestartet?
-  playlistStarted: boolean = false;
-
   //Service injecten
   constructor(private bs: BackendService) { }
 
@@ -49,9 +46,6 @@ export class PlaylistComponent implements OnInit {
 
     //Laenge der Playlist abbonieren
     this.bs.getFilesTotalTime().subscribe(filesTotalTime => this.filesTotalTime = filesTotalTime);
-
-    //Abbonieren, ob Playlist gestartet wurde
-    this.bs.getPlaylistStarted().subscribe(playlistStarted => this.playlistStarted = playlistStarted);
   }
 
   //zu gewissem Titel in Playlist springen

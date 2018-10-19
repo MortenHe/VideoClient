@@ -47,7 +47,7 @@
     </div>
 
     <!-- Steuerelemente (play, stop, seek) fuer Item-Wiedergabe -->
-    <playercontrol [class.hidden]="!playlistStarted"
+    <playercontrol [class.hidden]="position < 0"
                    class="pl-3 pr-3 col d-flex justify-content-between"></playercontrol>
 
     <!-- Suchbereich View -->

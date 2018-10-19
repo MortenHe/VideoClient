@@ -30,9 +30,6 @@ export class SearchComponent {
   //Aktuelle Playlist
   files: string[] = [];
 
-  //Wurde Playlist schon gestartet?
-  playlistStarted: boolean = false;
-
   //Anzahl der Sekunden bis Shutdown
   countdownTime: number;
 
@@ -80,9 +77,6 @@ export class SearchComponent {
 
     //Zustand abbonieren, ob Verbindung zu WSS besteht
     this.bs.getConnected().subscribe(connected => this.connected = connected);
-
-    //Abbonieren, ob Playlist gestartet wurde
-    this.bs.getPlaylistStarted().subscribe(playlistStarted => this.playlistStarted = playlistStarted);
 
     //Regelmassieg eine Nachricht an WSS schicken, damit ggf. die Verbindung wieder aufgebaut wird
     setInterval(() => {

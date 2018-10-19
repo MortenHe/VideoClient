@@ -1,6 +1,6 @@
 <!-- Playlist starten -->
 <button class="button-clean ml-2 mt-2 mb-2 start-playlist"
-        *ngIf="files.length && !playlistStarted"
+        *ngIf="files.length && position < 0"
         (click)="jumpTo(0)">
   <i class="fa fa-play mr-2"></i>Playlist starten</button>
 
@@ -9,13 +9,13 @@
      (click)="jumpTo(i)"
      class="row no-gutters item"
      [class.waiting]="i === jumpPosition"
-     [class.playing]="i === position && playlistStarted"
+     [class.playing]="i === position"
      [class.first]="first">
 
   <!-- Play-/ Spiner-Symbol-->
   <div class="fa fa-fw"
        [ngClass]="{
-        'fa-play': i === position && playlistStarted,
+        'fa-play': i === position,
         'fa-spinner fa-spin': i === jumpPosition
          }">
   </div>
@@ -23,11 +23,17 @@
   <!-- Name des Videos -->
   <div class="col pl-1">{{file|fileName}}</div>
 
-  <!-- Zeitinfo des Videos: Gesamtlaufzeit, gerade herunterlaufende Zeit oder 0:00 wenn Video schon gespielt wurde -->
+  <!-- Zeitinfo des Videos -->
   <div class="item-length text-right">
+
+    <!-- Video wurde schon gespielt. Restzeit 0:00 -->
     <ng-container *ngIf="i < position">0:00</ng-container>
-    <ng-container *ngIf="i === position && time !== '' && playlistStarted">{{time|timeformatter}}</ng-container>
-    <ng-container *ngIf="i > position || !playlistStarted">{{file.length|timeformatter}}</ng-container>
+
+    <!-- Aktuelles Video (runterlaufende Zeit) -->
+    <ng-container *ngIf="i === position && time !== ''">{{time|timeformatter}}</ng-container>
+
+    <!-- Videos nach aktueller Playlistposition (Gesamtlaufzeit des Videos) -->
+    <ng-container *ngIf="i > position">{{file.length|timeformatter}}</ng-container>
   </div>
 </div>
 

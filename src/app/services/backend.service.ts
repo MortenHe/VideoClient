@@ -76,9 +76,6 @@ export class BackendService {
     //aktueller Pause-Zustand
     paused$: Subject<boolean> = new Subject<boolean>();
 
-    //wurde Playlist schon gestartet?
-    playlistStarted$: Subject<boolean> = new Subject<boolean>();
-
     //Anzahl der Sekunden bis Shutdown
     countdownTime$: Subject<number> = new Subject<number>();
 
@@ -257,10 +254,6 @@ export class BackendService {
                     this.paused$.next(value);
                     break;
 
-                case "set-playlist-started":
-                    this.playlistStarted$.next(value);
-                    break;
-
                 case "set-files":
                     this.files$.next(value);
                     break;
@@ -308,10 +301,6 @@ export class BackendService {
 
     setPosition(position) {
         this.position$.next(position);
-    }
-
-    getPlaylistStarted() {
-        return this.playlistStarted$;
     }
 
     getPaused() {
