@@ -10,7 +10,7 @@ const timelite = require('timelite');
 const dataDir = "C:/Users/Martin/Desktop/media/done";
 //const dataDir = "F:/Video (geschnitten)/Jahresvideo HWH + MH/2015 - Jahresvideo";
 //2015, bibi-tina
-const mode = "wizard";
+const mode = "bibi-tina";
 
 //Benennung des Titels
 naming = [];
@@ -53,7 +53,7 @@ fs.readdir(dataDir, (err, files) => {
                     let timeOutput = [hours, minutes, seconds];
 
                     //[2,44,1] => 02:44:01
-                    let timeOutputString = timelite.str(timeOutput);
+                    let timeOutputString = timelite.time.str(timeOutput);
 
                     //Name (z.B. Bibi und Tina - ) setzen, sofern in Config hinterlegt
                     let name = naming[mode] ? naming[mode] : " - ";
