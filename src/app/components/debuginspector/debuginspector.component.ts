@@ -27,7 +27,6 @@ export class DebuginspectorComponent implements OnInit {
   domainModes = environment.domainModes;
   envName = environment.envName;
   production = environment.production;
-  proxyUrl = environment.proxyUrl;
 
   //Services injecten
   constructor(private bs: BackendService, private fs: ResultfilterService) { }

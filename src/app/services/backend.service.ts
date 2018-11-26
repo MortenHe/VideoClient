@@ -16,9 +16,6 @@ import 'rxjs/add/operator/switchMap';
 @Injectable()
 export class BackendService {
 
-    //URL wo die Proxyskripte liegen aus config laden
-    proxyUrl = environment.proxyUrl;
-
     //URL fuer WebSocketServer
     wssUrl = environment.wssUrl;
 

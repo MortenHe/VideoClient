@@ -1,0 +1,52 @@
+{
+    "kinder": {
+        "filter": [
+            {
+                "id": "all",
+                "icon": "all",
+                "active": true
+            },
+            {
+                "id": "bobo",
+                "icon": "bobo",
+                "active": true
+            },
+            {
+                "id": "conni",
+                "icon": "conni",
+                "active": true
+            },
+            {
+                "id": "janosch",
+                "icon": "janosch",
+                "active": true
+            },
+            {
+                "id": "misc",
+                "icon": "misc",
+                "active": true
+            }
+        ],
+        "items": []
+    },
+    "jahresvideo": {
+        "filter": [
+            {
+                "id": "all",
+                "label": "Alle",
+                "active": true
+            },
+            {
+                "id": "silvi",
+                "label": "Silvi",
+                "active": true
+            },
+            {
+                "id": "laila-luis",
+                "label": "Laila und Luis",
+                "active": true
+            }
+        ],
+        "items": []
+    }
+}

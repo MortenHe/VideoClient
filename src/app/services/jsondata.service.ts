@@ -3,6 +3,7 @@ import { Http } from '@angular/http';
 import { forkJoin } from "rxjs/observable/forkJoin";
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/finally';
+import { environment } from '../../environments/environment';
 
 @Injectable()
 export class JsondataService {
@@ -13,8 +14,11 @@ export class JsondataService {
   //JSON-Daten aus files laden
   loadJson() {
 
+    //Unterordner fuer JSON-Dateien aus Config laden
+    const appId = environment.appId;
+
     //per HTTP JSON Hauptfile holen
-    return this.http.get("assets/json/videolist.json").map(data => {
+    return this.http.get("assets/json/" + appId + "/videolist.json").map(data => {
 
       //JSON-Objekt laden. Dieses wird angepasst (gewisse Merkmale entfernt, items einfgefuegt)
       let jsonObj = data.json();
@@ -44,7 +48,7 @@ export class JsondataService {
               delete jsonObj[mode]["filter"][index]["active"];
 
               //Request erstellen, der JSON dieses Filters holt (z.B. bibi-tina.json)
-              let request = this.http.get("assets/json/" + mode + "/" + filterID + ".json").map(response => {
+              let request = this.http.get("assets/json/" + appId + "/" + mode + "/" + filterID + ".json").map(response => {
 
                 //filterID (bibi-tina) und Modus (hsp) merken, da Info sonst spaeter ueberschrieben wurde
                 let filterIDFile = (response.url).split(/[\\/]/).pop();

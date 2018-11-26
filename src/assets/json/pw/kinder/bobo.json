@@ -1,0 +1,80 @@
+[
+    {
+        "name": "Bobo baut eine Höhle und Bobo geht in den Zoo",
+        "file": "bobo-hoehle-zoo.mp4",
+        "length": "00:10:00",
+        "active": true
+    },
+    {
+        "name": "Bobo feiert Kindergeburtstag und Bobo auf dem Dachboden",
+        "file": "bobo-kindergeburtstag-dachboden.mp4",
+        "length": "00:09:48",
+        "active": true
+    },
+    {
+        "name": "Bobo beim Kinderarzt und Bobo in der Badewanne",
+        "file": "bobo-kinderarzt-badewanne.mp4",
+        "length": "00:09:52",
+        "active": true
+    },
+    {
+        "name": "Bobo putzt und Bobo kann nicht einschlafen",
+        "file": "bobo-putzt-einschlafen.mp4",
+        "length": "00:10:07",
+        "active": true
+    },
+    {
+        "name": "Bobo auf dem Kinderbauernhof und Bobo am Meer",
+        "file": "bobo-kinderbauernhof-meer.mp4",
+        "length": "00:10:04",
+        "active": true
+    },
+    {
+        "name": "Bobo geht ins Schwimmbad und Bobo und der Hund",
+        "file": "bobo-schwimmbad-hund.mp4",
+        "length": "00:10:01",
+        "active": true
+    },
+    {
+        "name": "Bobo auf dem Spielplatz und Bobo am Bach",
+        "file": "bobo-spielplatz-bach.mp4",
+        "length": "00:10:09",
+        "active": true
+    },
+    {
+        "name": "Bobo lässt einen Drachen steigen und Bobo auf der Kirmes",
+        "file": "bobo-drache-kirmes.mp4",
+        "length": "00:09:51",
+        "active": true
+    },
+    {
+        "name": "Bobo steht früh auf und Bobo macht ein Picknick",
+        "file": "bobo-frueh-picknick.mp4",
+        "length": "00:09:58",
+        "active": true
+    },
+    {
+        "name": "Bobo ist im Garten und Bobo fährt Zug",
+        "file": "bobo-garten-zug.mp4",
+        "length": "00:10:01",
+        "active": true
+    },
+    {
+        "name": "Bobo frühstückt und Bobo geht zur Eisdiele",
+        "file": "bobo-fruehstueck-eisdiele.mp4",
+        "length": "00:10:09",
+        "active": true
+    },
+    {
+        "name": "Bobo im Supermarkt und Bobo baut einen Turm",
+        "file": "bobo-supermarkt-turm.mp4",
+        "length": "00:10:09",
+        "active": true
+    },
+    {
+        "name": "Bobo im Kinderturnen und Bobo und die Babysitterin",
+        "file": "bobo-kinderturnen-babysitterin.mp4",
+        "length": "00:09:54",
+        "active": true
+    }
+]
