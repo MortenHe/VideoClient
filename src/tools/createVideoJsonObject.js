@@ -1,7 +1,7 @@
 //libraries laden fuer Dateizugriff
 //ffprobe.exe muss vorhanden und im Path sein (z.B. im ffmpeg-bundle)
 const fs = require('fs-extra')
-const getDuration = require('get-video-duration');
+const { getVideoDurationInSeconds } = require('get-video-duration')
 
 //Zeit Formattierung laden: [5, 13, 22] => 05:13:22
 const timelite = require('timelite');
@@ -10,7 +10,7 @@ const timelite = require('timelite');
 const dataDir = "C:/Users/Martin/Desktop/media/done";
 //const dataDir = "F:/Video (geschnitten)/Jahresvideo HWH + MH/2015 - Jahresvideo";
 //2015, bibi-tina
-const mode = "bibi-tina";
+const mode = "conni";
 
 //Benennung des Titels
 naming = [];
@@ -38,7 +38,7 @@ fs.readdir(dataDir, (err, files) => {
             durationPromises.push(new Promise((resolve, reject) => {
 
                 //Laenge errechnen fuer Datei
-                getDuration(dataDir + "/" + file).then((duration) => {
+                getVideoDurationInSeconds(dataDir + "/" + file).then((duration) => {
 
                     //Gesamtzeit als formattierten String. Zunaechst Float zu int: 13.4323 => 13
                     let totalSeconds = Math.trunc(duration);

@@ -280,5 +280,11 @@
         "file": "conni-hundebesuch.mp4",
         "length": "00:11:29",
         "active": true
+    },
+    {
+        "name": "Conni und der Laternenumzug",
+        "file": "conni-laterne.mp4",
+        "length": "00:11:33",
+        "active": true
     }
 ]
