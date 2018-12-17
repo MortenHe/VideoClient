@@ -286,5 +286,11 @@
         "file": "conni-laterne.mp4",
         "length": "00:11:33",
         "active": true
+    },
+    {
+        "name": "Conni macht Musik",
+        "file": "conni-musik.mp4",
+        "length": "00:11:29",
+        "active": true
     }
 ]
