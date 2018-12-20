@@ -20,11 +20,6 @@
                 "id": "janosch",
                 "icon": "janosch",
                 "active": true
-            },
-            {
-                "id": "misc",
-                "icon": "misc",
-                "active": true
             }
         ],
         "items": []

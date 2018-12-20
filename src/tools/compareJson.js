@@ -17,7 +17,7 @@ const path = require('path');
 itemsLocal = [];
 
 //Ueber ueber filter-dirs des aktuellen modes gehen (hsp, kindermusik,...)
-fs.readdirSync("../assets/" + appId + "/json").forEach(folder => {
+fs.readdirSync("../assets/json/" + appId).forEach(folder => {
 
     //Wenn es ein dir ist
     if (fs.lstatSync("../assets/json/" + appId + "/" + folder).isDirectory()) {
