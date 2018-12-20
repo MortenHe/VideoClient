@@ -28,53 +28,5 @@
         "file": "bobo-kinderbauernhof-meer.mp4",
         "length": "00:10:04",
         "active": true
-    },
-    {
-        "name": "Bobo geht ins Schwimmbad und Bobo und der Hund",
-        "file": "bobo-schwimmbad-hund.mp4",
-        "length": "00:10:01",
-        "active": true
-    },
-    {
-        "name": "Bobo auf dem Spielplatz und Bobo am Bach",
-        "file": "bobo-spielplatz-bach.mp4",
-        "length": "00:10:09",
-        "active": true
-    },
-    {
-        "name": "Bobo lässt einen Drachen steigen und Bobo auf der Kirmes",
-        "file": "bobo-drache-kirmes.mp4",
-        "length": "00:09:51",
-        "active": true
-    },
-    {
-        "name": "Bobo steht früh auf und Bobo macht ein Picknick",
-        "file": "bobo-frueh-picknick.mp4",
-        "length": "00:09:58",
-        "active": true
-    },
-    {
-        "name": "Bobo ist im Garten und Bobo fährt Zug",
-        "file": "bobo-garten-zug.mp4",
-        "length": "00:10:01",
-        "active": true
-    },
-    {
-        "name": "Bobo frühstückt und Bobo geht zur Eisdiele",
-        "file": "bobo-fruehstueck-eisdiele.mp4",
-        "length": "00:10:09",
-        "active": true
-    },
-    {
-        "name": "Bobo im Supermarkt und Bobo baut einen Turm",
-        "file": "bobo-supermarkt-turm.mp4",
-        "length": "00:10:09",
-        "active": true
-    },
-    {
-        "name": "Bobo im Kinderturnen und Bobo und die Babysitterin",
-        "file": "bobo-kinderturnen-babysitterin.mp4",
-        "length": "00:09:54",
-        "active": true
     }
 ]
