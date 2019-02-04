@@ -292,5 +292,11 @@
         "file": "conni-musik.mp4",
         "length": "00:11:29",
         "active": true
+    },
+    {
+        "name": "Conni geht nicht mit Fremden mit",
+        "file": "conni-fremden.mp4",
+        "length": "00:11:29",
+        "active": true
     }
 ]
