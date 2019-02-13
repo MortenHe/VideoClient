@@ -1,0 +1,10 @@
+module.exports = {
+    //Praefix fuer Dateiname (conni, bibi-tina)
+    mode: "conni",
+    
+    //Dateiname der mp4-Datei (baustelle, zirkuspony)
+    fileName: "laterne",
+    
+    //Link aus Med.
+    url: ""
+};

@@ -1,3 +1,9 @@
+//Link laden
+const link = require("./link.js");
+
+//Url aufteilen, damit part-urls erzeugt werden koennen
+const urlSplit = (link.url).split(/segment\d{1,}/);
+
 //libraries laden fuer Dateizugriff
 const fs = require('fs-extra');
 const download = require('download');
@@ -11,12 +17,6 @@ const { execSync } = require('child_process');
 //Wo sollen Videos gespeichert werden
 const downloadDir = "C:/Users/Martin/Desktop/media/down";
 
-//Praefix fuer Dateiname (conni, bibi-tina)
-const mode = "conni";
-
-//Dateiname der mp4-Datei (baustelle, zirkuspony)
-const name = "laterne";
-
 //Video-Promises sammeln
 videoPromises = [];
 
@@ -26,14 +26,14 @@ fs.emptyDirSync(downloadDir);
 //Einzelne Teile herunterladen
 for (let i = 1; i <= 155; i++) {
 
-    //Link mit passendem Segment-Identifier
-    link = "";
-
     //Videos-Promises sammeln
     videoPromises.push(new Promise((resolve, reject) => {
 
+        //Url mit part-id erstellen
+        let partUrl = urlSplit[0] + "segment" + i + urlSplit[1];
+
         //Download
-        download(link).then(data => {
+        download(partUrl).then(data => {
 
             //Datei speichern
             fs.writeFileSync(downloadDir + "/" + padStart(i, 3, "0") + ".ts", data);
@@ -56,7 +56,7 @@ Promise.all(videoPromises).then(() => {
     console.log("putting single files together done");
 
     //ts-Datei nach mp4 konvertieren
-    execSync("ffmpeg -i " + downloadDir + "/joined_files.ts -acodec copy -vcodec copy " + downloadDir + "/../done/" + mode + "-" + name + ".mp4");
+    execSync("ffmpeg -i " + downloadDir + "/joined_files.ts -acodec copy -vcodec copy " + downloadDir + "/../done/" + link.mode + "-" + link.fileName + ".mp4");
     console.log("creating mp4 file done");
 
     //Download-Dir leeren
