@@ -1,9 +1,12 @@
+//node .\compareLocalJsonWithServer.js pw pw (= PW Assets mit PW Pi vergleichen)
+//node .\compareLocalJsonWithServer.js marlen vb (= Marlen Assets mit VB vergleichen)
+
 //Connection laden
 const connection = require("./connection.js");
 
-//auf welcher Maschine (pw / marlen / vb) welche assets (pw vs. marlen) vergleichen
-const targetMachine = process.argv[2] || "pw";
-const appId = process.argv[3] || "pw";
+//welche assets (pw vs. marlen) auf welcher Maschine (pw / marlen / vb) vergleichen
+const appId = process.argv[2] || "pw";
+const targetMachine = process.argv[3] || "pw";
 console.log("compare local video files (" + appId + ") with server " + targetMachine);
 
 //Pfad wo die Videos auf Server liegen

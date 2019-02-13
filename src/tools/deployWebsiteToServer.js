@@ -1,9 +1,13 @@
+//node .\deployWebsiteToServer.js pw pw (= PW Webseite auf PW Pi laden)
+//node .\deployWebsiteToServer.js marlen vb (= Marlen Webseite auf VB laden)
+
 //Connection laden
 const connection = require("./connection.js");
 
-//wohin deployen (pw / marlen / vb) und welche assets (pw vs. marlen) verwenden
-const targetMachine = process.argv[2] || "pw";
-const appId = process.argv[3] || "pw";
+//Welche Website (pw vs. marlen) wohin deployen (pw / marlen / vb)
+const appId = process.argv[2] || "pw";
+const targetMachine = process.argv[3] || "pw";
+
 console.log("build and deploy video (" + appId + ") to server " + targetMachine);
 
 //Unter welchem Unterpfad wird die App auf dem Server laufen?
@@ -24,7 +28,7 @@ fs.readdirSync("../assets/json").forEach(folder => {
     }
 });
 
-//htacces Schablone in dist Ordner kopieren und durch Pattern Ersetzung anpassen
+//htaccess Schablone in dist Ordner kopieren und durch Pattern Ersetzung anpassen
 const replace = require("replace");
 console.log("copy htacces");
 fs.copySync('.htaccess', '../../dist/htaccess');
