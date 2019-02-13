@@ -298,5 +298,11 @@
         "file": "conni-fremden.mp4",
         "length": "00:11:29",
         "active": true
+    },
+    {
+        "name": "Conni hat Läuse",
+        "file": "conni-laeuse.mp4",
+        "length": "00:11:29",
+        "active": true
     }
 ]
