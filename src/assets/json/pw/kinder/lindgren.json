@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Pippi - 01 - Pippi zieht in die Villa Kunterbunt",
+        "file": "pippi-01-villa-kunterbunt.mp4",
+        "length": "00:27:11",
+        "active": true
+    },
+    {
+        "name": "Pippi - 02 - Neue Freunde",
+        "file": "pippi-02-neue-freunde.mp4",
+        "length": "00:27:47",
+        "active": true
+    },
+    {
+        "name": "Pippi - 03 - Auf Sachen-Suche",
+        "file": "pippi-03-sachen-suche.mp4",
+        "length": "00:27:10",
+        "active": true
+    },
+    {
+        "name": "Pippi - 04 - Pippi macht einen Ausflug",
+        "file": "pippi-04-ausflug.mp4",
+        "length": "00:27:08",
+        "active": true
+    },
+    {
+        "name": "Pippi - 05 - Die Gespenster",
+        "file": "pippi-05-gespenster.mp4",
+        "length": "00:27:32",
+        "active": true
+    },
+    {
+        "name": "Pippi - 06 - Auf dem Rummelpatz",
+        "file": "pippi-06-rummel.mp4",
+        "length": "00:27:08",
+        "active": true
+    },
+    {
+        "name": "Pippi - 07 - Pippi lernt Plutimikation",
+        "file": "pippi-07-plutimikation.mp4",
+        "length": "00:28:08",
+        "active": true
+    },
+    {
+        "name": "Pippi - 08 - Das Weihnachtsfest",
+        "file": "pippi-08-weihnachtsfest.mp4",
+        "length": "00:27:29",
+        "active": true
+    }
+]

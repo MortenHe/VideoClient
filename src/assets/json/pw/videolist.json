@@ -37,6 +37,11 @@
                 "active": true
             },
             {
+                "id": "lindgren",
+                "icon": "lindgren",
+                "active": true
+            },
+            {
                 "id": "maulwurf",
                 "icon": "maulwurf",
                 "active": true

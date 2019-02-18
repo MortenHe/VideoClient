@@ -10,13 +10,14 @@ const timelite = require('timelite');
 const dataDir = "C:/Users/Martin/Desktop/media/done";
 //const dataDir = "F:/Video (geschnitten)/Jahresvideo HWH + MH/2015 - Jahresvideo";
 //2015, bibi-tina
-const mode = "conni";
+const mode = "pippi";
 
 //Benennung des Titels
 naming = [];
 naming["conni"] = "Conni - ";
 naming["bibi-tina"] = "Bibi und Tina - ";
 naming["2015"] = "2015-";
+naming["pippi"] = "Pippi ";
 
 //Video-Infos sammeln
 outputArray = [];
@@ -73,6 +74,9 @@ fs.readdir(dataDir, (err, files) => {
 
     //warten bis alle Promises abgeschlossen sind
     Promise.all(durationPromises).then(() => {
+
+        //Liste nach Dateiname (pippi-01-fest.avi, pippi-02-freunde.avi) sortieren, da Promises unterschiedlich schnell zureuckkommen koennen
+        outputArray.sort((a, b) => a.file.localeCompare(b.file));
 
         //Video-Array ausgeben
         console.log(JSON.stringify(outputArray, null, 2));
