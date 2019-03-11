@@ -12,6 +12,11 @@
                 "active": true
             },
             {
+                "id": "bibi",
+                "icon": "bibi",
+                "active": true
+            },
+            {
                 "id": "bibi-tina",
                 "icon": "bibi-tina",
                 "active": true

@@ -1,3 +1,6 @@
+//Modus laden
+const link = require("./link.js");
+
 //libraries laden fuer Dateizugriff
 //ffprobe.exe muss vorhanden und im Path sein (z.B. im ffmpeg-bundle)
 const fs = require('fs-extra')
@@ -9,12 +12,11 @@ const timelite = require('timelite');
 //Wo liegen die Dateien fuer die JSON Infos erzeugt werden sollen?
 const dataDir = "C:/Users/Martin/Desktop/media/done";
 //const dataDir = "F:/Video (geschnitten)/Jahresvideo HWH + MH/2015 - Jahresvideo";
-//2015, bibi-tina
-const mode = "pippi";
 
 //Benennung des Titels
 naming = [];
 naming["conni"] = "Conni - ";
+naming["bibi"] = "Bibi Blocksberg - ";
 naming["bibi-tina"] = "Bibi und Tina - ";
 naming["2015"] = "2015-";
 naming["pippi"] = "Pippi ";
@@ -33,7 +35,7 @@ fs.readdir(dataDir, (err, files) => {
 
         //Wenn es eine Datei ist und zum aktuellen Modus gehoert
         let stat = fs.statSync(dataDir + "/" + file);
-        if (stat && stat.isFile() && file.startsWith(mode)) {
+        if (stat && stat.isFile() && file.startsWith(link.mode)) {
 
             //Promises sammeln, da Zeit-Ermittlung asynchron laeuft
             durationPromises.push(new Promise((resolve, reject) => {
@@ -57,7 +59,7 @@ fs.readdir(dataDir, (err, files) => {
                     let timeOutputString = timelite.time.str(timeOutput);
 
                     //Name (z.B. Bibi und Tina - ) setzen, sofern in Config hinterlegt
-                    let name = naming[mode] ? naming[mode] : " - ";
+                    let name = naming[link.mode] ? naming[link.mode] : " - ";
 
                     //Video-Objekt erstellen und sammeln
                     outputArray.push({
