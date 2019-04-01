@@ -4,5 +4,23 @@
         "file": "bibi-mami-not.mp4",
         "length": "00:25:13",
         "active": true
+    },
+    {
+        "name": "Bibi Blocksberg - Das verhexte Dromedar",
+        "file": "bibi-dromedar.mp4",
+        "length": "00:25:12",
+        "active": true
+    },
+    {
+        "name": "Bibi Blocksberg - Der Hexenbann (21)",
+        "file": "bibi-hexenbann.mp4",
+        "length": "00:25:12",
+        "active": true
+    },
+    {
+        "name": "Bibi Blocksberg - Der Hexengeburtstag (23)",
+        "file": "bibi-hexengeburtstag.mp4",
+        "length": "00:25:12",
+        "active": true
     }
 ]

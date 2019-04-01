@@ -6,7 +6,7 @@
         "active": true
     },
     {
-        "name": "Conni lernt backen",
+        "name": "Conni lernt backen (05)",
         "file": "conni-backen.mp4",
         "length": "00:11:25",
         "active": true
@@ -30,7 +30,7 @@
         "active": true
     },
     {
-        "name": "Conni erster Flug",
+        "name": "Conni erster Flug (07)",
         "file": "conni-flugzeug.mp4",
         "length": "00:11:26",
         "active": true
@@ -42,13 +42,13 @@
         "active": true
     },
     {
-        "name": "Conni hat Geburtstag",
+        "name": "Conni hat Geburtstag (10)",
         "file": "conni-geburtstag.mp4",
         "length": "00:11:22",
         "active": true
     },
     {
-        "name": "Conni bekommt eine Katze",
+        "name": "Conni bekommt eine Katze (02)",
         "file": "conni-katze.mp4",
         "length": "00:11:26",
         "active": true
@@ -108,13 +108,13 @@
         "active": true
     },
     {
-        "name": "Conni fährt Ski",
+        "name": "Conni fährt Ski (20)",
         "file": "conni-ski.mp4",
         "length": "00:11:40",
         "active": true
     },
     {
-        "name": "Conni zieht um",
+        "name": "Conni zieht um (13)",
         "file": "conni-umzug.mp4",
         "length": "00:11:30",
         "active": true
@@ -132,7 +132,7 @@
         "active": true
     },
     {
-        "name": "Conni geht zelten",
+        "name": "Conni geht zelten (03)",
         "file": "conni-zelten.mp4",
         "length": "00:11:20",
         "active": true
@@ -144,13 +144,13 @@
         "active": true
     },
     {
-        "name": "Conni lernt die Uhrzeit",
+        "name": "Conni lernt die Uhrzeit (11)",
         "file": "conni-uhr-tivi.mp4",
         "length": "00:11:26",
         "active": true
     },
     {
-        "name": "Conni geht ins Ballett",
+        "name": "Conni geht ins Ballett (09)",
         "file": "conni-ballett-tivi.mp4",
         "length": "00:11:30",
         "active": true
@@ -186,7 +186,7 @@
         "active": true
     },
     {
-        "name": "Conni und das Froschkonzert",
+        "name": "Conni und das Froschkonzert (34)",
         "file": "conni-froschkonzert-tivi.mp4",
         "length": "00:11:29",
         "active": true
@@ -246,7 +246,7 @@
         "active": true
     },
     {
-        "name": "Conni und der fiese Schnupfen",
+        "name": "Conni und der fiese Schnupfen (47)",
         "file": "conni-fiese-schnupfen.mp4",
         "length": "00:11:29",
         "active": true
@@ -258,7 +258,7 @@
         "active": true
     },
     {
-        "name": "Conni spielt Theater",
+        "name": "Conni spielt Theater (49)",
         "file": "conni-spielt-theater.mp4",
         "length": "00:11:29",
         "active": true
@@ -276,13 +276,13 @@
         "active": true
     },
     {
-        "name": "Conni und der Hundebesuch",
+        "name": "Conni und der Hundebesuch (50)",
         "file": "conni-hundebesuch.mp4",
         "length": "00:11:29",
         "active": true
     },
     {
-        "name": "Conni und der Laternenumzug",
+        "name": "Conni und der Laternenumzug (16)",
         "file": "conni-laterne.mp4",
         "length": "00:11:33",
         "active": true
@@ -300,9 +300,15 @@
         "active": true
     },
     {
-        "name": "Conni hat Läuse",
+        "name": "Conni hat Läuse (51)",
         "file": "conni-laeuse.mp4",
         "length": "00:11:29",
+        "active": true
+    },
+    {
+        "name": "Conni am Strand (21)",
+        "file": "conni-strand.mp4",
+        "length": "00:11:23",
         "active": true
     }
 ]
