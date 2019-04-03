@@ -8,5 +8,10 @@ module.exports = {
             host: '',
             user: '',
             password: ''
+        },
+        marlen: {
+            host: '',
+            user: '',
+            password: ''
         }
 };
