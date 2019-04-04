@@ -77,4 +77,9 @@ export class SearchComponent {
       });
     }, 1500);
   }
+
+  //App aktivieren (WSS per PHP starten)
+  activateApp() {
+    this.bs.activateApp().subscribe();
+  }
 }

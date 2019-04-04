@@ -16,6 +16,9 @@ import 'rxjs/add/operator/switchMap';
 @Injectable()
 export class BackendService {
 
+    //URL fuer Server (um App zu aktivieren)
+    serverUrl = environment.serverUrl;
+
     //URL fuer WebSocketServer
     wssUrl = environment.wssUrl;
 
@@ -307,5 +310,10 @@ export class BackendService {
 
     getConnected() {
         return this.connected$;
+    }
+
+    //App aktivieren = WSS starten
+    activateApp() {
+        return this.http.get(this.serverUrl + "/php/activateApp.php");
     }
 }

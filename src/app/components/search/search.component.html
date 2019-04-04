@@ -23,7 +23,8 @@
   <picontrol class="d-flex shadow"></picontrol>
 
   <!-- Zustand ueber Verbindung zu WSS -->
-  <div class="connection"><i class="fa fa-wifi"
+  <div class="connection"
+       (click)="activateApp()"><i class="fa fa-wifi"
        [ngClass]='{
      "text-danger": !connected,
      "text-success": connected
