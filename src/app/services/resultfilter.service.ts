@@ -28,7 +28,12 @@ export class ResultfilterService {
   }
 
   setModeFilter(mode: string) {
+
+    //Neue Modusfilter setzten
     this.modeFilterBS.next(mode);
+
+    //Dabei auch das Suchfeld leeren
+    this.setSearchTerm("");
   }
 
   getSearchTerm() {

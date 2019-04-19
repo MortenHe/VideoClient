@@ -28,5 +28,11 @@
         "file": "bibi-computerhexe.mp4",
         "length": "00:25:12",
         "active": true
+    },
+    {
+        "name": "Bibi Blocksberg - Abenteuer bei den Dinos (20)",
+        "file": "bibi-abenteuer-dinos.mp4",
+        "length": "00:25:12",
+        "active": true
     }
 ]
