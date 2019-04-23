@@ -38,7 +38,7 @@
   <div class="app-content container no-gutters p-0 shadow">
 
     <!-- Zeile fuer Ueberschrift, Mode-Select und Shutdown-Button -->
-    <div class="header-video row no-gutters align-items-center pt-2 pb-2 pl-3 pr-3">
+    <div class="header-video row no-gutters align-items-center pt-1 pb-1 pl-3 pr-3">
 
       <!-- Ueberschrift z.B. "Web Video Player (dev)" -->
       <h1 class="col">{{envName}}</h1>
@@ -49,7 +49,7 @@
 
     <!-- Steuerelemente (play, stop, seek) fuer Item-Wiedergabe -->
     <playercontrol [class.hidden]="position < 0"
-                   class="pl-3 pr-3 col d-flex justify-content-between"></playercontrol>
+                   class="col d-flex justify-content-around"></playercontrol>
 
     <!-- Suchbereich View -->
     <div>

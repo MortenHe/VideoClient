@@ -34,5 +34,11 @@
         "file": "bibi-abenteuer-dinos.mp4",
         "length": "00:25:12",
         "active": true
+    },
+    {
+        "name": "Bibi Blocksberg - Der magische Sternenstaub (38)",
+        "file": "bibi-magische-sternenstaub.mp4",
+        "length": "00:25:13",
+        "active": true
     }
 ]

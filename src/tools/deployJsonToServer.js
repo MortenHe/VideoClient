@@ -7,7 +7,7 @@ const connection = require("./connection.js");
 //Welche JSON Files (pw vs. marlen) wohin deployen (pw / marlen / vb)
 const appId = process.argv[2] || "pw";
 const targetMachine = process.argv[3] || "pw";
-console.log("deploy audio json (" + appId + ") to server " + targetMachine);
+console.log("deploy video json (" + appId + ") to server " + targetMachine);
 
 //Unter welchem Unterpfad wird die App auf dem Server laufen?
 const base_href = "wvp";
