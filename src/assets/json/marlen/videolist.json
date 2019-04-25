@@ -1,47 +1,53 @@
 {
     "kinder": {
-        "filter": [
-            {
-                "id": "all",
-                "icon": "all",
-                "active": true
-            },
-            {
-                "id": "bobo",
-                "icon": "bobo",
-                "active": true
-            },
-            {
-                "id": "conni",
-                "icon": "conni",
-                "active": true
-            },
-            {
-                "id": "janosch",
-                "icon": "janosch",
-                "active": true
-            }
-        ],
+        "filter": {
+            "display-type": "icon",
+            "filters": [
+                {
+                    "id": "all",
+                    "name": "all",
+                    "active": true
+                },
+                {
+                    "id": "bobo",
+                    "name": "bobo",
+                    "active": true
+                },
+                {
+                    "id": "conni",
+                    "name": "conni",
+                    "active": true
+                },
+                {
+                    "id": "janosch",
+                    "name": "janosch",
+                    "active": true
+                }
+            ]
+        },
         "items": []
     },
     "jahresvideo": {
-        "filter": [
-            {
-                "id": "all",
-                "label": "Alle",
-                "active": true
-            },
-            {
-                "id": "silvi",
-                "label": "Silvi",
-                "active": true
-            },
-            {
-                "id": "familie",
-                "label": "Familie",
-                "active": true
-            }
-        ],
+        "filter": {
+            "display-type": "label",
+            "filters": [
+                {
+                    "id": "all",
+                    "name": "Alle",
+                    "active": true
+                },
+                {
+                    "id": "silvi",
+                    "name": "Silvi",
+                    "active": true
+                },
+                {
+                    "id": "familie",
+                    "name": "Familie",
+                    "active": true
+                }
+            ]
+        },
         "items": []
     }
 }

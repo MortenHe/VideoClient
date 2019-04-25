@@ -1,25 +1,30 @@
 <!-- Form fuer Filter-Buttons -->
-<form [formGroup]="modeFilterForm">
+<form [formGroup]="modeFilterForm"
+      class="grid-form mt-2"
+      [ngClass]="{
+    'grid-label': modeFilter['display-type'] === 'label',
+    'grid-icon': modeFilter['display-type'] === 'icon'
+     }">
 
-      <!-- Ueber Filter-Optionen gehen -->
-      <label *ngFor="let singleModeFilter of modeFilter$ | async"
-             class="mode-filter cursor-pointer mt-2 mr-2"
-             [class.active]="singleModeFilter.id === modeFilterForm.controls.mode.value">
+     <!-- Ueber Filter-Optionen gehen -->
+     <label *ngFor="let singleModeFilter of modeFilter.filters"
+            class="mode-filter cursor-pointer"
+            [class.active]="singleModeFilter.id === modeFilterForm.controls.mode.value">
 
-            <!-- Vorschaubild des Filters (sofern definiert) -->
-            <img *ngIf="singleModeFilter.icon"
-                 height="50"
-                 width="50"
-                 src="assets/images/{{singleModeFilter.icon}}.png" />
+          <!-- Vorschaubild des Filters (sofern definiert) -->
+          <img *ngIf="modeFilter['display-type'] === 'icon'"
+               height="50"
+               width="50"
+               src="assets/images/{{singleModeFilter.name}}.png" />
 
-            <!-- Name des Filters (sofern definiert) -->
-            <span *ngIf="singleModeFilter.label">{{singleModeFilter.label}}</span>
+          <!-- Name des Filters (sofern definiert) -->
+          <span *ngIf="modeFilter['display-type'] === 'label'">{{singleModeFilter.name}}</span>
 
-            <!-- Usichtbare radio box -->
-            <input class="d-none"
-                   type="radio"
-                   [value]="singleModeFilter.id"
-                   name="mode"
-                   formControlName="mode">
-      </label>
+          <!-- Usichtbare radio box -->
+          <input class="d-none"
+                 type="radio"
+                 [value]="singleModeFilter.id"
+                 name="mode"
+                 formControlName="mode">
+     </label>
 </form>

@@ -53,7 +53,7 @@ export class BackendService {
     itemListFilteredBS = new BehaviorSubject([]);
 
     //Liste der Mode Filter dieses Modus als BS, das abboniert werden kann
-    modeFilterListSB = new BehaviorSubject([]);
+    modeFilterListBS = new BehaviorSubject(null);
 
     //Lautstaerke
     volume$: Subject<number> = new Subject<number>();
@@ -107,7 +107,7 @@ export class BackendService {
                 this.mode = mode;
 
                 //Filter-Modus-Liste des aktuellen Modus setzen
-                this.modeFilterListSB.next(this.itemListFull[mode].filter);
+                this.modeFilterListBS.next(this.itemListFull[mode].filter);
 
                 //gefilterte Itemliste erstellen
                 this.filterItemList();
@@ -269,7 +269,7 @@ export class BackendService {
     }
 
     getModeFilterList() {
-        return this.modeFilterListSB;
+        return this.modeFilterListBS;
     }
 
     getVolume() {

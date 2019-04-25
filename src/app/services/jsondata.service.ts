@@ -33,7 +33,7 @@ export class JsondataService {
         let inactiveFilters = [];
 
         //Ueber Filter des Modus gehen (bibi-tina, bobo,...)
-        modeData["filter"].forEach((filterData, index) => {
+        modeData["filter"]["filters"].forEach((filterData, index) => {
 
           //filterID merken (bibi-tina, bobo)
           let filterID = filterData["id"];
@@ -45,7 +45,7 @@ export class JsondataService {
             if (filterData["active"]) {
 
               //Feld "active" loeschen (wird nicht fuer die Oberflaeche benoetigt)
-              delete jsonObj[mode]["filter"][index]["active"];
+              delete jsonObj[mode]["filter"]["filters"][index]["active"];
 
               //Request erstellen, der JSON dieses Filters holt (z.B. bibi-tina.json)
               let request = this.http.get("assets/json/" + appId + "/" + mode + "/" + filterID + ".json").map(response => {
@@ -74,7 +74,7 @@ export class JsondataService {
           else {
 
             //Feld "active" loeschen
-            delete jsonObj[mode]["filter"][index]["active"];
+            delete jsonObj[mode]["filter"]["filters"][index]["active"];
           }
         });
 
@@ -82,10 +82,10 @@ export class JsondataService {
         inactiveFilters.forEach(filter => {
 
           //Position in Array ermitteln
-          let filterIndex = jsonObj[mode]["filter"].indexOf(filter)
+          let filterIndex = jsonObj[mode]["filter"]["filters"].indexOf(filter)
 
           //Filter aus Array loeschen
-          jsonObj[mode]["filter"].splice(filterIndex, 1);
+          jsonObj[mode]["filter"]["filters"].splice(filterIndex, 1);
         });
       }
 

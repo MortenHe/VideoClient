@@ -14,8 +14,8 @@ export class ModefilterComponent implements OnInit {
   //Form fuer Filter-Buttons
   modeFilterForm;
 
-  //Filter-Werte als Observable
-  modeFilter$;
+  //Filter-Werte
+  modeFilter;
 
   //Services injecten
   constructor(private fb: FormBuilder, private fs: ResultfilterService, private bs: BackendService) { }
@@ -24,7 +24,9 @@ export class ModefilterComponent implements OnInit {
   ngOnInit() {
 
     //Liste der Mode-Filter per Service abbonieren
-    this.modeFilter$ = this.bs.getModeFilterList();
+    this.bs.getModeFilterList().subscribe(modeFilter => {
+      this.modeFilter = modeFilter;
+    });
 
     //Reactive Form fuer Filter-Buttons erstellen
     this.modeFilterForm = this.fb.group({

@@ -1,87 +1,93 @@
 {
     "kinder": {
-        "filter": [
-            {
-                "id": "all",
-                "icon": "all",
-                "active": true
-            },
-            {
-                "id": "bebl",
-                "icon": "bebl",
-                "active": true
-            },
-            {
-                "id": "bibi",
-                "icon": "bibi",
-                "active": true
-            },
-            {
-                "id": "bibi-tina",
-                "icon": "bibi-tina",
-                "active": true
-            },
-            {
-                "id": "bobo",
-                "icon": "bobo",
-                "active": true
-            },
-            {
-                "id": "conni",
-                "icon": "conni",
-                "active": true
-            },
-            {
-                "id": "heidi",
-                "icon": "heidi",
-                "active": true
-            },
-            {
-                "id": "janosch",
-                "icon": "janosch",
-                "active": true
-            },
-            {
-                "id": "lindgren",
-                "icon": "lindgren",
-                "active": true
-            },
-            {
-                "id": "maulwurf",
-                "icon": "maulwurf",
-                "active": true
-            },
-            {
-                "id": "maja",
-                "icon": "maja",
-                "active": true
-            },
-            {
-                "id": "misc",
-                "icon": "misc",
-                "active": true
-            }
-        ],
+        "filter": {
+            "display-type": "icon",
+            "filters": [
+                {
+                    "id": "all",
+                    "name": "all",
+                    "active": true
+                },
+                {
+                    "id": "bebl",
+                    "name": "bebl",
+                    "active": true
+                },
+                {
+                    "id": "bibi",
+                    "name": "bibi",
+                    "active": true
+                },
+                {
+                    "id": "bibi-tina",
+                    "name": "bibi-tina",
+                    "active": true
+                },
+                {
+                    "id": "bobo",
+                    "name": "bobo",
+                    "active": true
+                },
+                {
+                    "id": "conni",
+                    "name": "conni",
+                    "active": true
+                },
+                {
+                    "id": "heidi",
+                    "name": "heidi",
+                    "active": true
+                },
+                {
+                    "id": "janosch",
+                    "name": "janosch",
+                    "active": true
+                },
+                {
+                    "id": "lindgren",
+                    "name": "lindgren",
+                    "active": true
+                },
+                {
+                    "id": "maulwurf",
+                    "name": "maulwurf",
+                    "active": true
+                },
+                {
+                    "id": "maja",
+                    "name": "maja",
+                    "active": true
+                },
+                {
+                    "id": "misc",
+                    "name": "misc",
+                    "active": true
+                }
+            ]
+        },
         "items": []
     },
     "jahresvideo": {
-        "filter": [
-            {
-                "id": "all",
-                "label": "Alle",
-                "active": true
-            },
-            {
-                "id": "2014",
-                "label": "2014",
-                "active": true
-            },
-            {
-                "id": "2015",
-                "label": "2015",
-                "active": true
-            }
-        ],
+        "filter": {
+            "display-type": "label",
+            "filters": [
+                {
+                    "id": "all",
+                    "name": "Alle",
+                    "active": true
+                },
+                {
+                    "id": "2014",
+                    "name": "2014",
+                    "active": true
+                },
+                {
+                    "id": "2015",
+                    "name": "2015",
+                    "active": true
+                }
+            ]
+        },
         "items": []
     }
 }
