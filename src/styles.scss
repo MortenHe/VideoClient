@@ -105,7 +105,8 @@ h1 {
 }
 
 button,
-input:focus {
+input:focus,
+select:focus {
     outline: none !important;
     box-shadow: none !important;
 }

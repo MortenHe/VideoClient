@@ -21,6 +21,9 @@ export class SearchComponent {
   //Position in Playlist
   position: number = -1;
 
+  //welche ModeFilter gibt es (all, conni, janosch, misc)
+  showModeFilterList: boolean = false;
+
   //Shutdown Status
   shutdown$;
 
@@ -55,6 +58,27 @@ export class SearchComponent {
 
       //Modus per Service setzen
       this.bs.setMode(mode);
+    });
+
+    //Liste der Modefilter abonnieren
+    this.bs.getModeFilterList().subscribe(modeFilterlist => {
+
+      //Wenn Filter mit Inhalt kommt (z.B. Beginn liefert BS null)
+      if (modeFilterlist) {
+
+        //Filteritems holen
+        let modeFilterListItems = modeFilterlist["filters"];
+
+        //Filter-Buttons nur anzeigen, wenn es neben "Alle" und "Sonstige" noch andere Filter gibt
+        this.showModeFilterList = modeFilterListItems.some(elem => {
+          return (elem.id !== 'all' && elem.id !== 'misc');
+        });
+      }
+
+      //es kam null von BS
+      else {
+        return false;
+      }
     });
 
     //Position in Playlist abbonieren

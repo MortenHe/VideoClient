@@ -61,7 +61,8 @@
       <selectmode class="d-flex ml-2 mr-2 mt-2"></selectmode>
 
       <!-- Filter-Buttons -->
-      <modefilter class="d-flex ml-2 mr-2"></modefilter>
+      <modefilter *ngIf="showModeFilterList"
+                  class="d-flex ml-2 mr-2"></modefilter>
 
       <!-- Suchfeld fuer Filterung -->
       <searchfilter class="d-flex ml-2 mr-2 mt-2"></searchfilter>
