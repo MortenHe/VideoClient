@@ -215,31 +215,31 @@ export class BackendService {
 
             //Switch anhand Message-Types
             switch (obj.type) {
-                case "change-volume":
+                case "volume":
                     this.volume$.next(value);
                     break;
 
-                case "time":
+                case "fileTime":
                     this.time$.next(value);
                     break;
 
-                case "set-position":
+                case "position":
                     this.position$.next(value);
                     break;
 
-                case "toggle-paused":
+                case "paused":
                     this.paused$.next(value);
                     break;
 
-                case "set-files":
+                case "files":
                     this.files$.next(value);
                     break;
 
-                case "set-files-total-time":
+                case "filesTotalTime":
                     this.filesTotalTime$.next(value);
                     break;
 
-                case "set-countdown-time":
+                case "countdownTime":
                     this.countdownTime$.next(value);
                     break;
 
