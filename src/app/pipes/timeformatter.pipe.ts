@@ -8,9 +8,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class TimeformatterPipe implements PipeTransform {
 
   transform(length_string: string, args?: any): any {
-    
-     //Wenn keine Stunde und keine 10-er Minute
-     if (length_string.startsWith("00:0")) {
+
+    //Wenn keine Stunde und keine 10-er Minute
+    if (length_string.startsWith("00:0")) {
 
       //gekuerzten String zureuckgeben
       return length_string.substring(4);

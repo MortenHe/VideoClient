@@ -59,6 +59,11 @@
                     "active": true
                 },
                 {
+                    "id": "pumuckl",
+                    "name": "pumuckl",
+                    "active": true
+                },
+                {
                     "id": "misc",
                     "name": "misc",
                     "active": true

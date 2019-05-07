@@ -46,5 +46,11 @@
         "file": "bibi-hexerei-zirkus.mp4",
         "length": "00:25:12",
         "active": true
+    },
+    {
+        "name": "Bibi Blocksberg - Der versunkene Schatz (29)",
+        "file": "bibi-versunkene-schatz.mp4",
+        "length": "00:25:13",
+        "active": true
     }
 ]

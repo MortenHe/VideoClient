@@ -3,6 +3,7 @@ const link = require("./link.js");
 
 //Url aufteilen, damit part-urls erzeugt werden koennen
 const urlSplit = (link.url).split(/segment\d{1,}/);
+//const urlSplit = (link.url).split(/frag\(\d{1,}/);
 
 //libraries laden fuer Dateizugriff
 const fs = require('fs-extra');
@@ -31,6 +32,8 @@ for (let i = 1; i <= 155; i++) {
 
         //Url mit part-id erstellen
         let partUrl = urlSplit[0] + "segment" + i + urlSplit[1];
+        //let partUrl = urlSplit[0] + "frag(" + i + urlSplit[1];
+        //console.log(partUrl);
 
         //Download
         download(partUrl).then(data => {
