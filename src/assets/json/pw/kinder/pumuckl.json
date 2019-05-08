@@ -4,5 +4,23 @@
         "file": "pumuckl-01-spuk.mp4",
         "length": "00:24:28",
         "active": true
+    },
+    {
+        "name": "Pumuckl - 02 - Das verkaufte Bett",
+        "file": "pumuckl-02-bett.mp4",
+        "length": "00:24:28",
+        "active": true
+    },
+    {
+        "name": "Pumuckl - 04 - Das Schlossgespenst",
+        "file": "pumuckl-04-schlossgespenst.mp4",
+        "length": "00:22:48",
+        "active": true
+    },
+    {
+        "name": "Pumuckl - 19 - Das Spanferkelessen",
+        "file": "pumuckl-pumuckl-19-spanferkelessen.mp4",
+        "length": "00:24:04",
+        "active": true
     }
 ]

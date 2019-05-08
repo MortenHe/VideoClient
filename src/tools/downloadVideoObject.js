@@ -1,9 +1,11 @@
 //Link laden
 const link = require("./link.js");
 
-//Url aufteilen, damit part-urls erzeugt werden koennen
-const urlSplit = (link.url).split(/segment\d{1,}/);
-//const urlSplit = (link.url).split(/frag\(\d{1,}/);
+//Url je nach Modus aufteilen, damit part-urls erzeugt werden koennen
+const urlSplit = {
+    zdf: (link.url).split(/segment\d{1,}/),
+    dm: (link.url).split(/frag\(\d{1,}/)
+}[link.source];
 
 //libraries laden fuer Dateizugriff
 const fs = require('fs-extra');
@@ -24,16 +26,23 @@ videoPromises = [];
 //Download-Dir leeren
 fs.emptyDirSync(downloadDir);
 
+//Wie viele Segmente sollen fuer diesen Modus abgefragt werden
+const limit = {
+    zdf: 80,
+    dm: 500
+}[link.source];
+
 //Einzelne Teile herunterladen
-for (let i = 1; i <= 155; i++) {
+for (let i = 1; i <= limit; i++) {
 
     //Videos-Promises sammeln
     videoPromises.push(new Promise((resolve, reject) => {
 
-        //Url mit part-id erstellen
-        let partUrl = urlSplit[0] + "segment" + i + urlSplit[1];
-        //let partUrl = urlSplit[0] + "frag(" + i + urlSplit[1];
-        //console.log(partUrl);
+        //Url mit part-id erstellen fuer best. Modus
+        let partUrl = {
+            zdf: urlSplit[0] + "segment" + i + urlSplit[1],
+            dm: urlSplit[0] + "frag(" + i + urlSplit[1]
+        }[link.source];
 
         //Download
         download(partUrl).then(data => {

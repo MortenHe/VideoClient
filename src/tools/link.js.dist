@@ -4,6 +4,9 @@ module.exports = {
     
     //Dateiname der mp4-Datei (baustelle, zirkuspony)
     fileName: "laterne",
+
+    //Wo liegt das Video ("zdf", "dm")
+    source: "zdf",
     
     //Link aus Med.
     url: ""
