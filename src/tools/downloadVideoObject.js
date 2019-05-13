@@ -28,7 +28,7 @@ fs.emptyDirSync(downloadDir);
 
 //Wie viele Segmente sollen fuer diesen Modus abgefragt werden
 const limit = {
-    zdf: 80,
+    zdf: 150,
     dm: 500
 }[link.source];
 
