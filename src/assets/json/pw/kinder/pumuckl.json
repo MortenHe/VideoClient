@@ -12,15 +12,147 @@
         "active": true
     },
     {
+        "name": "Pumuckl - 03 - Das neue Badezimmer",
+        "file": "pumuckl-03-badezimmer.mp4",
+        "length": "00:24:00",
+        "active": true
+    },
+    {
         "name": "Pumuckl - 04 - Das Schlossgespenst",
         "file": "pumuckl-04-schlossgespenst.mp4",
         "length": "00:22:48",
         "active": true
     },
     {
+        "name": "Pumuckl - 05 - Die abergläubische Putzfrau",
+        "file": "pumuckl-05-putzfrau.mp4",
+        "length": "00:24:35",
+        "active": true
+    },
+    {
+        "name": "Pumuckl - 06 - Macht Ferien",
+        "file": "pumuckl-06-ferien.mp4",
+        "length": "00:24:30",
+        "active": true
+    },
+    {
+        "name": "Pumuckl - 07 - Der Geist des Wassers",
+        "file": "pumuckl-07-geist-wasser.mp4",
+        "length": "00:24:11",
+        "active": true
+    },
+    {
+        "name": "Pumuckl - 08 - In der Schule",
+        "file": "pumuckl-08-schule.mp4",
+        "length": "00:22:34",
+        "active": true
+    },
+    {
+        "name": "Pumuckl - 09 - Und der Pudding",
+        "file": "pumuckl-09-pudding.mp4",
+        "length": "00:24:15",
+        "active": true
+    },
+    {
+        "name": "Pumuckl - 10 - Der rätselhafte Hund",
+        "file": "pumuckl-10-hund.mp4",
+        "length": "00:22:21",
+        "active": true
+    },
+    {
+        "name": "Pumuckl - 11 - Und der Nikolaus",
+        "file": "pumuckl-11-nikolaus.mp4",
+        "length": "00:24:30",
+        "active": true
+    },
+    {
+        "name": "Pumuckl - 12 - Auf heißer Spur",
+        "file": "pumuckl-12-spur.mp4",
+        "length": "00:24:30",
+        "active": true
+    },
+    {
+        "name": "Pumuckl - 13 - Das Weihnachtsgeschenk",
+        "file": "pumuckl-13-weihnachtsgeschenk.mp4",
+        "length": "00:24:19",
+        "active": true
+    },
+    {
+        "name": "Pumuckl - 14 - Der erste Schnee",
+        "file": "pumuckl-14-schnee.mp4",
+        "length": "00:23:51",
+        "active": true
+    },
+    {
+        "name": "Pumuckl - 15 - Der Wollpullove",
+        "file": "pumuckl-15-wollpullover.mp4",
+        "length": "00:24:19",
+        "active": true
+    },
+    {
+        "name": "Pumuckl - 16 - Der große Krach",
+        "file": "pumuckl-16-krach.mp4",
+        "length": "00:24:29",
+        "active": true
+    },
+    {
+        "name": "Pumuckl - 17 - Der große Krach und seine Folgen",
+        "file": "pumuckl-17-krach-folgen.mp4",
+        "length": "00:23:24",
+        "active": true
+    },
+    {
+        "name": "Pumuckl - 18 - Eder bekommt Besuch",
+        "file": "pumuckl-18-besuch.mp4",
+        "length": "00:23:17",
+        "active": true
+    },
+    {
         "name": "Pumuckl - 19 - Das Spanferkelessen",
         "file": "pumuckl-19-spanferkelessen.mp4",
         "length": "00:24:04",
+        "active": true
+    },
+    {
+        "name": "Pumuckl - 20 - Und Puwackl",
+        "file": "pumuckl-20-puwackl.mp4",
+        "length": "00:23:42",
+        "active": true
+    },
+    {
+        "name": "Pumuckl - 21 - Und die Angst",
+        "file": "pumuckl-21-angst.mp4",
+        "length": "00:23:59",
+        "active": true
+    },
+    {
+        "name": "Pumuckl - 22 - Der verhängnisvolle Schlagrahm",
+        "file": "pumuckl-22-schlagrahm.mp4",
+        "length": "00:24:22",
+        "active": true
+    },
+    {
+        "name": "Pumuckl - 23 - Im Zoo",
+        "file": "pumuckl-23-zoo.mp4",
+        "length": "00:24:26",
+        "active": true
+    },
+    {
+        "name": "Pumuckl - 24 - Die geheimnisvollen Briefe",
+        "file": "pumuckl-24-briefe.mp4",
+        "length": "00:24:17",
+        "active": true
+    },
+    {
+        "name": "Pumuckl - 25 - Und die Ostereier",
+        "file": "pumuckl-25-ostereier.mp4",
+        "length": "00:24:01",
+        "active": true
+    },
+    {
+        "name": "Pumuckl - 26 - Der erste April",
+        "file": "pumuckl-26-april.mp4",
+        "length": "00:24:33",
         "active": true
     }
 ]

@@ -19,7 +19,12 @@ naming["conni"] = "Conni - ";
 naming["bibi"] = "Bibi Blocksberg - ";
 naming["bibi-tina"] = "Bibi und Tina - ";
 naming["2015"] = "2015-";
+naming["2016"] = "2016-";
+naming["2017"] = "2017-";
+naming["2018"] = "2018-";
+naming["2019"] = "2019-";
 naming["pippi"] = "Pippi ";
+naming["pumuckl"] = "Pumuckl - ";
 
 //Video-Infos sammeln
 outputArray = [];
