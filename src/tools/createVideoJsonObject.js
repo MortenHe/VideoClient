@@ -12,6 +12,7 @@ const timelite = require('timelite');
 //Wo liegen die Dateien fuer die JSON Infos erzeugt werden sollen?
 const dataDir = "C:/Users/Martin/Desktop/media/done";
 //const dataDir = "F:/Video (geschnitten)/Jahresvideo HWH + MH/2015 - Jahresvideo";
+//const dataDir = "F:/";
 
 //Benennung des Titels
 naming = [];
@@ -37,6 +38,11 @@ fs.readdir(dataDir, (err, files) => {
 
     //Ueber Dateien gehen
     for (let file of files) {
+
+        //Unsichtbare Datei uebergehen
+        if (file === "System Volume Information") {
+            continue;
+        }
 
         //Wenn es eine Datei ist und zum aktuellen Modus gehoert
         let stat = fs.statSync(dataDir + "/" + file);

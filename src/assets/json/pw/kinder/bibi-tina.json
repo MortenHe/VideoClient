@@ -1,8 +1,14 @@
 [
     {
-        "name": "Bibi und Tina - Sabrinas Fohlen",
+        "name": "Bibi und Tina - Ferien auf dem Martinshof (01)",
+        "file": "bibi-tina-ferien-martinshofs.mp4",
+        "length": "00:25:00",
+        "active": true
+    },
+    {
+        "name": "Bibi und Tina - Sabrinas Fohlen (02)",
         "file": "bibi-tina-sabrinas-fohlen.mp4",
-        "length": "00:26:00",
+        "length": "00:25:00",
         "active": true
     },
     {
@@ -24,7 +30,7 @@
         "active": true
     },
     {
-        "name": "Bibi und Tina - Das rätselhafte Mädchen",
+        "name": "Bibi und Tina - Das rätselhafte Mädchen (36)",
         "file": "bibi-tina-maedchen.mp4",
         "length": "00:25:09",
         "active": true
@@ -42,7 +48,7 @@
         "active": true
     },
     {
-        "name": "Bibi und Tina - Das Pferd in der Schule",
+        "name": "Bibi und Tina - Das Pferd in der Schule (23)",
         "file": "bibi-tina-pferd-schule.mp4",
         "length": "00:26:02",
         "active": true
@@ -96,7 +102,7 @@
         "active": true
     },
     {
-        "name": "Bibi und Tina - Der Hufschmied",
+        "name": "Bibi und Tina - Der Hufschmied (12)",
         "file": "bibi-tina-hufschmied.mp4",
         "length": "00:25:09",
         "active": true
@@ -156,7 +162,7 @@
         "active": true
     },
     {
-        "name": "Bibi und Tina - Gestüt Szendrö in Gefahr",
+        "name": "Bibi und Tina - Gestüt Szendrö in Gefahr (30)",
         "file": "bibi-tina-gestuet-gefahr.mp4",
         "length": "00:25:10",
         "active": true
@@ -264,7 +270,7 @@
         "active": true
     },
     {
-        "name": "Bibi und Tina - Das Zirkuspony",
+        "name": "Bibi und Tina - Das Zirkuspony (13)",
         "file": "bibi-tina-zirkuspony.mp4",
         "length": "00:25:09",
         "active": true

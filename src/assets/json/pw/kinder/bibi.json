@@ -58,5 +58,23 @@
         "file": "bibi-hexspruch-folgen.mp4",
         "length": "00:25:00",
         "active": true
+    },
+    {
+        "name": "Bibi Blocksberg - Die vertauschte Hexenkugel (32)",
+        "file": "bibi-vertauschte-hexenkugel.mp4",
+        "length": "00:25:00",
+        "active": true
+    },
+    {
+        "name": "Bibi Blocksberg - Das Hexenhoroskop (33)",
+        "file": "bibi-hexenhoroskop.mp4",
+        "length": "00:25:00",
+        "active": true
+    },
+    {
+        "name": "Bibi Blocksberg - Der Turbobesen (35)",
+        "file": "bibi-turbobesen.mp4",
+        "length": "00:25:00",
+        "active": true
     }
 ]
