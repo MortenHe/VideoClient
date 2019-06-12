@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import { forkJoin } from "rxjs/observable/forkJoin";
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/finally';
@@ -9,7 +9,7 @@ import { environment } from '../../environments/environment';
 export class JsondataService {
 
   //Service injecten
-  constructor(private http: Http) { }
+  constructor(private http: HttpClient) { }
 
   //JSON-Daten aus files laden
   loadJson() {
@@ -21,7 +21,7 @@ export class JsondataService {
     return this.http.get("assets/json/" + appId + "/videolist.json").map(data => {
 
       //JSON-Objekt laden. Dieses wird angepasst (gewisse Merkmale entfernt, items einfgefuegt)
-      let jsonObj = data.json();
+      let jsonObj = data;
 
       //ForkJoin Array, damit auslesen der einzelnen Unter-JSONs (bibi-tina.json, bobo.json) parallel erfolgen kann
       let modeDataFileArr: Observable<any>[] = [];
@@ -50,12 +50,8 @@ export class JsondataService {
               //Request erstellen, der JSON dieses Filters holt (z.B. bibi-tina.json)
               let request = this.http.get("assets/json/" + appId + "/" + mode + "/" + filterID + ".json").map(response => {
 
-                //filterID (bibi-tina) und Modus (hsp) merken, da Info sonst spaeter ueberschrieben wurde
-                let filterIDFile = (response.url).split(/[\\/]/).pop();
-                let filterID = filterIDFile.replace('.json', '');
-
                 //Ergebnis des Reqeusts als JSON + weitere Parameter weiterreichen
-                return { data: response.json(), filterID: filterID, mode: mode };
+                return { data: response, filterID: filterID, mode: mode };
               });
 
               //Request sammeln -> werden spaeter per forkjoin ausgefuehrt

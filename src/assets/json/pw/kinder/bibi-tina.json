@@ -66,7 +66,7 @@
         "active": true
     },
     {
-        "name": "Bibi und Tina - Das Westernturnier",
+        "name": "Bibi und Tina - Das Westernturnier (21)",
         "file": "bibi-tina-westernturnier.mp4",
         "length": "00:26:02",
         "active": true
@@ -291,6 +291,18 @@
         "name": "Bibi und Tina - Ein falscher Verdacht (39)",
         "file": "bibi-tina-verdacht.mp4",
         "length": "00:25:09",
+        "active": true
+    },
+    {
+        "name": "Bibi und Tina - Der verhexte Sattel (04)",
+        "file": "bibi-tina-verhexte-sattel.mp4",
+        "length": "00:25:05",
+        "active": true
+    },
+    {
+        "name": "Bibi und Tina - Die Wildpferde (03)",
+        "file": "bibi-tina-wildpferde.mp4",
+        "length": "00:25:07",
         "active": true
     }
 ]

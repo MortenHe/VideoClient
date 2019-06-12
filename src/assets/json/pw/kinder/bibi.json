@@ -76,5 +76,11 @@
         "file": "bibi-turbobesen.mp4",
         "length": "00:25:00",
         "active": true
+    },
+    {
+        "name": "Bibi Blocksberg - Das chinesische Hexenkraut (36)",
+        "file": "bibi-tina-wildpferde.mp4",
+        "length": "00:25:07",
+        "active": true
     }
 ]

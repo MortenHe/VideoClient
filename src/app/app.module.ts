@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 //Angular Material
 import { MatSliderModule } from '@angular/material/slider';
@@ -61,7 +61,7 @@ import { VolumeControlComponent } from './components/volume-control/volume-contr
   ],
   imports: [
     BrowserModule,
-    HttpModule,
+    HttpClientModule,
     ReactiveFormsModule,
     MatSliderModule,
     RouterModule.forRoot([

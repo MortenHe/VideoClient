@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from "@angular/http";
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
@@ -83,7 +83,7 @@ export class BackendService {
     connected$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
     //Services injekten
-    constructor(private http: Http, private jds: JsondataService, private fs: ResultfilterService, private modeFilterPipe: ModeFilterPipe, private searchFilterPipe: SearchFilterPipe, private orderByPipe: OrderByPipe) {
+    constructor(private http: HttpClient, private jds: JsondataService, private fs: ResultfilterService, private modeFilterPipe: ModeFilterPipe, private searchFilterPipe: SearchFilterPipe, private orderByPipe: OrderByPipe) {
 
         //WebSocket erstellen
         this.createWebsocket();
