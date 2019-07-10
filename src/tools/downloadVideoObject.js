@@ -18,7 +18,14 @@ const padStart = require('lodash.padstart');
 const { execSync } = require('child_process');
 
 //Wo sollen Videos gespeichert werden
-const downloadDir = "C:/Users/Martin/Desktop/media/down";
+const mediaDir = "C:/Users/Martin/Desktop/media";
+const downloadDir = mediaDir + "/down";
+const doneDir = mediaDir + "/done";
+
+//Dir anlegen, wo fertiges Video liegen soll, falls es nicht existiert
+if (!fs.existsSync(doneDir)) {
+    fs.mkdirSync(doneDir);
+}
 
 //Video-Promises sammeln
 videoPromises = [];
@@ -68,7 +75,7 @@ Promise.all(videoPromises).then(() => {
     console.log("putting single files together done");
 
     //ts-Datei nach mp4 konvertieren
-    execSync("ffmpeg -i " + downloadDir + "/joined_files.ts -acodec copy -vcodec copy " + downloadDir + "/../done/" + link.mode + "-" + link.fileName + ".mp4");
+    execSync("ffmpeg -i " + downloadDir + "/joined_files.ts -acodec copy -vcodec copy " + doneDir + "/" + link.mode + "-" + link.fileName + ".mp4");
     console.log("creating mp4 file done");
 
     //Download-Dir leeren

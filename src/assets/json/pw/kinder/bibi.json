@@ -88,5 +88,11 @@
         "file": "bibi-babysitter.mp4",
         "length": "00:25:18",
         "active": true
-    }
+    },
+    {
+        "name": "Bibi Blocksberg - Das magische Pendel (47)",
+        "file": "bibi-magische-pendel.mp4",
+        "length": "00:25:12",
+        "active": true
+      }
 ]
