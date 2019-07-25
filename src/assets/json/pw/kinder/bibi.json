@@ -94,5 +94,11 @@
         "file": "bibi-magische-pendel.mp4",
         "length": "00:25:12",
         "active": true
-      }
+    },
+    {
+        "name": "Bibi Blocksberg - Manias magische Mixtur",
+        "file": "bibi-mixtur.mp4",
+        "length": "00:25:12",
+        "active": true
+    }
 ]
