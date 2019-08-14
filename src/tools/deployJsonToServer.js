@@ -1,90 +1,97 @@
+//Nur JSON-Config auf Server uebertragen
 //node .\deployJsonToServer.js pw pw (= PW JSON auf PW Pi laden)
 //node .\deployJsonToServer.js marlen vb (= Marlen JSON auf VB laden)
 
-//Connection laden
-const connection = require("./connection.js");
+//Async Methode fuer Await Aufrufe
+async function main() {
 
-//Welche JSON Files (pw vs. marlen) wohin deployen (pw / marlen / vb)
-const appId = process.argv[2] || "pw";
-const targetMachine = process.argv[3] || "pw";
-console.log("deploy video json (" + appId + ") to server " + targetMachine);
+    //Connection laden
+    const connection = require("./connection.js");
 
-//Unter welchem Unterpfad wird die App auf dem Server laufen?
-const base_href = "wvp";
+    //Welche JSON Files (pw vs. marlen) wohin deployen (pw / marlen / vb)
+    const appId = process.argv[2] || "pw";
+    const targetMachine = process.argv[3] || "pw";
+    console.log("deploy video json (" + appId + ") to server " + targetMachine);
 
-//Asset Ordner mit JSON files kopieren
-const fs = require('fs-extra');
-fs.removeSync("../../myAssets/assets");
-fs.copySync("../assets", "../../myAssets/assets");
+    //Unter welchem Unterpfad wird die App auf dem Server laufen?
+    const base_href = "wvp";
 
-//Assets (=JSON-Configs) loeschen, die nicht zu dieser App gehoeren (z.B. json von marlen loeschen, wenn pw json deployed wird)
-fs.readdirSync("../../myAssets/assets/json").forEach(folder => {
-    if (folder !== appId) {
-        console.log("delete assets from app " + folder);
-        fs.removeSync("../../myAssets/assets/json/" + folder);
-    }
-});
+    //Pfad wo Dateien auf Server liegen sollen
+    let server_video_path = "/var/www/html/" + base_href;
 
-//JSON-Folder zippen
-const zipFolder = require('zip-folder');
-console.log("zip json data");
-zipFolder('../../MyAssets', '../../myJson.zip', function (err) { });
+    //Asset Ordner mit JSON files kopieren
+    const fs = require('fs-extra');
 
-//Pfad wo Dateien auf Server liegen sollen
-let server_audio_path = "/var/www/html/" + base_href;
+    //alte lokale Assets entfernen
+    console.log("remove old assets");
+    await fs.remove("../../myAssets/assets");
 
-//SSH-Verbindung um Shell-Befehle auszufuehren (unzip, chmod,...)
-const SSH2Promise = require('ssh2-promise');
-const ssh = new SSH2Promise({
-    host: connection[targetMachine].host,
-    username: connection[targetMachine].user,
-    password: connection[targetMachine].password
-});
+    //neue Assets kopieren
+    console.log("copy new assets");
+    await fs.copy("../assets", "../../myAssets/assets");
 
-//sftp-Verbindung um Webseiten-Dateien hochzuladen
-const Client = require('ssh2-sftp-client');
-const sftp = new Client();
-sftp.connect({
-    host: connection[targetMachine].host,
-    port: '22',
-    username: connection[targetMachine].user,
-    password: connection[targetMachine].password
-}).then(() => {
+    //Assets (=JSON-Configs) loeschen, die nicht zu dieser App gehoeren (z.B. json von marlen loeschen, wenn pw json deployed wird)
+    console.log("delete other JSON-configs");
+    const folders = await fs.readdir("../../myAssets/assets/json")
+    folders.forEach(folder => {
+        if (folder !== appId) {
+            console.log("delete assets from app " + folder);
+            fs.removeSync("../../myAssets/assets/json/" + folder);
+        }
+    });
+
+    //JSON-Folder zippen
+    const zipFolder = require('zip-a-folder');
+    console.log("zip json data");
+    await zipFolder.zip('../../MyAssets', '../../myJson.zip');
+
+    //SSH-Verbindung um Shell-Befehle auszufuehren (unzip, chmod,...)
+    const SSH2Promise = require('ssh2-promise');
+    const ssh = new SSH2Promise({
+        host: connection[targetMachine].host,
+        username: connection[targetMachine].user,
+        password: connection[targetMachine].password
+    });
+
+    //sftp-Verbindung um Webseiten-Dateien hochzuladen
+    const Client = require('ssh2-sftp-client');
+    const sftp = new Client();
+    await sftp.connect({
+        host: connection[targetMachine].host,
+        port: '22',
+        username: connection[targetMachine].user,
+        password: connection[targetMachine].password
+    });
 
     //assets Ordner loeschen
-    console.log("delete folder " + server_audio_path + "/assets");
-    return sftp.rmdir(server_audio_path + "/assets", true);
-}).then(() => {
+    console.log("delete folder " + server_video_path + "/assets");
+    await sftp.rmdir(server_video_path + "/assets", true);
 
     //gezippte JSON-files hochladen
     console.log("upload json zip file");
-    return sftp.fastPut("../../myJson.zip", server_audio_path + "/myJson.zip");
-}).then(() => {
+    await sftp.fastPut("../../myJson.zip", server_video_path + "/myJson.zip");
 
     //per SSH verbinden, damit Shell-Befehle ausgefuehrt werden koennen
     console.log("connect via ssh");
-    return ssh.connect();
-}).then(() => {
+    await ssh.connect();
 
     //JSON-Daten entzippen
     console.log("unzip json file");
-    return ssh.exec("cd " + server_audio_path + " && unzip myJson.zip");
-}).then(() => {
+    await ssh.exec("cd " + server_video_path + " && unzip myJson.zip");
 
     //Zip-File loeschen
     console.log("delete zip file");
-    return sftp.delete(server_audio_path + "/myJson.zip");
-}).then(() => {
+    await sftp.delete(server_video_path + "/myJson.zip");
 
     //Rechte anpassen, damit Daten in Webseite geladen werden koennen
     console.log("chmod 0777");
-    return ssh.exec("chmod -R 0777 /var/www/html");
-}).then(() => {
+    await ssh.exec("chmod -R 0777 /var/www/html");
 
     //Programm beenden
     console.log("build process done");
-    sftp.end();
+    await sftp.end();
     process.exit();
-}).catch((err) => {
-    console.log(err);
-});
+}
+
+//Deployment starten
+main();
