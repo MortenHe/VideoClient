@@ -100,5 +100,17 @@
         "file": "bibi-mixtur.mp4",
         "length": "00:25:12",
         "active": true
+    },
+    {
+        "name": "Bibi Blocksberg - Im Dschungel (6)",
+        "file": "bibi-dschungel.mp4",
+        "length": "00:26:15",
+        "active": true
+    },
+    {
+        "name": "Bibi Blocksberg - Verliebt sich (15)",
+        "file": "bibi-verliebt.mp4",
+        "length": "00:25:12",
+        "active": true
     }
 ]

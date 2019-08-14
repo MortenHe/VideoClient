@@ -60,5 +60,8 @@ export class ResultlistComponent {
         "startPlayback": startPlayback
       }
     });
+
+    //Beim Starten oder Einreihen eines Vidoes das Suchfeld leeren
+    this.fs.setSearchTerm("");
   }
 }

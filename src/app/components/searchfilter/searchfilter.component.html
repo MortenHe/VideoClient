@@ -1,22 +1,18 @@
-<!-- Form fuer Suchfeld -->
-<form [formGroup]="searchFilterForm">
+<!-- Label besteht auch Icon und Suchfeld -->
+<label class="search-field form-control d-flex no-gutters align-items-center p-1"
+       for="searchField">
 
-      <!-- Label besteht auch Icon und Suchfeld -->
-      <label class="search-field form-control d-flex no-gutters align-items-center p-1"
-             for="searchField">
+      <!-- Such-Symbol -->
+      <i class="fa fa-search ml-2"></i>
 
-            <!-- Such-Symbol -->
-            <i class="fa fa-search ml-2"></i>
-
-            <!-- Suchefeld -->
-            <input autofocus
-                   autocomplete="off"
-                   id="searchField"
-                   placeholder="Liste durchsuchen"
-                   class="col ml-2"
-                   id="search"
-                   type="search"
-                   name="search"
-                   formControlName="search">
-      </label>
-</form>
+      <!-- Suchefeld -->
+      <input [formControl]="searchField"
+             autofocus
+             autocomplete="off"
+             id="searchField"
+             placeholder="Liste durchsuchen"
+             class="col ml-2"
+             id="search"
+             type="search"
+             name="search">
+</label>

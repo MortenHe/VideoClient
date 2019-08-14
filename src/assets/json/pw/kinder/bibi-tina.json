@@ -24,7 +24,7 @@
         "active": true
     },
     {
-        "name": "Bibi und Tina - Die Biber sind los",
+        "name": "Bibi und Tina - Die Biber sind los (50)",
         "file": "bibi-tina-biber.mp4",
         "length": "00:25:08",
         "active": true
@@ -78,7 +78,7 @@
         "active": true
     },
     {
-        "name": "Bibi und Tina - Der Sheriffstern",
+        "name": "Bibi und Tina - Der Sheriffstern (45)",
         "file": "bibi-tina-sheriffstern.mp4",
         "length": "00:25:09",
         "active": true
@@ -246,7 +246,7 @@
         "active": true
     },
     {
-        "name": "Bibi und Tina - Das vertauschte Pferd",
+        "name": "Bibi und Tina - Das vertauschte Pferd (48)",
         "file": "bibi-tina-vertauschte-pferd.mp4",
         "length": "00:25:08",
         "active": true
@@ -303,6 +303,18 @@
         "name": "Bibi und Tina - Die Wildpferde (03)",
         "file": "bibi-tina-wildpferde.mp4",
         "length": "00:25:07",
+        "active": true
+    },
+    {
+        "name": "Bibi und Tina - Alex und das Internat (06)",
+        "file": "bibi-tina-internat.mp4",
+        "length": "00:25:08",
+        "active": true
+    },
+    {
+        "name": "Bibi und Tina - Der Liebesbrief (05)",
+        "file": "bibi-tina-liebesbrief.mp4",
+        "length": "00:25:10",
         "active": true
     }
 ]
