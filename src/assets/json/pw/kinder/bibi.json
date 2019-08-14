@@ -79,7 +79,7 @@
     },
     {
         "name": "Bibi Blocksberg - Das chinesische Hexenkraut (36)",
-        "file": "bibi-tina-wildpferde.mp4",
+        "file": "bibi-hexenkraut.mp4",
         "length": "00:25:07",
         "active": true
     },
@@ -110,6 +110,12 @@
     {
         "name": "Bibi Blocksberg - Verliebt sich (15)",
         "file": "bibi-verliebt.mp4",
+        "length": "00:25:12",
+        "active": true
+    },
+    {
+        "name": "Bibi Blocksberg - Als Prinzessin",
+        "file": "bibi-prinzessin.mp4",
         "length": "00:25:12",
         "active": true
     }

@@ -42,6 +42,12 @@
         "active": true
     },
     {
+        "name": "Der Zauberer von Oz - We're off to see the wizard (DVD)",
+        "file": "wizard-off-dvd.mp4",
+        "length": "00:01:10",
+        "active": true
+    },
+    {
         "name": "Der Zauberer von Oz - Somewhere Over The Rainbow",
         "file": "over-the-rainbow.mp4",
         "length": "00:02:09",
