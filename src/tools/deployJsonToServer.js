@@ -33,12 +33,12 @@ async function main() {
     //Assets (=JSON-Configs) loeschen, die nicht zu dieser App gehoeren (z.B. json von marlen loeschen, wenn pw json deployed wird)
     console.log("delete other JSON-configs");
     const folders = await fs.readdir("../../myAssets/assets/json")
-    folders.forEach(folder => {
+    for (const folder of folders) {
         if (folder !== appId) {
             console.log("delete assets from app " + folder);
-            fs.removeSync("../../myAssets/assets/json/" + folder);
+            await fs.remove("../../myAssets/assets/json/" + folder);
         }
-    });
+    }
 
     //JSON-Folder zippen
     const zipFolder = require('zip-a-folder');
