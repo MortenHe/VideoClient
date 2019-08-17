@@ -1,5 +1,6 @@
 //Variable importerein
 @import '~scss/variables.scss';
+
 //eigene styles
 .items {
     .add-item {
@@ -8,40 +9,53 @@
         border-top: 1px solid $color-grey;
         width: 35px;
         color: $color-grey;
-        &:hover {
-            background: $color-light-bg-hover;
+
+        &:not(:disabled) {
+            &:hover {
+                background: $color-light-bg-hover;
+            }
+
         }
     }
+
     .box {
         //border-bottom: 1px solid $color-grey; //border-radius: $border-radius;
         border: none;
         border-top: 1px solid $color-grey;
         padding: 5px;
         background: $color-light-bg;
-        cursor: pointer;
+
         .fa-play,
         .fa-plus {
             display: none;
         }
-        &:hover:not(.active-item) {
-            background: $color-light-bg-hover;
-            .fa-play,
-            .fa-plus {
-                display: inline;
-                opacity: .5;
+
+        &:not(:disabled) {
+            &:hover:not(.active-item) {
+                background: $color-light-bg-hover;
+
+                .fa-play,
+                .fa-plus {
+                    display: inline;
+                    opacity: .5;
+                }
             }
         }
+
         &.active-item {
             background: $color-light-bg-active;
+
             .fa-play,
             .fa-plus {
                 display: inline;
                 opacity: 1;
             }
         }
+
         ul {
             margin-bottom: 0;
             padding-left: 21px;
+
             li {
                 list-style-type: none;
                 color: $color-light-grey;
@@ -54,6 +68,7 @@
     .box {
         &:hover:not(.active-item) {
             background: $color-light-bg !important;
+
             .fa-play,
             .fa-plus {
                 display: none !important;
