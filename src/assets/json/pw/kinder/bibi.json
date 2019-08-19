@@ -118,5 +118,11 @@
         "file": "bibi-prinzessin.mp4",
         "length": "00:25:12",
         "active": true
+    },
+    {
+        "name": "Bibi Blocksberg - Das Dino-Ei (07)",
+        "file": "bibi-dino-ei.mp4",
+        "length": "00:25:57",
+        "active": true
     }
 ]
