@@ -1,5 +1,6 @@
 //MH Variablen importieren
 @import '~scss/variables.scss';
+
 .start-playlist:hover {
     background: $color-info-green;
     border-radius: $border-radius;
@@ -15,12 +16,15 @@
     justify-content: center;
     user-select: none;
     padding: 5px;
-    &:hover:not(.active-item) {
+
+    &:hover:not(.active-item):not(.sortable-chosen) {
         background: $color-light-bg-hover;
     }
+
     &.waiting {
         background: $color-light-bg-hover;
     }
+
     &.first {
         border-top: 1px solid $color-grey;
     }
@@ -39,7 +43,7 @@
 @media (hover: none) {
     .item {
         &:hover:not(.active-item):not(.waiting) {
-            background: $color-info-green;
+            background: $color-light-bg;
         }
     }
 }

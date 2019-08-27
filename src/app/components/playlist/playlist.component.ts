@@ -27,6 +27,43 @@ export class PlaylistComponent implements OnInit {
   //Service injecten
   constructor(private bs: BackendService) { }
 
+  //Darf Item sortiert werden? Nur Items hinter aktuell laufendem Titel
+  //nur ab 2 Titeln in der Playlist
+  //nur wenn nicht nur noch der letzte Titel uebrigt ist zur Sortierung (Playlist beim vorletzten Titel angekommen)
+  draggable(index): boolean {
+    return (index > this.position || this.position === -1) && this.files.length > 1 && (this.position + 2 < this.files.length);
+  }
+
+  //Wenn Sortiervorgang abgeschlossen ist, Server ueber neue Sortierung informieren
+  sortDone(event: any) {
+    this.bs.sendMessage({
+      type: "sort-playlist", value: {
+        from: event.oldIndex,
+        to: event.newIndex
+      }
+    });
+  };
+
+  //Events, die innerhalb einer Sortierliste liegen auswerten
+  eventInsideSort(event: any) {
+
+    //Funktion ist im data-Attribute hinterlegt
+    const dataset = (event.target as HTMLElement).dataset;
+    switch (dataset.func) {
+
+      //Titel aus Playlist entfernen
+      case "remove":
+        const removeIndex = event.oldIndex;
+        this.removeItemFromPlaylist(removeIndex);
+        break;
+
+      //Zu gewissem Titel springen
+      case "jump":
+        const jumpIndex = Number(dataset.index)
+        this.jumpTo(jumpIndex);
+    }
+  }
+
   //beim Init
   ngOnInit() {
 
@@ -46,6 +83,11 @@ export class PlaylistComponent implements OnInit {
 
     //Laenge der Playlist abbonieren
     this.bs.getFilesTotalTime().subscribe(filesTotalTime => this.filesTotalTime = filesTotalTime);
+  }
+
+  //Titel aus Playlist entfernen
+  removeItemFromPlaylist(position: number) {
+    this.bs.sendMessage({ type: "remove-from-playlist", value: position });
   }
 
   //zu gewissem Titel in Playlist springen

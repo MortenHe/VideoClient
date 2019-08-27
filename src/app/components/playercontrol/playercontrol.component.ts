@@ -40,11 +40,6 @@ export class PlayercontrolComponent {
         this.bs.sendMessage({ type: "toggle-play-pause", value: "" });
     }
 
-    //zum vorherigen / naechten Titel wechseln
-    changeItem(increase: boolean) {
-        this.bs.sendMessage({ type: "change-item", value: increase });
-    }
-
     //innerhalb des Items spulen
     seek(forward: boolean) {
         this.bs.sendMessage({ type: "seek", value: forward });

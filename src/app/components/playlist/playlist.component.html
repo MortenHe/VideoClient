@@ -4,38 +4,55 @@
         (click)="jumpTo(0)">
   <i class="fa fa-play mr-2"></i>Playlist starten</button>
 
-<!-- Info ueber Playlist -->
-<div *ngFor="let file of files; let i = index, let first = first"
-     (click)="jumpTo(i)"
-     class="row no-gutters item"
-     [ngClass]="{
+<!-- Info ueber Playlist (Playlist sortierbar) -->
+<div [sortablejs]="files"
+     (update)=sortDone($event)
+     (filter)=eventInsideSort($event)>
+
+  <!-- nur Items nach der aktuellen Position sortierbar-->
+  <div *ngFor="let file of files, index as i, first as first"
+       class="row no-gutters item drag"
+       [ngClass]="{
+       'drag': i > position,
        'waiting': i === jumpPosition,
        'playing': i === position,
        'first': first
      }">
 
-  <!-- Play-/ Spiner-Symbol-->
-  <div class="fa fa-fw"
-       [ngClass]="{
+    <!-- Play-/ Spiner-Symbol-->
+    <div class="fa fa-fw"
+         [ngClass]="{
         'fa-play': i === position,
         'fa-spinner fa-spin': i === jumpPosition
          }">
-  </div>
+    </div>
 
-  <!-- Name des Videos -->
-  <div class="col pl-1">{{file.name|fileName}}</div>
+    <!-- Sortier-Handle -->
+    <i *ngIf="draggable(i)"
+       class="border fa-fw sort-handle fa fa-arrows-v mr-2"></i>
 
-  <!-- Zeitinfo des Videos -->
-  <div class="item-length text-right">
+    <!-- Titel aus Playlist loeschen, nur Titel nach aktueller Position sind loeschbar -->
+    <button *ngIf="i > position"
+            data-func="remove"
+            class="button-clean add-item ignore-sort"><i class="fa fa-minus"></i></button>
 
-    <!-- Video wurde schon gespielt. Restzeit 0:00 -->
-    <ng-container *ngIf="i < position">0:00</ng-container>
+    <!-- Name des Videos. Klick startet video -->
+    <div data-func="jump"
+         [attr.data-index]="i"
+         class="col pl-1 ignore-sort">{{file.name|fileName}}</div>
 
-    <!-- Aktuelles Video (runterlaufende Zeit) -->
-    <ng-container *ngIf="i === position && time !== ''">{{time|timeformatter}}</ng-container>
+    <!-- Zeitinfo des Videos -->
+    <div class="item-length text-right">
 
-    <!-- Videos nach aktueller Playlistposition (Gesamtlaufzeit des Videos) -->
-    <ng-container *ngIf="i > position">{{file.length|timeformatter}}</ng-container>
+      <!-- Video wurde schon gespielt. Restzeit 0:00 -->
+      <ng-container *ngIf="i < position">0:00</ng-container>
+
+      <!-- Aktuelles Video (runterlaufende Zeit) -->
+      <ng-container *ngIf="i === position && time !== ''">{{time|timeformatter}}</ng-container>
+
+      <!-- Videos nach aktueller Playlistposition (Gesamtlaufzeit des Videos) -->
+      <ng-container *ngIf="i > position">{{file.length|timeformatter}}</ng-container>
+    </div>
   </div>
 </div>
 

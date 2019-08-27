@@ -2,8 +2,6 @@
 @import 'customize-bootstrap.scss';
 //Bootstrap importieren
 @import '../node_modules/bootstrap/scss/bootstrap';
-//Angular Material CSS
-@import 'customize-material.scss';
 //MH Variablen importieren
 @import '~scss/variables.scss';
 /* Bootstrap changes */
@@ -329,4 +327,12 @@ button:disabled {
 
 .invisible {
     visibility: hidden;
+}
+
+.sort-handle {
+    cursor: move;
+}
+
+.sortable-chosen {
+    background: $color-light-bg-hover !important;
 }
