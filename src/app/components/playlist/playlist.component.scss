@@ -40,6 +40,15 @@
     padding-bottom: 0px;
 }
 
+.play-spinner {
+    flex: 1;
+    display: flex !important;
+    align-self: stretch;
+    justify-content: center;
+    align-items: center;
+    max-width: 40px;
+}
+
 @media (hover: none) {
     .item {
         &:hover:not(.active-item):not(.waiting) {

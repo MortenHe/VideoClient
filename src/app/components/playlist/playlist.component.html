@@ -11,7 +11,7 @@
 
   <!-- nur Items nach der aktuellen Position sortierbar-->
   <div *ngFor="let file of files, index as i, first as first"
-       class="row no-gutters item drag"
+       class="row no-gutters item drag pl-0"
        [ngClass]="{
        'drag': i > position,
        'waiting': i === jumpPosition,
@@ -20,7 +20,8 @@
      }">
 
     <!-- Play-/ Spiner-Symbol-->
-    <div class="fa fa-fw"
+    <div *ngIf="i === position || i === jumpPosition"
+         class="fa fa-fw play-spinner"
          [ngClass]="{
         'fa-play': i === position,
         'fa-spinner fa-spin': i === jumpPosition
@@ -28,21 +29,22 @@
     </div>
 
     <!-- Sortier-Handle -->
-    <i *ngIf="draggable(i)"
-       class="border fa-fw sort-handle fa fa-arrows-v mr-2"></i>
+    <i *ngIf="!(i === position || i === jumpPosition)"
+       [class.invisible]="!draggable(i)"
+       class="fa-fw sort-handle fa fa-arrows-v mr-1"></i>
+
+    <!-- Name des Videos. Klick startet video -->
+    <div data-func="jump"
+         [attr.data-index]="i"
+         class="col ignore-sort mr-2">{{file.name|fileName}}</div>
 
     <!-- Titel aus Playlist loeschen, nur Titel nach aktueller Position sind loeschbar -->
     <button *ngIf="i > position"
             data-func="remove"
             class="button-clean add-item ignore-sort"><i class="fa fa-minus"></i></button>
 
-    <!-- Name des Videos. Klick startet video -->
-    <div data-func="jump"
-         [attr.data-index]="i"
-         class="col pl-1 ignore-sort">{{file.name|fileName}}</div>
-
     <!-- Zeitinfo des Videos -->
-    <div class="item-length text-right">
+    <div class="item-length text-right mr-1">
 
       <!-- Video wurde schon gespielt. Restzeit 0:00 -->
       <ng-container *ngIf="i < position">0:00</ng-container>

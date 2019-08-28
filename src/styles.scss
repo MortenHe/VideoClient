@@ -147,7 +147,7 @@ button:disabled {
 }
 
 .item-length {
-    min-width: 50px;
+    min-width: 45px;
 }
 
 .switch {
@@ -331,6 +331,12 @@ button:disabled {
 
 .sort-handle {
     cursor: move;
+    flex: 1;
+    display: flex !important;
+    align-self: stretch;
+    justify-content: center;
+    align-items: center;
+    max-width: 40px;
 }
 
 .sortable-chosen {
