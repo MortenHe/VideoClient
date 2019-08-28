@@ -9,6 +9,21 @@ import { ResultfilterService } from '../../services/resultfilter.service';
 
 export class SortfilterComponent implements OnInit {
 
+  //Sortier-Optionen
+  sortOptions = [{
+    orderField: "name",
+    reverseOrder: false
+  }, {
+    orderField: "length",
+    reverseOrder: true
+  }, {
+    orderField: "length",
+    reverseOrder: false
+  }];
+
+  //Welche Sortieroption ist aktiv?
+  sortOptionsIndex = 0;
+
   //Sortierfeld
   orderField: string;
 
@@ -28,9 +43,15 @@ export class SortfilterComponent implements OnInit {
     this.fs.getReverseOrder().subscribe(reverseOrder => this.reverseOrder = reverseOrder);
   }
 
-  //Sortierfeld und Reverse setzen
-  setOrder(field, reverse) {
-    this.fs.setReverseOrder(reverse);
-    this.fs.setOrderField(field);
+  //Zur nachesten Sortieroption wechseln
+  setNextOrder() {
+
+    //Naechste Sortieroption auswaehlen
+    this.sortOptionsIndex = (this.sortOptionsIndex + 1) % this.sortOptions.length;
+    const newOption = this.sortOptions[this.sortOptionsIndex];
+
+    //Sortieroption setzen
+    this.fs.setReverseOrder(newOption.reverseOrder);
+    this.fs.setOrderField(newOption.orderField);
   }
 }

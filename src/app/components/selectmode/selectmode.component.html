@@ -1,12 +1,5 @@
-<!-- Form fuer Mode-Select -->
-<form [formGroup]="selectModeForm">
-
-    <!-- Auswahl der Videolisten (Kindervideos, Jahresvideo) -->
-    <select formControlName="select-mode"
-            class="width-auto form-control">
-
-        <!-- auswaehlbare Optionen ausgeben -->
-        <option *ngFor="let mode of modes"
-                [value]="mode.id">{{mode.label}}</option>
-    </select>
-</form>
+<!-- Modus-Auswahl (Kindervideo, Jahresvideo) -->
+<button *ngFor="let mode of modes"
+        class="btn"
+        [class.active-mode]="activeMode === mode.id"
+        (click)="setMode(mode.id)"><span>{{mode.label}}</span></button>

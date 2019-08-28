@@ -15,20 +15,11 @@ export class SearchComponent {
   //Name der App fuer Ueberschrift (z.B. Video Player (dev))
   envName = environment.envName;
 
-  //Zustand ob Verbindung zu WSS existiert
-  connected: boolean;
-
-  //Position in Playlist
-  position: number = -1;
-
   //welche ModeFilter gibt es (all, conni, janosch, misc)
   showModeFilterList: boolean = false;
 
   //Shutdown Status
   shutdown$;
-
-  //Anzahl der Sekunden bis Shutdown
-  countdownTime: number;
 
   //Services und Router injecten
   constructor(private bs: BackendService, private route: ActivatedRoute, private router: Router) {
@@ -81,17 +72,8 @@ export class SearchComponent {
       }
     });
 
-    //Position in Playlist abbonieren
-    this.bs.getPosition().subscribe(position => this.position = position);
-
-    //Anzahl der Sekunden bis Shutdown abbonieren
-    this.bs.getCountdownTime().subscribe(countdownTime => this.countdownTime = countdownTime);
-
     //Shutdown Zustand abbonieren
     this.shutdown$ = this.bs.getShutdown();
-
-    //Zustand abbonieren, ob Verbindung zu WSS besteht
-    this.bs.getConnected().subscribe(connected => this.connected = connected);
 
     //Regelmassieg eine Nachricht an WSS schicken, damit ggf. die Verbindung wieder aufgebaut wird
     setInterval(() => {
@@ -100,10 +82,5 @@ export class SearchComponent {
         value: ""
       });
     }, 1500);
-  }
-
-  //App aktivieren (WSS per PHP starten)
-  activateApp() {
-    this.bs.activateApp().subscribe();
   }
 }

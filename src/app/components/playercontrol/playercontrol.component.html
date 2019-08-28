@@ -1,20 +1,24 @@
+<!-- Player-Funktionen -->
 <!-- Item nach links spulen -->
 <button (click)="seek(false)"
-        class="ripple fa fa-backward text-info button-clean"></button>
+        [disabled]="position < 0"
+        class="ripple fa fa-backward text-info button-clean mr-2"></button>
 
 <!-- toggle pause restart -->
 <button (click)="togglePausedRestart()"
-        class="ripple fa button-clean"
+        [disabled]="position < 0"
+        class="ripple fa button-clean mr-2"
         [ngClass]='{
-                "fa-play text-success": paused,
-                "fa-pause text-warning": !paused
+                "fa-play text-info": paused,
+                "fa-pause text-info": !paused
         }'></button>
 
 <!-- stop -->
 <button (click)="stopAndResetPlaylist()"
-        class="ripple fa button-clean"
-        class="ripple fa fa-stop text-danger button-clean"></button>
+        [disabled]="position < 0"
+        class="ripple fa fa-stop text-info button-clean mr-2"></button>
 
 <!-- Item nach rechts spulen -->
 <button (click)="seek(true)"
+        [disabled]="position < 0"
         class="ripple fa fa-forward text-info button-clean"></button>

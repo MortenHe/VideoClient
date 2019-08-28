@@ -1,17 +1,11 @@
-:host {
-    position: absolute;
-    right: 0px;
-    border-radius: 5px;
-    overflow: hidden;
-}
+@import '~scss/variables.scss';
 
 button {
-    cursor: pointer;
-    background: white;
     width: 40px;
     height: 40px;
-    opacity: .3;
+    border-radius: 40px;
+
     &.active {
-        opacity: 1;
+        background: $color-lighter-grey;
     }
 }

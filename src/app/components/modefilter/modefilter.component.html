@@ -1,6 +1,6 @@
 <!-- Form fuer Filter-Buttons -->
 <form [formGroup]="modeFilterForm"
-      class="grid-form mt-2"
+      class="grid-form"
       [ngClass]="{
           'grid-label': modeFilter['display-type'] === 'label',
           'grid-icon': modeFilter['display-type'] === 'icon'
@@ -15,7 +15,7 @@
           <img *ngIf="modeFilter['display-type'] === 'icon'"
                height="50"
                width="50"
-               src="assets/images/{{singleModeFilter.name}}.png" />
+               [src]="'assets/images/' + singleModeFilter.name + '.png'" />
 
           <!-- Name des Filters (sofern definiert) -->
           <span *ngIf="modeFilter['display-type'] === 'label'">{{singleModeFilter.name}}</span>

@@ -36,6 +36,8 @@ import { PicontrolComponent } from './components/picontrol/picontrol.component';
 import { DebuginspectorComponent } from './components/debuginspector/debuginspector.component';
 import { ToggletrackviewComponent } from './components/toggletrackview/toggletrackview.component';
 import { VolumeControlComponent } from './components/volume-control/volume-control.component';
+import { ConnectionComponent } from './components/connection/connection.component';
+import { CountdownComponent } from './components/countdown/countdown.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +59,9 @@ import { VolumeControlComponent } from './components/volume-control/volume-contr
     OrderByPipe,
     ToggleCheckboxDirective,
     VolumeControlComponent,
-    FileNamePipe
+    FileNamePipe,
+    ConnectionComponent,
+    CountdownComponent
   ],
   imports: [
     BrowserModule,

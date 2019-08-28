@@ -10,7 +10,7 @@ import { BackendService } from '../../services/backend.service';
 export class PicontrolComponent {
 
   //Nutzer muss 2 mal auf Shutdown klicken, klicks zaehlen
-  clicks = 0;
+  clicks: number = 0;
 
   //Service injecten
   constructor(private bs: BackendService) { }

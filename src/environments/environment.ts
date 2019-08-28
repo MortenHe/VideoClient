@@ -6,10 +6,10 @@ export const environment = {
   wssUrl: 'ws://localhost:8080',
   domainModes: [{
     "id": "kinder",
-    "label": "Kindervideos"
+    "label": "Serien"
   },
   {
     "id": "jahresvideo",
-    "label": "Jahresvideos"
+    "label": "Familie"
   }]
 };

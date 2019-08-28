@@ -9,14 +9,22 @@ import { BackendService } from '../../services/backend.service';
 
 export class VolumeControlComponent {
 
-  //Aktueller Lautstaerkewert
-  volume: number
+  //Aktuelle Position in Playlist
+  position: number;
+
+  //Aktuelle Lautstaerke
+  volume: number;
 
   //Service injecten
   constructor(private bs: BackendService) { }
 
   //Beim Init
   ngOnInit() {
+
+    //Aktuelle Position abbonieren
+    this.bs.getPosition().subscribe(position => {
+      this.position = position
+    });
 
     //Aktuelle Lautstaerke abbonieren
     this.bs.getVolume().subscribe(volume => {

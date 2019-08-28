@@ -84,7 +84,7 @@ export class ToggleCheckboxDirective {
         this._renderer.addClass(nextLabel, "next-label");
         this._renderer.addClass(nextLabel, "fa");
         this._renderer.addClass(nextLabel, this.fa);
-        this._renderer.addClass(nextLabel, "shadow");
+        //this._renderer.addClass(nextLabel, "shadow");
         this._renderer.setAttribute(nextLabel, "for", this.id);
 
         // Add label after input

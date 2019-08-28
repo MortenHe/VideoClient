@@ -1,0 +1,7 @@
+//MH Variablen importieren
+@import '~scss/variables.scss';
+
+.active-mode span {
+    font-weight: bold;
+    border-bottom: 2px solid $color-grey;
+}

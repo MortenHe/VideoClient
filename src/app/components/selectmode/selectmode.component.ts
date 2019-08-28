@@ -11,11 +11,11 @@ import { environment } from '../../../environments/environment';
 })
 export class SelectmodeComponent implements OnInit {
 
+  //aktiver Modus
+  activeMode: string;
+
   //Liste der Modes (kindervideo, jahresvideo)
   modes: any[];
-
-  //Form fuer Auswahl des Modus
-  selectModeForm;
 
   //Services injecten
   constructor(private fb: FormBuilder, private bs: BackendService, private router: Router) { }
@@ -26,23 +26,17 @@ export class SelectmodeComponent implements OnInit {
     //Modes aus Config laden
     this.modes = environment.domainModes;
 
-    //Reactive Form fuer Mode-Select erstellen
-    this.selectModeForm = this.fb.group({
-      "select-mode": ""
-    });
+    //1. Modus als aktiv setzen
+    this.activeMode = this.modes[0];
 
-    //Wenn sich Wert des Mode-Select aendert
-    this.selectModeForm.get("select-mode").valueChanges.subscribe(mode => {
-
-      //zu passender URL navigieren
-      this.router.navigate(['/search', mode]);
-    });
-
-    //Wen sich der Modus aendert (z.B. URL annavigiert oder Aenderung per Select)
+    //Wen sich der Modus aendert (z.B. URL annavigiert oder Aenderung per Select), Modus merken
     this.bs.getMode().subscribe(mode => {
-
-      //ausgewaehlten Modus in Select setzen, dabei kein changeevent triggern
-      this.selectModeForm.controls["select-mode"].setValue(mode, { emitEvent: false });
+      this.activeMode = mode;
     });
+  }
+
+  //Wenn Modus gesetzt wird, zu passender URL navigieren
+  setMode(mode) {
+    this.router.navigate(['/search', mode]);
   }
 }
