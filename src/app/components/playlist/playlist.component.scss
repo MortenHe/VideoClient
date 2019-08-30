@@ -16,6 +16,7 @@
     justify-content: center;
     user-select: none;
     padding: 5px;
+    min-height: 36px;
 
     &:hover:not(.active-item):not(.sortable-chosen) {
         background: $color-light-bg-hover;
@@ -31,7 +32,7 @@
 }
 
 .playing {
-    background: $color-info-green;
+    background: $color-light-bg-active !important;
 }
 
 .filesTotalTime {

@@ -1,0 +1,2 @@
+- Playlist starten optisch anpassen
+- bereits gespielt Titel ausgrauen?

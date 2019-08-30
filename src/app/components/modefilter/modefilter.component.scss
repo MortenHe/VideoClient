@@ -29,7 +29,7 @@
         }
 
         &:hover:not(.active) {
-            border: 3px solid $color-light-bg-hover;
+            border: 3px solid rgba($color-info-blue, .5);
 
             img {
                 filter: grayscale(.3);
@@ -37,7 +37,7 @@
         }
 
         &.active {
-            border: 3px solid $color-light-bg-active;
+            border: 3px solid $color-info-blue;
 
             img {
                 filter: grayscale(0);

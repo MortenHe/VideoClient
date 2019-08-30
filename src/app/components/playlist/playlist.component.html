@@ -2,7 +2,7 @@
 <button class="button-clean ml-3 my-2 start-playlist"
         *ngIf="files.length && position < 0"
         (click)="jumpTo(0)">
-  <i class="fa fa-play mr-2"></i>Playlist starten</button>
+  <i class="fa fa-fw fa-play mr-2"></i>Playlist starten</button>
 
 <!-- Info ueber Playlist (Playlist sortierbar) -->
 <div [sortablejs]="files"
@@ -11,7 +11,7 @@
 
   <!-- nur Items nach der aktuellen Position sortierbar-->
   <div *ngFor="let file of files, index as i, first as first"
-       class="row no-gutters item drag pl-0"
+       class="row no-gutters item pl-3"
        [ngClass]="{
        'drag': i > position,
        'waiting': i === jumpPosition,
@@ -21,25 +21,30 @@
 
     <!-- Play-/ Spiner-Symbol-->
     <div *ngIf="i === position || i === jumpPosition"
-         class="fa fa-fw play-spinner"
+         class="fa fa-fw"
          [ngClass]="{
         'fa-play': i === position,
         'fa-spinner fa-spin': i === jumpPosition
          }">
     </div>
 
-    <!-- Sortier-Handle -->
-    <i *ngIf="!(i === position || i === jumpPosition)"
-       [class.invisible]="!draggable(i)"
-       class="fa-fw sort-handle fa fa-arrows-v mr-1"></i>
+    <!-- Jump To (vor sort Bereich) -->
+    <i *ngIf="i < position && i !== jumpPosition"
+       (click)="jumpTo(i)"
+       class="fa fa-fw fa-play opacity-30"></i>
+
+    <!-- Jump To (im Sortbereich) -->
+    <i *ngIf="i > position && i !== jumpPosition"
+       data-func="jump"
+       [attr.data-index]="i"
+       class="fa fa-fw fa-play ignore-sort opacity-30"></i>
 
     <!-- Name des Videos. Klick startet video -->
-    <div data-func="jump"
-         [attr.data-index]="i"
-         class="col ignore-sort mr-2">{{file.name|fileName}}</div>
+    <div [class.sort-handle]="draggable(i)"
+         class="col ml-3 mr-3">{{file.name|fileName}}</div>
 
     <!-- Titel aus Playlist loeschen, nur Titel nach aktueller Position sind loeschbar -->
-    <button *ngIf="i > position"
+    <button [class.invisible]="i <= position"
             data-func="remove"
             class="button-clean add-item ignore-sort"><i class="fa fa-minus"></i></button>
 

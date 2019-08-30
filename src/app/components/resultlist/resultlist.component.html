@@ -1,29 +1,20 @@
 <!-- Ueber Items-Array gehen und die bereits gefilterte und sortierte Liste ausgeben -->
-<div *ngFor="let item of items$ | async"
-     class="row no-gutters align-items-center items">
+<button *ngFor="let item of items$ | async"
+        class="row no-gutters items pl-3 box"
+        (click)="addToPlaylist(item, false)"
+        [disabled]="isInPlaylist(item)">
 
-  <!-- Enque-Symbol (deaktiviert, wenn Titel in Playlist) -->
-  <button (click)="addToPlaylist(item, false)"
-          [disabled]="isInPlaylist(item)"
-          class="button-clean add-item">
-    <i *ngIf="!isInPlaylist(item)"
-       class="fa fa-plus"></i>
-  </button>
+  <!-- Links: Add-Symbol -->
+  <i class="fa fa-fw fa-plus mr-3 align-self-center"></i>
 
-  <!-- Button um einzelnes Item direkt zu starten -->
-  <button (click)="addToPlaylist(item, true)"
-          [disabled]="isInPlaylist(item)"
-          class="box col text-left pl-2">
+  <!-- Rechts: [Titel, Dauer] darunter Info -->
+  <div class="col no-gutters">
 
-    <!-- Zeile mit (hover-) Playsymbol, Name der Playlist und Laenge -->
-    <div class="row no-gutters align-items-center">
-
-      <!-- Play-Symbol bei hover und active angezeigt (wenn Titel nicht in Playlist)-->
-      <i *ngIf="!isInPlaylist(item)"
-         class="fa fa-play mr-2"></i>
+    <!-- Name des Titels und Laenge -->
+    <div class="col row no-gutters">
 
       <!-- Itemname -->
-      <span class="col">{{item.name|fileName}}</span>
+      <span class="col text-left">{{item.name|fileName}}</span>
 
       <!-- formattierte Laenge des Items -->
       <div class="item-length item-length-video text-right ml-1 mr-1">
@@ -31,13 +22,12 @@
       </div>
     </div>
 
-    <!-- Wenn Tracks angezeigt werden sollen -->
+    <!-- Wenn Tracks angezeigt werden sollen, Tracks ausgeben -->
     <ul *ngIf="showTracks$ | async">
-
-      <!-- Tracks ausgeben -->
-      <li *ngFor="let track of item.tracks">
+      <li *ngFor="let track of item.tracks"
+          class="mr-1">
         {{track}}
       </li>
     </ul>
-  </button>
-</div>
+  </div>
+</button>

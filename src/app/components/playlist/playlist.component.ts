@@ -75,10 +75,14 @@ export class PlaylistComponent implements OnInit {
 
     //aktuellen Index in Titelliste abbonieren und in Variable schreiben (fuer CSS-Klasse)
     this.bs.getPosition().subscribe(position => {
-      this.position = position;
 
-      //temp. Sprungwert (fuer optische Darstellung) wieder zuruecksetzen
-      this.jumpPosition = -1;
+      //kurz Verzoegerung damit Spinner sichtbar ist
+      setTimeout(() => {
+        this.position = position;
+
+        //temp. Sprungwert (fuer optische Darstellung) wieder zuruecksetzen
+        this.jumpPosition = -1;
+      }, 1000);
     });
 
     //Laenge der Playlist abbonieren
