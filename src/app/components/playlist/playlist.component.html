@@ -13,6 +13,7 @@
   <div *ngFor="let file of files, index as i, first as first"
        class="row no-gutters item pl-3"
        [ngClass]="{
+       'opacity-50': i < position,
        'drag': i > position,
        'waiting': i === jumpPosition,
        'playing': i === position,

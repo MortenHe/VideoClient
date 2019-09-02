@@ -7,10 +7,10 @@
 <!-- toggle pause restart -->
 <button (click)="togglePausedRestart()"
         [disabled]="position < 0"
-        class="ripple fa button-clean mr-2"
+        class="ripple fa button-clean mr-2 text-info"
         [ngClass]='{
-                "fa-play text-info": paused,
-                "fa-pause text-info": !paused
+                "fa-play": paused,
+                "fa-pause": !paused
         }'></button>
 
 <!-- stop -->
