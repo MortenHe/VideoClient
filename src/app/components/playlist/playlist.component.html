@@ -1,10 +1,4 @@
-<!-- Playlist starten -->
-<button class="button-clean ml-3 my-2 start-playlist"
-        *ngIf="files.length && position < 0"
-        (click)="jumpTo(0)">
-  <i class="fa fa-fw fa-play mr-2"></i>Playlist starten</button>
-
-<!-- Info ueber Playlist (Playlist sortierbar) -->
+<!-- sortierbare Playlist -->
 <div [sortablejs]="files"
      (update)=sortDone($event)
      (filter)=eventInsideSort($event)>
@@ -41,8 +35,11 @@
        class="fa fa-fw fa-play ignore-sort opacity-30"></i>
 
     <!-- Name des Videos. Klick startet video -->
-    <div [class.sort-handle]="draggable(i)"
-         class="col ml-3 mr-3">{{file.name|fileName}}</div>
+    <div class="col ml-3 mr-3"
+         [ngClass]="{
+      'sort-handle': draggable(i),
+      'font-weight-bold': i === position
+    }">{{file.name|fileName}}</div>
 
     <!-- Titel aus Playlist loeschen, nur Titel nach aktueller Position sind loeschbar -->
     <button [class.invisible]="i <= position"
@@ -64,7 +61,19 @@
   </div>
 </div>
 
-<!-- Laenge der Playlist -->
-<div *ngIf="files.length > 1"
-     class="filesTotalTime">{{filesTotalTime | timeformatter}}
+<!-- 2. Zeile: Playlist starten-Button und Gesamtlaenge der Playlist-Countdown -->
+<div class="start-playlist pl-3 pr-2 d-flex">
+
+  <!-- Playlist starten -->
+  <div class="font-weight-bold cursor-pointer text-info"
+       *ngIf="files.length && position < 0"
+       (click)="jumpTo(0)">
+    <i class="fa fa-fw fa-play"></i>
+    <span class="ml-3">Playlist starten</span>
+  </div>
+
+  <!-- Laenge der Playlist -->
+  <div class="ml-auto"
+       *ngIf="files.length > 1">{{filesTotalTime | timeformatter}}
+  </div>
 </div>

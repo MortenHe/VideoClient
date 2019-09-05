@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { BackendService } from '../../services/backend.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from '../../../environments/environment'
-import { ResultfilterService } from '../../services/resultfilter.service';
 
 @Component({
   selector: 'app-search',
@@ -20,6 +19,9 @@ export class SearchComponent {
 
   //Shutdown Status
   shutdown$;
+
+  //Liste der Files
+  files: any[] = [];
 
   //Services und Router injecten
   constructor(private bs: BackendService, private route: ActivatedRoute, private router: Router) {
@@ -71,6 +73,11 @@ export class SearchComponent {
         return false;
       }
     });
+
+    //Files abonnieren
+    this.bs.getFiles().subscribe(files => {
+      this.files = files;
+    })
 
     //Shutdown Zustand abbonieren
     this.shutdown$ = this.bs.getShutdown();

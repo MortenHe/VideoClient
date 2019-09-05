@@ -1,17 +1,12 @@
 //MH Variablen importieren
 @import '~scss/variables.scss';
 
-.start-playlist:hover {
-    background: $color-info-green;
-    border-radius: $border-radius;
-}
-
 .item {
     padding-left: 5px;
     background: $color-light-bg;
     cursor: pointer;
     display: flex;
-    border-bottom: 1px solid $color-grey;
+    border-bottom: 1px solid $color-light-border-grey;
     align-items: center;
     justify-content: center;
     user-select: none;
@@ -27,18 +22,12 @@
     }
 
     &.first {
-        border-top: 1px solid $color-grey;
+        border-top: 1px solid $color-light-border-grey;
     }
 }
 
 .playing {
     background: $color-light-bg-active !important;
-}
-
-.filesTotalTime {
-    text-align: right;
-    padding: 5px;
-    padding-bottom: 0px;
 }
 
 .play-spinner {
@@ -48,6 +37,11 @@
     justify-content: center;
     align-items: center;
     max-width: 40px;
+}
+
+.start-playlist {
+    padding: 5px;
+    border-bottom: 1px solid $color-light-border-grey;
 }
 
 @media (hover: none) {

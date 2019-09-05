@@ -1,4 +1,0 @@
-- Playlist starten optisch anpassen
-- bereits gespielte Titel ausgrauen?
-- laufender Titel fett
-- Playsymbol blau statt grün

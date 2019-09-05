@@ -19,7 +19,7 @@
     }
 
     .mode-filter {
-        border: 3px solid $color-grey;
+        border: 3px solid rgba($color-grey, .3);
         border-radius: $border-radius;
         padding: 5px;
         user-select: none;
