@@ -62,7 +62,7 @@
 </div>
 
 <!-- 2. Zeile: Playlist starten-Button und Gesamtlaenge der Playlist-Countdown -->
-<div *ngIf="position < 0 || (files.length && position + 1 < files.length)"
+<div *ngIf="(files.length && position + 1 < files.length)"
      class="start-playlist pl-3 pr-2 d-flex">
 
   <!-- Playlist starten -->
