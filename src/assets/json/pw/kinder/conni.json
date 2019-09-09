@@ -1,312 +1,312 @@
 [
     {
-        "name": "Conni und der Advent",
+        "name": "Conni - Der Advent",
         "file": "conni-advent.mp4",
         "length": "00:11:31",
         "active": true
     },
     {
-        "name": "Conni lernt backen (05)",
+        "name": "Conni - Lernt backen (05)",
         "file": "conni-backen.mp4",
         "length": "00:11:25",
         "active": true
     },
     {
-        "name": "Conni auf dem Bauernhof (08)",
+        "name": "Conni - Auf dem Bauernhof (08)",
         "file": "conni-bauernhof.mp4",
         "length": "00:11:33",
         "active": true
     },
     {
-        "name": "Conni in den Bergen (23)",
+        "name": "Conni - In den Bergen (23)",
         "file": "conni-berge.mp4",
         "length": "00:11:40",
         "active": true
     },
     {
-        "name": "Conni entdeckt die Bücher (25)",
+        "name": "Conni - Entdeckt die Bücher (25)",
         "file": "conni-buecher.mp4",
         "length": "00:11:38",
         "active": true
     },
     {
-        "name": "Conni erster Flug (07)",
+        "name": "Conni - Erster Flug (07)",
         "file": "conni-flugzeug.mp4",
         "length": "00:11:26",
         "active": true
     },
     {
-        "name": "Conni spielt Fußball (22)",
+        "name": "Conni - Spielt Fußball (22)",
         "file": "conni-fussball.mp4",
         "length": "00:11:35",
         "active": true
     },
     {
-        "name": "Conni hat Geburtstag (10)",
+        "name": "Conni - Hat Geburtstag (10)",
         "file": "conni-geburtstag.mp4",
         "length": "00:11:22",
         "active": true
     },
     {
-        "name": "Conni bekommt eine Katze (02)",
+        "name": "Conni - Bekommt eine Katze (02)",
         "file": "conni-katze.mp4",
         "length": "00:11:26",
         "active": true
     },
     {
-        "name": "Conni beim Kinderarzt (26)",
+        "name": "Conni - Beim Kinderarzt (26)",
         "file": "conni-kinderarzt.mp4",
         "length": "00:11:54",
         "active": true
     },
     {
-        "name": "Conni übernachtet im Kindergarten (05)",
+        "name": "Conni - Übernachtet im Kindergarten (05)",
         "file": "conni-kindergarten-uebernachtung.mp4",
         "length": "00:11:28",
         "active": true
     },
     {
-        "name": "Conni und der Osterhase (15)",
+        "name": "Conni - Der Osterhase (15)",
         "file": "conni-osterhase.mp4",
         "length": "00:11:27",
         "active": true
     },
     {
-        "name": "Conni backt Pizza (18)",
+        "name": "Conni - Backt Pizza (18)",
         "file": "conni-pizza.mp4",
         "length": "00:11:36",
         "active": true
     },
     {
-        "name": "Conni lernt Rad fahren (01)",
+        "name": "Conni - Lernt Rad fahren (01)",
         "file": "conni-rad.mp4",
         "length": "00:11:31",
         "active": true
     },
     {
-        "name": "Conni lernt Reiten (17)",
+        "name": "Conni - Lernt Reiten (17)",
         "file": "conni-reiten.mp4",
         "length": "00:11:41",
         "active": true
     },
     {
-        "name": "Conni fährt Schlittschuh",
+        "name": "Conni - Fährt Schlittschuh",
         "file": "conni-schilttschuh.mp4",
         "length": "00:11:31",
         "active": true
     },
     {
-        "name": "Conni und der erste Schnee",
+        "name": "Conni - Der erste Schnee",
         "file": "conni-schnee.mp4",
         "length": "00:11:31",
         "active": true
     },
     {
-        "name": "Conni lernt Schwimmen (06)",
+        "name": "Conni - Lernt Schwimmen (06)",
         "file": "conni-schwimmen.mp4",
         "length": "00:11:26",
         "active": true
     },
     {
-        "name": "Conni fährt Ski (20)",
+        "name": "Conni - Fährt Ski (20)",
         "file": "conni-ski.mp4",
         "length": "00:11:40",
         "active": true
     },
     {
-        "name": "Conni zieht um (13)",
+        "name": "Conni - Zieht um (13)",
         "file": "conni-umzug.mp4",
         "length": "00:11:30",
         "active": true
     },
     {
-        "name": "Conni geht verloren (24)",
+        "name": "Conni - Geht verloren (24)",
         "file": "conni-verloren.mp4",
         "length": "00:11:28",
         "active": true
     },
     {
-        "name": "Conni beim Zahnarzt (12)",
+        "name": "Conni - Beim Zahnarzt (12)",
         "file": "conni-zahnarzt.mp4",
         "length": "00:11:41",
         "active": true
     },
     {
-        "name": "Conni geht zelten (03)",
+        "name": "Conni - Geht zelten (03)",
         "file": "conni-zelten.mp4",
         "length": "00:11:20",
         "active": true
     },
     {
-        "name": "Conni geht in den Zoo (14)",
+        "name": "Conni - Geht in den Zoo (14)",
         "file": "conni-zoo.mp4",
         "length": "00:11:32",
         "active": true
     },
     {
-        "name": "Conni lernt die Uhrzeit (11)",
+        "name": "Conni - Lernt die Uhrzeit (11)",
         "file": "conni-uhr-tivi.mp4",
         "length": "00:11:26",
         "active": true
     },
     {
-        "name": "Conni geht ins Ballett (09)",
+        "name": "Conni - Geht ins Ballett (09)",
         "file": "conni-ballett-tivi.mp4",
         "length": "00:11:30",
         "active": true
     },
     {
-        "name": "Conni sucht Kater Mau (27)",
+        "name": "Conni - Sucht Kater Mau (27)",
         "file": "conni-sucht-mau-tivi.mp4",
         "length": "00:11:29",
         "active": true
     },
     {
-        "name": "Conni auf der Burg (28)",
+        "name": "Conni - Auf der Burg (28)",
         "file": "conni-burg-tivi.mp4",
         "length": "00:11:29",
         "active": true
     },
     {
-        "name": "Conni und der Babysitter (36)",
+        "name": "Conni - Der Babysitter (36)",
         "file": "conni-babysitter-tivi.mp4",
         "length": "00:11:30",
         "active": true
     },
     {
-        "name": "Conni beim Frisör (32)",
+        "name": "Conni - Beim Frisör (32)",
         "file": "conni-frisör-tivi.mp4",
         "length": "00:11:29",
         "active": true
     },
     {
-        "name": "Conni lässt einen Drachen steigen (30)",
+        "name": "Conni - Lässt einen Drachen steigen (30)",
         "file": "conni-drache-tivi.mp4",
         "length": "00:11:29",
         "active": true
     },
     {
-        "name": "Conni und das Froschkonzert (34)",
+        "name": "Conni - Das Froschkonzert (34)",
         "file": "conni-froschkonzert-tivi.mp4",
         "length": "00:11:29",
         "active": true
     },
     {
-        "name": "Conni geht auf Waldsafari (29)",
+        "name": "Conni - Geht auf Waldsafari (29)",
         "file": "conni-waldsafari-tivi.mp4",
         "length": "00:11:29",
         "active": true
     },
     {
-        "name": "Conni übernachtet bei Julia",
+        "name": "Conni - Übernachtet bei Julia",
         "file": "conni-uebernachtet-bei-julia-tivi.mp4",
         "length": "00:11:29",
         "active": true
     },
     {
-        "name": "Conni auf der Baustelle (39)",
+        "name": "Conni - Auf der Baustelle (39)",
         "file": "conni-baustelle.mp4",
         "length": "00:11:29",
         "active": true
     },
     {
-        "name": "Conni macht Flohmarkt (38)",
+        "name": "Conni - Macht Flohmarkt (38)",
         "file": "conni-flohmarkt.mp4",
         "length": "00:11:29",
         "active": true
     },
     {
-        "name": "Conni feiert Fasching (37)",
+        "name": "Conni - Feiert Fasching (37)",
         "file": "conni-fasching.mp4",
         "length": "00:11:29",
         "active": true
     },
     {
-        "name": "Conni hilft Papa im Garten (40)",
+        "name": "Conni - Hilft Papa im Garten (40)",
         "file": "conni-hilft-garten.mp4",
         "length": "00:11:29",
         "active": true
     },
     {
-        "name": "Conni im Straßenverkehr (42)",
+        "name": "Conni - Im Straßenverkehr (42)",
         "file": "conni-strassenverkehr.mp4",
         "length": "00:11:29",
         "active": true
     },
     {
-        "name": "Conni wird Clown (41)",
+        "name": "Conni - Wird Clown (41)",
         "file": "conni-clown.mp4",
         "length": "00:11:29",
         "active": true
     },
     {
-        "name": "Conni fährt Bahn (45)",
+        "name": "Conni - Fährt Bahn (45)",
         "file": "conni-faehrt-bahn.mp4",
         "length": "00:11:29",
         "active": true
     },
     {
-        "name": "Conni und der fiese Schnupfen (47)",
+        "name": "Conni - Der fiese Schnupfen (47)",
         "file": "conni-fiese-schnupfen.mp4",
         "length": "00:11:29",
         "active": true
     },
     {
-        "name": "Conni und der Dreck-weg-Tag (48)",
+        "name": "Conni - Der Dreck-weg-Tag (48)",
         "file": "conni-dreck-weg-tag.mp4",
         "length": "00:11:29",
         "active": true
     },
     {
-        "name": "Conni spielt Theater (49)",
+        "name": "Conni - Spielt Theater (49)",
         "file": "conni-spielt-theater.mp4",
         "length": "00:11:29",
         "active": true
     },
     {
-        "name": "Conni kann nicht einschlafen (46)",
+        "name": "Conni - Kann nicht einschlafen (46)",
         "file": "conni-kann-nicht-einschlafen.mp4",
         "length": "00:11:29",
         "active": true
     },
     {
-        "name": "Conni turnt (43)",
+        "name": "Conni - Turnt (43)",
         "file": "conni-turnt.mp4",
         "length": "00:11:29",
         "active": true
     },
     {
-        "name": "Conni und der Hundebesuch (50)",
+        "name": "Conni - Der Hundebesuch (50)",
         "file": "conni-hundebesuch.mp4",
         "length": "00:11:29",
         "active": true
     },
     {
-        "name": "Conni und der Laternenumzug (16)",
+        "name": "Conni - Der Laternenumzug (16)",
         "file": "conni-laterne.mp4",
         "length": "00:11:33",
         "active": true
     },
     {
-        "name": "Conni macht Musik (19)",
+        "name": "Conni - Macht Musik (19)",
         "file": "conni-musik.mp4",
         "length": "00:11:29",
         "active": true
     },
     {
-        "name": "Conni geht nicht mit Fremden mit (35)",
+        "name": "Conni - Geht nicht mit Fremden mit (35)",
         "file": "conni-fremden.mp4",
         "length": "00:11:29",
         "active": true
     },
     {
-        "name": "Conni hat Läuse (51)",
+        "name": "Conni - Hat Läuse (51)",
         "file": "conni-laeuse.mp4",
         "length": "00:11:29",
         "active": true
     },
     {
-        "name": "Conni am Strand (21)",
+        "name": "Conni - Am Strand (21)",
         "file": "conni-strand.mp4",
         "length": "00:11:23",
         "active": true
