@@ -26,13 +26,13 @@
     <!-- Jump To (vor sort Bereich) -->
     <i *ngIf="i < position && i !== jumpPosition"
        (click)="jumpTo(i)"
-       class="fa fa-fw fa-play opacity-30"></i>
+       class="fa fa-fw fa-play opacity-50"></i>
 
     <!-- Jump To (im Sortbereich) -->
     <i *ngIf="i > position && i !== jumpPosition"
        data-func="jump"
        [attr.data-index]="i"
-       class="fa fa-fw fa-play ignore-sort opacity-30"></i>
+       class="fa fa-fw fa-play ignore-sort opacity-50"></i>
 
     <!-- Name des Videos. Klick startet video -->
     <div class="col ml-3 mr-3"
@@ -44,7 +44,7 @@
     <!-- Titel aus Playlist loeschen, nur Titel nach aktueller Position sind loeschbar -->
     <button [class.invisible]="i <= position"
             data-func="remove"
-            class="button-clean add-item ignore-sort"><i class="fa fa-minus"></i></button>
+            class="button-clean add-item ignore-sort opacity-50"><i class="fa fa-minus"></i></button>
 
     <!-- Zeitinfo des Videos -->
     <div class="item-length text-right mr-1">

@@ -1,14 +1,16 @@
 <!-- Ueber Items-Array gehen und die bereits gefilterte und sortierte Liste ausgeben -->
 <button *ngFor="let item of items$ | async"
         class="row no-gutters items pl-3 box"
-        (click)="addToPlaylist(item, false)"
         [disabled]="isInPlaylist(item)">
 
-  <!-- Links: Add-Symbol -->
-  <i class="fa fa-fw fa-plus mr-3 align-self-center"></i>
+  <!-- Links: Direktes Abspielen-Symbol -->
+  <i class="fa fa-fw fa-play mr-3 align-self-center opacity-50"
+     [class.invisible]="isInPlaylist(item)"
+     (click)="addToPlaylist(item, true)"></i>
 
   <!-- Rechts: [Titel, Dauer] darunter Info -->
-  <div class="col no-gutters">
+  <div class="col no-gutters"
+       (click)="addToPlaylist(item, false)">
 
     <!-- Name des Titels und Laenge -->
     <div class="col row no-gutters">
