@@ -4,6 +4,7 @@ const link = require("./link.js");
 //Url je nach Modus aufteilen, damit part-urls erzeugt werden koennen
 const urlSplit = {
     zdf: (link.url).split(/segment\d{1,}/),
+    wdr: (link.url).split(/segment\d{1,}/),
     dm: (link.url).split(/frag\(\d{1,}/)
 }[link.source];
 
@@ -36,6 +37,7 @@ fs.emptyDirSync(downloadDir);
 //Wie viele Segmente sollen fuer diesen Modus abgefragt werden
 const limit = {
     zdf: 165,
+    wdr: 10,
     dm: 500
 }[link.source];
 
@@ -48,6 +50,7 @@ for (let i = 1; i <= limit; i++) {
         //Url mit part-id erstellen fuer best. Modus
         let partUrl = {
             zdf: urlSplit[0] + "segment" + i + urlSplit[1],
+            wdr: urlSplit[0] + "segment" + i + urlSplit[1],
             dm: urlSplit[0] + "frag(" + i + urlSplit[1]
         }[link.source];
 

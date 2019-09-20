@@ -1,0 +1,6 @@
+MEDIUM
+- Sortierung mit Umlaution Zieht um vs. Übernachtet
+
+LOW
+- font-awesome 5
+- Liste nach Nummer erstellen (welche Folgen von Bibi und Tina fehlen noch)

@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Die Maus - Digital 0101",
+        "file": "maus-0101.mp4",
+        "length": "00:00:48",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Achternbahn",
+        "file": "maus-achterbahn.mp4",
+        "length": "00:00:45",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Äpfel sammeln",
+        "file": "maus-aepfel.mp4",
+        "length": "00:00:56",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Akkubohrer",
+        "file": "maus-akkubohrer.mp4",
+        "length": "00:00:54",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Eiermaschine [1]",
+        "file": "maus-eiermaschine1.mp4",
+        "length": "00:00:34",
+        "active": true
+    }
+]

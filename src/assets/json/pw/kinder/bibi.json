@@ -6,7 +6,7 @@
         "active": true
     },
     {
-        "name": "Bibi Blocksberg - Das verhexte Dromedar",
+        "name": "Bibi Blocksberg - Das verhexte Dromedar (19)",
         "file": "bibi-dromedar.mp4",
         "length": "00:25:12",
         "active": true
@@ -96,7 +96,7 @@
         "active": true
     },
     {
-        "name": "Bibi Blocksberg - Manias magische Mixtur",
+        "name": "Bibi Blocksberg - Manias magische Mixtur (45)",
         "file": "bibi-mixtur.mp4",
         "length": "00:25:12",
         "active": true
@@ -114,7 +114,7 @@
         "active": true
     },
     {
-        "name": "Bibi Blocksberg - Als Prinzessin",
+        "name": "Bibi Blocksberg - Als Prinzessin (02)",
         "file": "bibi-prinzessin.mp4",
         "length": "00:25:12",
         "active": true
@@ -129,6 +129,18 @@
         "name": "Bibi Blocksberg - Wo ist Kartoffelbrei (09)",
         "file": "bibi-wo-kartoffelbrei.mp4",
         "length": "00:26:04",
+        "active": true
+    },
+    {
+        "name": "Bibi Blocksberg - Das Wettfliegen (10)",
+        "file": "bibi-wettfliegen.mp4",
+        "length": "00:26:09",
+        "active": true
+    },
+    {
+        "name": "Bibi Blocksberg - Der Kobold aus dem Briefkasten (39)",
+        "file": "bibi-kobold-briefkasten.mp4",
+        "length": "00:25:13",
         "active": true
     }
 ]
