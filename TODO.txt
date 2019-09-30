@@ -1,5 +1,4 @@
 MEDIUM
-- Sortierung mit Umlaution Zieht um vs. Übernachtet
 
 LOW
 - font-awesome 5

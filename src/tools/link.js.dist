@@ -1,13 +1,14 @@
 module.exports = {
-    //Praefix fuer Dateiname (conni, bibi-tina)
-    mode: "conni",
-    
-    //Dateiname der mp4-Datei (baustelle, zirkuspony)
-    fileName: "laterne",
+     
+    //Wo liegt das Video ("zdf", "wdr", "dm")
+    source: "wdr",
 
-    //Wo liegt das Video ("zdf", "dm")
-    source: "zdf",
-    
-    //Link aus Med.
-    url: ""
+    //Praefix fuer Dateiname (conni, bibi-tina, bibi, maus)
+    mode: "maus",
+
+    //Array von Namen und Links aus Med.
+    urls: [
+        ["anglerglueck", "https://..."],
+        ["apfelbaum", "https://..."],
+    ]
 };

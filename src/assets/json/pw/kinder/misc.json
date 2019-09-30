@@ -64,5 +64,11 @@
         "file": "poor-boy.mp4",
         "length": "00:00:34",
         "active": true
+    },
+    {
+        "name": "Lausbuam - Resi, i hol die mit meim Traktor ab",
+        "file": "resi-traktor-lausbuam.mp4",
+        "length": "00:04:25",
+        "active": true
     }
 ]

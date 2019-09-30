@@ -24,6 +24,54 @@
         "active": true
     },
     {
+        "name": "Die Maus - Ampel",
+        "file": "maus-ampel.mp4",
+        "length": "00:01:20",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Angeln",
+        "file": "maus-angeln.mp4",
+        "length": "00:01:01",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Anglerglück",
+        "file": "maus-anglerglueck.mp4",
+        "length": "00:01:27",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Apfelbaum",
+        "file": "maus-apfelbaum.mp4",
+        "length": "00:01:16",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Archäologe",
+        "file": "maus-archaeologe.mp4",
+        "length": "00:01:07",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Artisten",
+        "file": "maus-artisten.mp4",
+        "length": "00:00:39",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Auf Rädern",
+        "file": "maus-auf-raedern.mp4",
+        "length": "00:00:40",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Ausmaschine",
+        "file": "maus-ausmaschine.mp4",
+        "length": "00:00:35",
+        "active": true
+    },
+    {
         "name": "Die Maus - Eiermaschine [1]",
         "file": "maus-eiermaschine1.mp4",
         "length": "00:00:34",

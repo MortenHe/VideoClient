@@ -142,5 +142,11 @@
         "file": "bibi-kobold-briefkasten.mp4",
         "length": "00:25:13",
         "active": true
+    },
+    {
+        "name": "Bibi Blocksberg - Die verhexten Marionetten (41)",
+        "file": "bibi-marionette.mp4",
+        "length": "00:25:14",
+        "active": true
     }
 ]

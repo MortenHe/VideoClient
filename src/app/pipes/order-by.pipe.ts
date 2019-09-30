@@ -18,7 +18,7 @@ export class OrderByPipe implements PipeTransform {
       if (orderField === 'name') {
 
         //normale Sortierung nach Namensfeld (nur aufsteigend moeglich)
-        return a.name > b.name ? 1 : -1;
+        return a.name.localeCompare(b.name);
       }
 
       //Sortierung nach Laenge
