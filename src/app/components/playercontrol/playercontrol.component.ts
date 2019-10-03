@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { BackendService } from '../../services/backend.service';
-import { environment } from '../../../environments/environment';
 
 @Component({
     selector: 'playercontrol',

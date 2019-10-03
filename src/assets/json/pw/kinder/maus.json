@@ -72,6 +72,54 @@
         "active": true
     },
     {
+        "name": "Die Maus - Auto aufblasen",
+        "file": "maus-auto-aufblasen.mp4",
+        "length": "00:00:49",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Autowerkstatt",
+        "file": "maus-autowerkstatt.mp4",
+        "length": "00:00:59",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Backform",
+        "file": "maus-backform.mp4",
+        "length": "00:00:57",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Badehose",
+        "file": "maus-badehose.mp4",
+        "length": "00:00:41",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Badewanne",
+        "file": "maus-badewanne.mp4",
+        "length": "00:01:04",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Badewannentür",
+        "file": "maus-badewannentuer.mp4",
+        "length": "00:01:04",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Baggerschaufel",
+        "file": "maus-baggerschaufel.mp4",
+        "length": "00:01:03",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Balkon",
+        "file": "maus-balkon.mp4",
+        "length": "00:00:39",
+        "active": true
+    },
+    {
         "name": "Die Maus - Eiermaschine [1]",
         "file": "maus-eiermaschine1.mp4",
         "length": "00:00:34",

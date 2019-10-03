@@ -33,7 +33,6 @@ import { SelectmodeComponent } from './components/selectmode/selectmode.componen
 import { PlaylistComponent } from './components/playlist/playlist.component';
 import { PlayercontrolComponent } from './components/playercontrol/playercontrol.component';
 import { PicontrolComponent } from './components/picontrol/picontrol.component';
-import { DebuginspectorComponent } from './components/debuginspector/debuginspector.component';
 import { ToggletrackviewComponent } from './components/toggletrackview/toggletrackview.component';
 import { VolumeControlComponent } from './components/volume-control/volume-control.component';
 import { ConnectionComponent } from './components/connection/connection.component';
@@ -52,7 +51,6 @@ import { CountdownComponent } from './components/countdown/countdown.component';
     PlaylistComponent,
     PlayercontrolComponent,
     PicontrolComponent,
-    DebuginspectorComponent,
     ToggletrackviewComponent,
     ModeFilterPipe,
     SearchFilterPipe,

@@ -70,5 +70,11 @@
         "file": "resi-traktor-lausbuam.mp4",
         "length": "00:04:25",
         "active": true
+    },
+    {
+        "name": "Eule findet den Beat - Europatour Medley",
+        "file": "eule-europatour-medley.mp4",
+        "length": "00:04:44",
+        "active": true
     }
 ]

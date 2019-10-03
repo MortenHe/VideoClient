@@ -27,6 +27,6 @@ export class ToggletrackviewComponent implements OnInit {
 
       //Wert in Checkbox anpassen, aber kein Event feuern
       this.showTracksCheckbox.setValue(bool, { emitEvent: false });
-    })
+    });
   }
 }
