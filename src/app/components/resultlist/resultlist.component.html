@@ -15,8 +15,9 @@
     <!-- Name des Titels und Laenge -->
     <div class="col row no-gutters">
 
-      <!-- Itemname -->
-      <span class="col text-left">{{item.name|fileName:modeFilter}}</span>
+      <!-- gekuerzter Itemname mit Highlight -->
+      <span class="col text-left"
+            [highlight]="searchTerm">{{item.name|fileName:modeFilter}}</span>
 
       <!-- formattierte Laenge des Items -->
       <div class="item-length item-length-video text-right ml-1 mr-1">
@@ -24,10 +25,11 @@
       </div>
     </div>
 
-    <!-- Wenn Tracks angezeigt werden sollen, Tracks ausgeben -->
+    <!-- Wenn Tracks angezeigt werden sollen, Tracks ausgeben (mit Highlight) -->
     <ul *ngIf="showTracks$ | async">
       <li *ngFor="let track of item.tracks"
-          class="mr-1">
+          class="mr-1"
+          [highlight]="searchTerm">
         {{track}}
       </li>
     </ul>

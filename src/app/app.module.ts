@@ -37,6 +37,7 @@ import { ToggletrackviewComponent } from './components/toggletrackview/toggletra
 import { VolumeControlComponent } from './components/volume-control/volume-control.component';
 import { ConnectionComponent } from './components/connection/connection.component';
 import { CountdownComponent } from './components/countdown/countdown.component';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { CountdownComponent } from './components/countdown/countdown.component';
     VolumeControlComponent,
     FileNamePipe,
     ConnectionComponent,
-    CountdownComponent
+    CountdownComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

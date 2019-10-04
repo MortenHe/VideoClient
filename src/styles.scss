@@ -236,3 +236,8 @@ button:disabled {
 .opacity-100 {
     opacity: 1;
 }
+
+mark {
+    padding: 0;
+    background: rgba($color-info-blue, .4);
+}

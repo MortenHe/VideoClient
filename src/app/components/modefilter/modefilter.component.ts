@@ -30,22 +30,16 @@ export class ModefilterComponent implements OnInit {
 
     //Reactive Form fuer Filter-Buttons erstellen
     this.modeFilterForm = this.fb.group({
-
-      //Filter-Buttons
       "mode": ""
     });
 
-    //Bei Aenderungen der Filter-Buttons
+    //Bei Aenderungen der Filter-Buttons, Modus-Filter setzen
     this.modeFilterForm.get('mode').valueChanges.subscribe(mode => {
-
-      //Modus-Filter setzen
       this.fs.setModeFilter(mode);
     });
 
-    //Bei Navigation-Aenderung aendert sich der Video-Modus
+    //Bei Navigation-Aenderung aendert sich der Video-Modus, den Mode-Filter auf all setzen, damit alle Videos des neuen Modus angezeigt werden
     this.bs.getMode().subscribe(
-
-      //den Mode-Filter auf all setzen, damit alle Videos des neuen Modus angezeigt werden
-      newMode => this.modeFilterForm.controls['mode'].setValue("all"));
+      () => this.modeFilterForm.controls['mode'].setValue("all"));
   }
 }

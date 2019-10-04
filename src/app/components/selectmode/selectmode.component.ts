@@ -18,7 +18,7 @@ export class SelectmodeComponent implements OnInit {
   modes: any[];
 
   //Services injecten
-  constructor(private fb: FormBuilder, private bs: BackendService, private router: Router) { }
+  constructor(private bs: BackendService, private router: Router) { }
 
   //beim Init
   ngOnInit() {
