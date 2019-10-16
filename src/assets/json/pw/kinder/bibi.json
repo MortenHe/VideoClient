@@ -154,5 +154,17 @@
         "file": "bibi-orient.mp4",
         "length": "00:26:18",
         "active": true
+    },
+    {
+        "name": "Bibi Blocksberg - Der Wetterfrosch (01)",
+        "file": "bibi-wetterfrosch.mp4",
+        "length": "00:25:08",
+        "active": true
+    },
+    {
+        "name": "Bibi Blocksberg - Der weiße Kakadu (17).mp4",
+        "file": "bibi-kakadu.mp4",
+        "length": "00:25:12",
+        "active": true
     }
 ]

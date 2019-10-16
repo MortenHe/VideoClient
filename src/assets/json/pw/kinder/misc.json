@@ -76,5 +76,11 @@
         "file": "eule-europatour-medley.mp4",
         "length": "00:04:44",
         "active": true
+    },
+    {
+        "name": "Eule findet den Beat - Finde deinen Beat",
+        "file": "eule-europatour-finde-deinen-beat.mp4",
+        "length": "00:02:36",
+        "active": true
     }
 ]
