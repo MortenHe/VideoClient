@@ -11,9 +11,6 @@ import { environment } from '../../../environments/environment'
 
 export class SearchComponent {
 
-  //Name der App fuer Ueberschrift (z.B. Video Player (dev))
-  envName = environment.envName;
-
   //welche ModeFilter gibt es (all, conni, janosch, misc)
   showModeFilterList: boolean = false;
 
@@ -23,7 +20,6 @@ export class SearchComponent {
   //Liste der Files
   files: any[] = [];
 
-  //Services und Router injecten
   constructor(private bs: BackendService, private route: ActivatedRoute, private router: Router) {
   }
 
