@@ -1,6 +1,6 @@
 export const environment = {
   envName: 'Video',
-  appId: 'pw',
+  assetId: 'pw',
   production: true,
   serverUrl: 'http://192.168.0.150',
   wssUrl: 'ws://192.168.0.150:8080',

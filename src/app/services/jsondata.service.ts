@@ -15,10 +15,10 @@ export class JsondataService {
   loadJson() {
 
     //Unterordner fuer JSON-Dateien aus Config laden
-    const appId = environment.appId;
+    const assetId = environment.assetId;
 
     //per HTTP JSON Hauptfile holen
-    return this.http.get("assets/json/" + appId + "/videolist.json").map(data => {
+    return this.http.get("assets/json/" + assetId + "/videolist.json").map(data => {
 
       //JSON-Objekt laden. Dieses wird angepasst (gewisse Merkmale entfernt, items einfgefuegt)
       let jsonObj = data;
@@ -48,7 +48,7 @@ export class JsondataService {
               delete jsonObj[mode]["filter"]["filters"][index]["active"];
 
               //Request erstellen, der JSON dieses Filters holt (z.B. bibi-tina.json)
-              let request = this.http.get("assets/json/" + appId + "/" + mode + "/" + filterID + ".json").map(response => {
+              let request = this.http.get("assets/json/" + assetId + "/" + mode + "/" + filterID + ".json").map(response => {
 
                 //Ergebnis des Reqeusts als JSON + weitere Parameter weiterreichen
                 return { data: response, filterID: filterID, mode: mode };

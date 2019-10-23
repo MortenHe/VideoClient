@@ -1,6 +1,0 @@
-MEDIUM
-
-LOW
-- font-awesome 5
-- Resultlist.ts, etc. prüfen welche Abos benötigt
-- Liste nach Nummer erstellen (welche Folgen von Bibi und Tina fehlen noch)
