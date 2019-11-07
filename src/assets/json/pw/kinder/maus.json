@@ -264,9 +264,99 @@
         "active": true
     },
     {
+        "name": "Die Maus - Bodenlinie.mp4",
+        "file": "maus-bodenlinie.mp4",
+        "length": "00:01:13",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Bombardon.mp4",
+        "file": "maus-bombardon.mp4",
+        "length": "00:00:37",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Brett.mp4",
+        "file": "maus-brett.mp4",
+        "length": "00:00:31",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Briefmarke.mp4",
+        "file": "maus-briefmarke.mp4",
+        "length": "00:00:52",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Brille.mp4",
+        "file": "maus-brille.mp4",
+        "length": "00:00:44",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Buechsenpyramide.mp4",
+        "file": "maus-buechsenpyramide.mp4",
+        "length": "00:00:41",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Buegelbeine.mp4",
+        "file": "maus-buegelbeine.mp4",
+        "length": "00:01:02",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Buegelbrett.mp4",
+        "file": "maus-buegelbrett.mp4",
+        "length": "00:00:59",
+        "active": true
+    },
+    {
         "name": "Die Maus - Eiermaschine [1]",
         "file": "maus-eiermaschine1.mp4",
         "length": "00:00:34",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Bueroklammer.mp4",
+        "file": "maus-bueroklammer.mp4",
+        "length": "00:00:39",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Chamaeleon.mp4",
+        "file": "maus-chamaeleon.mp4",
+        "length": "00:01:09",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Computer.mp4",
+        "file": "maus-computer.mp4",
+        "length": "00:01:03",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Computermaus.mp4",
+        "file": "maus-computermaus.mp4",
+        "length": "00:01:17",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Computermaus2.mp4",
+        "file": "maus-computermaus2.mp4",
+        "length": "00:01:32",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Dachrinne.mp4",
+        "file": "maus-dachrinne.mp4",
+        "length": "00:01:15",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Daumenkino.mp4",
+        "file": "maus-daumenkino.mp4",
+        "length": "00:00:49",
         "active": true
     }
 ]

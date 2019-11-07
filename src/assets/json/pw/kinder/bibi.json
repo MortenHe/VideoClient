@@ -172,5 +172,11 @@
         "file": "bibi-vampire.mp4",
         "length": "00:26:39",
         "active": true
+    },
+    {
+        "name": "Bibi Blocksberg - Der neue Nachbar (54).mp4",
+        "file": "bibi-neue-nachbar.mp4",
+        "length": "00:25:13",
+        "active": true
     }
 ]
