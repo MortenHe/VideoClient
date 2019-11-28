@@ -168,147 +168,231 @@
         "active": true
     },
     {
-        "name": "Die Maus - Bauklötzeturm.mp4",
+        "name": "Die Maus - Bauklötzeturm",
         "file": "maus-baukloetzeturm.mp4",
         "length": "00:01:11",
         "active": true
     },
     {
-        "name": "Die Maus - Beinstelzen.mp4",
+        "name": "Die Maus - Beinstelzen",
         "file": "maus-beinstelzen.mp4",
         "length": "00:00:51",
         "active": true
     },
     {
-        "name": "Die Maus - Beiwagen.mp4",
+        "name": "Die Maus - Beiwagen",
         "file": "maus-beiwagen.mp4",
         "length": "00:00:51",
         "active": true
     },
     {
-        "name": "Die Maus - Bergschuhe.mp4",
+        "name": "Die Maus - Bergschuhe",
         "file": "maus-bergschuhe.mp4",
         "length": "00:00:55",
         "active": true
     },
     {
-        "name": "Die Maus - Bibliothek.mp4",
+        "name": "Die Maus - Bibliothek",
         "file": "maus-bibliothek.mp4",
         "length": "00:00:36",
         "active": true
     },
     {
-        "name": "Die Maus - Bienenhaus.mp4",
+        "name": "Die Maus - Bienenhaus",
         "file": "maus-bienenhaus.mp4",
         "length": "00:00:40",
         "active": true
     },
     {
-        "name": "Die Maus - Bienenschutz.mp4",
+        "name": "Die Maus - Bienenschutz",
         "file": "maus-bienenschutz.mp4",
         "length": "00:00:55",
         "active": true
     },
     {
-        "name": "Die Maus - Bild aufhängen.mp4",
+        "name": "Die Maus - Bild aufhängen",
         "file": "maus-bild-aufhaengen.mp4",
         "length": "00:00:45",
         "active": true
     },
     {
-        "name": "Die Maus - Bildhauer.mp4",
+        "name": "Die Maus - Bildhauer",
         "file": "maus-bildhauer.mp4",
         "length": "00:00:51",
         "active": true
     },
     {
-        "name": "Die Maus - Birnbaum.mp4",
+        "name": "Die Maus - Birnbaum",
         "file": "maus-birnbaum.mp4",
         "length": "00:01:04",
         "active": true
     },
     {
-        "name": "Die Maus - Birnbaumleiter.mp4",
+        "name": "Die Maus - Birnbaumleiter",
         "file": "maus-birnbaumleiter.mp4",
         "length": "00:00:44",
         "active": true
     },
     {
-        "name": "Die Maus - Bleistift.mp4",
+        "name": "Die Maus - Bleistift",
         "file": "maus-bleistift.mp4",
         "length": "00:00:30",
         "active": true
     },
     {
-        "name": "Die Maus - Blumen.mp4",
+        "name": "Die Maus - Blumen",
         "file": "maus-blumen.mp4",
         "length": "00:00:41",
         "active": true
     },
     {
-        "name": "Die Maus - Blumen2.mp4",
+        "name": "Die Maus - Blumen2",
         "file": "maus-blumen2.mp4",
         "length": "00:00:40",
         "active": true
     },
     {
-        "name": "Die Maus - Blumentapete.mp4",
+        "name": "Die Maus - Blumentapete",
         "file": "maus-blumentapete.mp4",
         "length": "00:00:55",
         "active": true
     },
     {
-        "name": "Die Maus - Bockspringen.mp4",
+        "name": "Die Maus - Bockspringen",
         "file": "maus-bockspringen.mp4",
         "length": "00:00:45",
         "active": true
     },
     {
-        "name": "Die Maus - Bodenlinie.mp4",
+        "name": "Die Maus - Bodenlinie",
         "file": "maus-bodenlinie.mp4",
         "length": "00:01:13",
         "active": true
     },
     {
-        "name": "Die Maus - Bombardon.mp4",
+        "name": "Die Maus - Bombardon",
         "file": "maus-bombardon.mp4",
         "length": "00:00:37",
         "active": true
     },
     {
-        "name": "Die Maus - Brett.mp4",
+        "name": "Die Maus - Brett",
         "file": "maus-brett.mp4",
         "length": "00:00:31",
         "active": true
     },
     {
-        "name": "Die Maus - Briefmarke.mp4",
+        "name": "Die Maus - Briefmarke",
         "file": "maus-briefmarke.mp4",
         "length": "00:00:52",
         "active": true
     },
     {
-        "name": "Die Maus - Brille.mp4",
+        "name": "Die Maus - Brille",
         "file": "maus-brille.mp4",
         "length": "00:00:44",
         "active": true
     },
     {
-        "name": "Die Maus - Buechsenpyramide.mp4",
+        "name": "Die Maus - Büchsenpyramide",
         "file": "maus-buechsenpyramide.mp4",
         "length": "00:00:41",
         "active": true
     },
     {
-        "name": "Die Maus - Buegelbeine.mp4",
+        "name": "Die Maus - Bügelbeine",
         "file": "maus-buegelbeine.mp4",
         "length": "00:01:02",
         "active": true
     },
     {
-        "name": "Die Maus - Buegelbrett.mp4",
+        "name": "Die Maus - Bügelbrett",
         "file": "maus-buegelbrett.mp4",
         "length": "00:00:59",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Büroklammer",
+        "file": "maus-bueroklammer.mp4",
+        "length": "00:00:39",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Chamaeleon",
+        "file": "maus-chamaeleon.mp4",
+        "length": "00:01:09",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Computer",
+        "file": "maus-computer.mp4",
+        "length": "00:01:03",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Computermaus",
+        "file": "maus-computermaus.mp4",
+        "length": "00:01:17",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Computermaus2",
+        "file": "maus-computermaus2.mp4",
+        "length": "00:01:32",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Dachrinne",
+        "file": "maus-dachrinne.mp4",
+        "length": "00:01:15",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Daumenkino",
+        "file": "maus-daumenkino.mp4",
+        "length": "00:00:49",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Dirigent",
+        "file": "maus-dirigent.mp4",
+        "length": "00:00:36",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Diskus",
+        "file": "maus-diskus.mp4",
+        "length": "00:00:30",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Drachen steigen",
+        "file": "maus-drachensteigen.mp4",
+        "length": "00:00:49",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Drehstuhl",
+        "file": "maus-drehstuhl.mp4",
+        "length": "00:00:39",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Dreirad",
+        "file": "maus-dreirad.mp4",
+        "length": "00:01:01",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Dudelsack",
+        "file": "maus-dudelsack.mp4",
+        "length": "00:01:01",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Eckball",
+        "file": "maus-eckball.mp4",
+        "length": "00:01:01",
         "active": true
     },
     {
@@ -318,45 +402,51 @@
         "active": true
     },
     {
-        "name": "Die Maus - Bueroklammer.mp4",
-        "file": "maus-bueroklammer.mp4",
-        "length": "00:00:39",
+        "name": "Die Maus - Eiermaschine [2]",
+        "file": "maus-eiermaschine2.mp4",
+        "length": "00:00:36",
         "active": true
     },
     {
-        "name": "Die Maus - Chamaeleon.mp4",
-        "file": "maus-chamaeleon.mp4",
-        "length": "00:01:09",
+        "name": "Die Maus - Eiermaschine [3]",
+        "file": "maus-eiermaschine3.mp4",
+        "length": "00:00:34",
         "active": true
     },
     {
-        "name": "Die Maus - Computer.mp4",
-        "file": "maus-computer.mp4",
-        "length": "00:01:03",
+        "name": "Die Maus - Einkaufsnetz",
+        "file": "maus-einkaufsnetz.mp4",
+        "length": "00:00:59",
         "active": true
     },
     {
-        "name": "Die Maus - Computermaus.mp4",
-        "file": "maus-computermaus.mp4",
-        "length": "00:01:17",
+        "name": "Die Maus - Einlochen",
+        "file": "maus-einlochen.mp4",
+        "length": "00:01:11",
         "active": true
     },
     {
-        "name": "Die Maus - Computermaus2.mp4",
-        "file": "maus-computermaus2.mp4",
-        "length": "00:01:32",
+        "name": "Die Maus - Eis Beim Fußball",
+        "file": "maus-eis-beim-fussball.mp4",
+        "length": "00:00:32",
         "active": true
     },
     {
-        "name": "Die Maus - Dachrinne.mp4",
-        "file": "maus-dachrinne.mp4",
-        "length": "00:01:15",
+        "name": "Die Maus - Eis-Mausschrift",
+        "file": "maus-eis-maus-schrift.mp4",
+        "length": "00:00:15",
         "active": true
     },
     {
-        "name": "Die Maus - Daumenkino.mp4",
-        "file": "maus-daumenkino.mp4",
-        "length": "00:00:49",
+        "name": "Die Maus - Eis",
+        "file": "maus-eis.mp4",
+        "length": "00:00:38",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Eispickel",
+        "file": "maus-eispickel.mp4",
+        "length": "00:00:58",
         "active": true
     }
 ]
