@@ -448,5 +448,53 @@
         "file": "maus-eispickel.mp4",
         "length": "00:00:58",
         "active": true
+    },
+    {
+        "name": "Die Maus - Eisverkäufer",
+        "file": "maus-eisverkaeufer.mp4",
+        "length": "00:00:48",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Elefanten-Gießkanne",
+        "file": "maus-elefanten-giesskanne.mp4",
+        "length": "00:01:09",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Elefantendusche",
+        "file": "maus-elefantendusche.mp4",
+        "length": "00:00:40",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Elefantenplakat",
+        "file": "maus-elefantenplakat.mp4",
+        "length": "00:01:23",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Elefantenschaukel",
+        "file": "maus-elefantenschaukel.mp4",
+        "length": "00:00:37",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Erdtunnel",
+        "file": "maus-erdtunnel.mp4",
+        "length": "00:00:39",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Ersatzballon",
+        "file": "maus-ersatzballon.mp4",
+        "length": "00:00:24",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Escher",
+        "file": "maus-escher.mp4",
+        "length": "00:00:55",
+        "active": true
     }
 ]
