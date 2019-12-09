@@ -496,5 +496,53 @@
         "file": "maus-escher.mp4",
         "length": "00:00:55",
         "active": true
+    },
+    {
+        "name": "Die Maus - Fahrkartenautomat",
+        "file": "maus-fahrkartenautomat.mp4",
+        "length": "00:01:02",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Faltblumen",
+        "file": "maus-faltblumen.mp4",
+        "length": "00:01:10",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Federball",
+        "file": "maus-federball.mp4",
+        "length": "00:01:03",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Fernrohr",
+        "file": "maus-fernrohr.mp4",
+        "length": "00:01:14",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Fernseher",
+        "file": "maus-fernseher.mp4",
+        "length": "00:00:32",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Fernsteuerung",
+        "file": "maus-fernsteuerung.mp4",
+        "length": "00:00:51",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Fische",
+        "file": "maus-fische.mp4",
+        "length": "00:00:53",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Fischfang",
+        "file": "maus-fischfang.mp4",
+        "length": "00:00:36",
+        "active": true
     }
 ]

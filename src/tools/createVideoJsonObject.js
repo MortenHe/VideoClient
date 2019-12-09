@@ -70,10 +70,20 @@ fs.readdir(dataDir, (err, files) => {
                     //[2,44,1] => 02:44:01
                     let timeOutputString = timelite.time.str(timeOutput);
 
-                    //Name (z.B. Bibi und Tina - Tina-gefahr) setzen, sofern in Config hinterlegt und .mp4 entfernen
-                    let label = file.replace(link.mode + "-", "");
-                    label = label.replace(".mp4", "");
-                    let name = naming[link.mode] ? naming[link.mode] + label[0].toUpperCase() + label.slice(1) : " - ";
+                    //bibi-mamis-neuer-besen.mp4 -> mamis-neuer-besen
+                    let name = file.replace(link.mode + "-", "");
+                    name = name.replace(".mp4", "");
+
+                    //mamis-neuer-besen -> mamis neuer besen
+                    name = name.replace(/-/g, ' ');
+
+                    //mamis neuer besen -> Bibi Blocksberg - mamis neuer besen
+                    name = naming[link.mode] ? naming[link.mode] + name : " - ";
+
+                    //Bibi Blocksberg - mamis neuer besen -> Bibi Blocksberg - Mamis Neuer Besen
+                    name = name.replace(/\b[a-z]/g, (chr) => {
+                        return chr.toUpperCase();
+                    });
 
                     //Video-Objekt erstellen und sammeln
                     outputArray.push({

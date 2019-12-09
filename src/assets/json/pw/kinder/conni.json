@@ -1,6 +1,6 @@
 [
     {
-        "name": "Conni - Der Advent",
+        "name": "Conni - Der Advent (52)",
         "file": "conni-advent.mp4",
         "length": "00:11:31",
         "active": true
@@ -90,13 +90,13 @@
         "active": true
     },
     {
-        "name": "Conni - Fährt Schlittschuh",
+        "name": "Conni - Fährt Schlittschuh (44)",
         "file": "conni-schilttschuh.mp4",
         "length": "00:11:31",
         "active": true
     },
     {
-        "name": "Conni - Der erste Schnee",
+        "name": "Conni - Der erste Schnee (33)",
         "file": "conni-schnee.mp4",
         "length": "00:11:31",
         "active": true
@@ -198,7 +198,7 @@
         "active": true
     },
     {
-        "name": "Conni - Übernachtet bei Julia",
+        "name": "Conni - Übernachtet bei Julia (31)",
         "file": "conni-uebernachtet-bei-julia-tivi.mp4",
         "length": "00:11:29",
         "active": true
