@@ -196,5 +196,11 @@
         "file": "bibi-mamis-geburtstag.mp4",
         "length": "00:25:11",
         "active": true
+    },
+    {
+        "name": "Bibi Blocksberg - Die verhexte Sternenreise (43)",
+        "file": "bibi-verhexte-sternenreise.mp4",
+        "length": "00:25:12",
+        "active": true
     }
 ]
