@@ -316,5 +316,11 @@
         "file": "bibi-tina-liebesbrief.mp4",
         "length": "00:25:10",
         "active": true
+    },
+    {
+        "name": "Bibi und Tina - Geheimnisvolle Weihnachtszeit (53)",
+        "file": "bibi-tina-geheimnisvolle-weihnachtszeit.mp4",
+        "length": "00:25:08",
+        "active": true
     }
 ]
