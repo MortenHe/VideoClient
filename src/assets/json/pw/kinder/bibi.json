@@ -208,5 +208,11 @@
         "file": "bibi-weihnachten-bei-familie-blocksberg.mp4",
         "length": "00:25:13",
         "active": true
+    },
+    {
+        "name": "Bibi Blocksberg - Der magische Koffer (42)",
+        "file": "bibi-der-magische-koffer.mp4",
+        "length": "00:25:12",
+        "active": true
     }
 ]
