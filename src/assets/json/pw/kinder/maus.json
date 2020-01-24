@@ -640,5 +640,53 @@
         "file": "maus-fussball.mp4",
         "length": "00:00:59",
         "active": true
+    },
+    {
+        "name": "Die Maus - Fußball im TV",
+        "file": "maus-fussball-im-tv.mp4",
+        "length": "00:00:58",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Gartenbank",
+        "file": "maus-gartenbank.mp4",
+        "length": "00:01:27",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Gartenschlauch",
+        "file": "maus-gartenschlauch.mp4",
+        "length": "00:00:37",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Geplatzter Ball",
+        "file": "maus-geplatzter-ball.mp4",
+        "length": "00:00:39",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Geschenkente",
+        "file": "maus-geschenkente.mp4",
+        "length": "00:01:05",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Gewichtheben",
+        "file": "maus-gewichtheben.mp4",
+        "length": "00:00:59",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Gewichtheber",
+        "file": "maus-gewichtheber.mp4",
+        "length": "00:00:37",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Gießkanne",
+        "file": "maus-giesskanne.mp4",
+        "length": "00:00:32",
+        "active": true
     }
 ]
