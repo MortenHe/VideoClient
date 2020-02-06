@@ -688,5 +688,53 @@
         "file": "maus-giesskanne.mp4",
         "length": "00:00:32",
         "active": true
+    },
+    {
+        "name": "Die Maus - Gipsbein",
+        "file": "maus-gipsbein.mp4",
+        "length": "00:00:30",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Gitarre",
+        "file": "maus-gitarre.mp4",
+        "length": "00:00:47",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Glasmusik",
+        "file": "maus-glasmusik.mp4",
+        "length": "00:01:32",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Glocke",
+        "file": "maus-glocke.mp4",
+        "length": "00:00:40",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Glücksspiel",
+        "file": "maus-gluecksspiel.mp4",
+        "length": "00:00:35",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Glühbirne",
+        "file": "maus-gluehbirne.mp4",
+        "length": "00:00:54",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Glühwürmer",
+        "file": "maus-gluehwuermer.mp4",
+        "length": "00:01:03",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Golf",
+        "file": "maus-golf.mp4",
+        "length": "00:00:38",
+        "active": true
     }
 ]

@@ -27,6 +27,7 @@
             "scripts": []
           },
           "configurations": {
+            "vb": {},
             "pw": {
               "optimization": true,
               "outputHashing": "all",
@@ -85,6 +86,9 @@
             },
             "marlen": {
               "browserTarget": "website:build:marlen"
+            },
+            "vb": {
+              "browserTarget": "website:build:vb"
             }
           }
         },

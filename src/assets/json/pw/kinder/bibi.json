@@ -214,5 +214,11 @@
         "file": "bibi-der-magische-koffer.mp4",
         "length": "00:25:12",
         "active": true
+    },
+    {
+        "name": "Bibi Blocksberg - Das Hexenhotel (50)",
+        "file": "bibi-hexenhotel.mp4",
+        "length": "00:25:12",
+        "active": true
     }
 ]

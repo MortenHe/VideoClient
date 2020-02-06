@@ -1,6 +1,5 @@
 //Nur JSON-Config auf Server uebertragen
-//node .\deployJsonToServer.js pw pw (= PW JSON auf PW Pi laden)
-//node .\deployJsonToServer.js marlen vb (= Marlen JSON auf VB laden)
+//node .\deployJsonToServer.js pw | marlen | vb
 
 //Async Methode fuer Await Aufrufe
 async function main() {
@@ -9,15 +8,15 @@ async function main() {
     const connection = require("./connection.js");
 
     //Welche JSON Files (pw vs. marlen) wohin deployen (pw / marlen / vb)
-    const appId = process.argv[2] || "pw";
-    const targetMachine = process.argv[3] || "pw";
-    console.log("deploy video json (" + appId + ") to server " + targetMachine + ": " + connection[targetMachine].host);
+    const targetMachine = process.argv[2] || "pw";
+    const assetsId = connection[targetMachine].assetId;
+    console.log("deploy video json (" + assetsId + ") to server " + targetMachine + ": " + connection[targetMachine].host);
 
     //Unter welchem Unterpfad wird die App auf dem Server laufen?
     const base_href = "wvp";
 
     //Pfad wo Dateien auf Server liegen sollen
-    let server_video_path = "/var/www/html/" + base_href;
+    const server_video_path = "/var/www/html/" + base_href;
 
     //Asset Ordner mit JSON files kopieren
     const fs = require('fs-extra');
@@ -30,11 +29,13 @@ async function main() {
     console.log("copy new assets");
     await fs.copy("../assets", "../../myAssets/assets");
 
+    //versch. environments koennen gemeinsame assets nutzen
     //Assets (=JSON-Configs) loeschen, die nicht zu dieser App gehoeren (z.B. json von marlen loeschen, wenn pw json deployed wird)
+    console.log("keep assets from app " + assetsId);
     console.log("delete other JSON-configs");
     const folders = await fs.readdir("../../myAssets/assets/json")
     for (const folder of folders) {
-        if (folder !== appId) {
+        if (folder !== assetsId) {
             console.log("delete assets from app " + folder);
             await fs.remove("../../myAssets/assets/json/" + folder);
         }
