@@ -11,7 +11,7 @@ const targetMachine = process.argv[2] || "pw";
 
 //Dort liegen / dorthin kommen die Dateien
 const localvideoDir = "C:/Users/Martin/Desktop/media/videoDone" + targetMachine.toUpperCase();
-const remotevideoDir = "/media/usb_red/video";
+const remotevideoDir = "/media/pi/usb_red/video";
 
 console.log("upload video files from " + localvideoDir);
 console.log("upload to server " + targetMachine + ": " + connection[targetMachine].host);

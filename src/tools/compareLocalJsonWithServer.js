@@ -12,7 +12,7 @@ const assetsId = connection[targetMachine].assetId;
 console.log("compare local video files (" + assetsId + ") with server " + targetMachine + ": " + connection[targetMachine].host);
 
 //Pfade wo die Dateien liegen auf Server
-const videoPath = "/media/usb_red/video";
+const videoPath = "/media/pi/usb_red/video";
 
 //libraries laden fuer Dateizugriff
 const fs = require('fs-extra')
