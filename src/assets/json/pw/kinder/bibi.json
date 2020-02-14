@@ -220,5 +220,11 @@
         "file": "bibi-hexenhotel.mp4",
         "length": "00:25:12",
         "active": true
+    },
+    {
+        "name": "Bibi Blocksberg - 3 x schwarzer Kater (04)",
+        "file": "bibi-schwarzer-kater.mp4",
+        "length": "00:26:07",
+        "active": true
     }
 ]

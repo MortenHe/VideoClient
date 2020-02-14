@@ -736,5 +736,53 @@
         "file": "maus-golf.mp4",
         "length": "00:00:38",
         "active": true
+    },
+    {
+        "name": "Die Maus - Golfloch",
+        "file": "maus-golfloch.mp4",
+        "length": "00:01:14",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Grammophon",
+        "file": "maus-grammophon.mp4",
+        "length": "00:00:47",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Grammotrichter",
+        "file": "maus-grammotrichter.mp4",
+        "length": "00:01:11",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Gross Und Klein",
+        "file": "maus-gross-und-klein.mp4",
+        "length": "00:00:45",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Grosse Malerei",
+        "file": "maus-grosse-malerei.mp4",
+        "length": "00:00:52",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Gulli",
+        "file": "maus-gulli.mp4",
+        "length": "00:00:45",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Haengebruecke",
+        "file": "maus-haengebruecke.mp4",
+        "length": "00:00:59",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Haengematte",
+        "file": "maus-haengematte.mp4",
+        "length": "00:00:55",
+        "active": true
     }
 ]

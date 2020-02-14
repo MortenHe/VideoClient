@@ -14,7 +14,7 @@ const { execSync } = require('child_process');
 //Wo sollen Videos gespeichert werden
 const mediaDir = "C:/Users/Martin/Desktop/media";
 const downloadDir = mediaDir + "/videoDownload";
-const doneDir = mediaDir + "/videoDonePW";
+const doneDir = mediaDir + "/done/videoPW";
 
 //Dir anlegen, wo fertiges Video liegen soll, falls es nicht existiert
 if (!fs.existsSync(doneDir)) {
