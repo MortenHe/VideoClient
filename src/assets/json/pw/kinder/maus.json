@@ -756,13 +756,13 @@
         "active": true
     },
     {
-        "name": "Die Maus - Gross Und Klein",
+        "name": "Die Maus - Groß und klein",
         "file": "maus-gross-und-klein.mp4",
         "length": "00:00:45",
         "active": true
     },
     {
-        "name": "Die Maus - Grosse Malerei",
+        "name": "Die Maus - Große Malerei",
         "file": "maus-grosse-malerei.mp4",
         "length": "00:00:52",
         "active": true
@@ -774,15 +774,63 @@
         "active": true
     },
     {
-        "name": "Die Maus - Haengebruecke",
+        "name": "Die Maus - Hängebrücke",
         "file": "maus-haengebruecke.mp4",
         "length": "00:00:59",
         "active": true
     },
     {
-        "name": "Die Maus - Haengematte",
+        "name": "Die Maus - Hängematte",
         "file": "maus-haengematte.mp4",
         "length": "00:00:55",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Handstand",
+        "file": "maus-handstand.mp4",
+        "length": "00:00:35",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Handy",
+        "file": "maus-handy.mp4",
+        "length": "00:00:55",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Hantel",
+        "file": "maus-hantel.mp4",
+        "length": "00:00:46",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Hausbau",
+        "file": "maus-hausbau.mp4",
+        "length": "00:01:08",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Henkeltasche",
+        "file": "maus-henkeltasche.mp4",
+        "length": "00:00:37",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Hindernisapfel",
+        "file": "maus-hindernisapfel.mp4",
+        "length": "00:01:03",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Hochrad",
+        "file": "maus-hochrad.mp4",
+        "length": "00:00:31",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Honigfass",
+        "file": "maus-honigfass.mp4",
+        "length": "00:00:35",
         "active": true
     }
 ]
