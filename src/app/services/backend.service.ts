@@ -10,7 +10,6 @@ import { OrderByPipe } from '../pipes/order-by.pipe';
 import { environment } from '../../environments/environment';
 import { Subject } from 'rxjs/Subject';
 import { Observer } from 'rxjs/Observer';
-import { JsondataService } from './jsondata.service';
 import 'rxjs/add/operator/switchMap';
 
 @Injectable()
@@ -27,9 +26,6 @@ export class BackendService {
 
     //Komplette Itemliste wird nur 1 Mal geholt
     itemListFull;
-
-    //Mode als Variable
-    mode;
 
     //Mode-Filter (conni, heidi)
     modeFilter;
@@ -56,25 +52,25 @@ export class BackendService {
     modeFilterListBS = new BehaviorSubject(null);
 
     //Lautstaerke
-    volume$: Subject<number> = new Subject<number>();
+    volume$: BehaviorSubject<number> = new BehaviorSubject<number>(null);
 
     //Zeit innerhalb items
-    time$: Subject<string> = new Subject<string>();
+    time$: BehaviorSubject<string> = new BehaviorSubject<string>(null);
 
     //Die Dateien, die gerade abgespielt werden
-    files$: Subject<any[]> = new Subject<any[]>();
+    files$: BehaviorSubject<any[]> = new BehaviorSubject<any[]>([]);
 
     //Die Gesamtspielzeit der Playlist, die gerade abgespielt werden
-    filesTotalTime$: Subject<string> = new Subject<string>();
+    filesTotalTime$: BehaviorSubject<string> = new BehaviorSubject<string>(null);
 
     //Aktueller Index in Titelliste
-    position$: Subject<number> = new Subject<number>();
+    position$: BehaviorSubject<number> = new BehaviorSubject<number>(0);
 
     //aktueller Pause-Zustand
-    paused$: Subject<boolean> = new Subject<boolean>();
+    paused$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
     //Anzahl der Sekunden bis Shutdown
-    countdownTime$: Subject<number> = new Subject<number>();
+    countdownTime$: BehaviorSubject<number> = new BehaviorSubject<number>(null);
 
     //wurde Server heruntergefahren?
     shutdown$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
@@ -82,66 +78,52 @@ export class BackendService {
     //Ist die App gerade mit dem WSS verbunden?
     connected$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
-    //Services injekten
-    constructor(private http: HttpClient, private jds: JsondataService, private fs: ResultfilterService, private modeFilterPipe: ModeFilterPipe, private searchFilterPipe: SearchFilterPipe, private orderByPipe: OrderByPipe) {
-
-        //WebSocket erstellen
+    //Websocket erstellen, von dort erhaelt man die JSON-Infos ueber verfuegbare Items
+    constructor(private http: HttpClient, private fs: ResultfilterService, private modeFilterPipe: ModeFilterPipe, private searchFilterPipe: SearchFilterPipe, private orderByPipe: OrderByPipe) {
         this.createWebsocket();
     }
 
-    //Itemlist laden
-    loadFullItemlist() {
+    //Subscriptions erstellen, die die komplette JSON-Liste filtern
+    finishInit() {
 
-        //Itemlist holen per HTTP-Request
-        this.jds.loadJson().switchMap(fullList => {
-            return fullList;
-        }).subscribe(itemList => {
+        //Wenn sich der Modus aendert
+        this.modeBS.subscribe(mode => {
 
-            //komplette Itemliste speichern
-            this.itemListFull = itemList;
+            //Filter-Modus-Liste des aktuellen Modus setzen
+            this.modeFilterListBS.next(this.itemListFull[this.modeBS.getValue()].filter);
 
-            //Wenn sich der Modus aendert
-            this.modeBS.subscribe(mode => {
+            //gefilterte Itemliste erstellen
+            this.filterItemList();
+        });
 
-                //Modus in Variable speichern (fuer Start Playlist Funktion)
-                this.mode = mode;
+        //Aenderungen an ModeFilter abbonieren, speichern und Itemliste neu erstellen
+        this.fs.getModeFilter().subscribe(modeFilter => {
+            this.modeFilter = modeFilter;
+            this.filterItemList();
+        });
 
-                //Filter-Modus-Liste des aktuellen Modus setzen
-                this.modeFilterListBS.next(this.itemListFull[mode].filter);
+        //Aenderungen an Suchterm abbonieren, speichern und Itemliste neu erstellen
+        this.fs.getSearchTerm().subscribe(searchTerm => {
+            this.searchTerm = searchTerm;
+            this.filterItemList();
+        });
 
-                //gefilterte Itemliste erstellen
-                this.filterItemList();
-            });
+        //Aenderungen an Track-Sichtbarkeit abbonieren, speichern und Itemliste neu erstellen
+        this.fs.getShowTracks().subscribe(showTracks => {
+            this.searchIncludeTracks = showTracks;
+            this.filterItemList();
+        });
 
-            //Aenderungen an ModeFilter abbonieren, speichern und Itemliste neu erstellen
-            this.fs.getModeFilter().subscribe(modeFilter => {
-                this.modeFilter = modeFilter;
-                this.filterItemList();
-            });
+        //Aenderungen an Sortierfeld abbonieren, speichern und Itemliste neu erstellen
+        this.fs.getOrderField().subscribe(orderField => {
+            this.orderField = orderField;
+            this.filterItemList();
+        });
 
-            //Aenderungen an Suchterm abbonieren, speichern und Itemliste neu erstellen
-            this.fs.getSearchTerm().subscribe(searchTerm => {
-                this.searchTerm = searchTerm;
-                this.filterItemList();
-            });
-
-            //Aenderungen an Track-Sichtbarkeit abbonieren, speichern und Itemliste neu erstellen
-            this.fs.getShowTracks().subscribe(showTracks => {
-                this.searchIncludeTracks = showTracks;
-                this.filterItemList();
-            });
-
-            //Aenderungen an Sortierfeld abbonieren, speichern und Itemliste neu erstellen
-            this.fs.getOrderField().subscribe(orderField => {
-                this.orderField = orderField;
-                this.filterItemList();
-            });
-
-            //Aenderungen an umgekehrter Sortierung abbonieren, speichern und Itemliste neu erstellen
-            this.fs.getReverseOrder().subscribe(reverseOrder => {
-                this.reverseOrder = reverseOrder;
-                this.filterItemList();
-            });
+        //Aenderungen an umgekehrter Sortierung abbonieren, speichern und Itemliste neu erstellen
+        this.fs.getReverseOrder().subscribe(reverseOrder => {
+            this.reverseOrder = reverseOrder;
+            this.filterItemList();
         });
     }
 
@@ -149,7 +131,7 @@ export class BackendService {
     filterItemList() {
 
         //Mode-Filter auf Items dieses Modus anwenden
-        let filteredItemList = this.modeFilterPipe.transform(this.itemListFull[this.mode].items, this.modeFilter);
+        let filteredItemList = this.modeFilterPipe.transform(this.itemListFull[this.modeBS.getValue()].items, this.modeFilter);
 
         //Suchfeld-Filter anwenden
         filteredItemList = this.searchFilterPipe.transform(filteredItemList, this.searchTerm, this.searchIncludeTracks);
@@ -237,6 +219,13 @@ export class BackendService {
 
                 case "filesTotalTime":
                     this.filesTotalTime$.next(value);
+                    break;
+
+                case "mainJSON":
+                    this.itemListFull = value;
+
+                    //Subscriptions anlegen, damit Aenderungen an Mode, etc. auf itemList angewendet werden
+                    this.finishInit();
                     break;
 
                 case "countdownTime":

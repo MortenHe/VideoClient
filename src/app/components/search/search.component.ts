@@ -26,9 +26,6 @@ export class SearchComponent {
   //Beim Init
   ngOnInit() {
 
-    //Komplettliste der Items in Service laden
-    this.bs.loadFullItemlist();
-
     //immer wenn sich die Route /serach/kinder -> /search/jahresvideo aendert
     this.route.paramMap.subscribe(params => {
 

@@ -10,7 +10,6 @@ import { SortablejsModule } from 'ngx-sortablejs'
 //eigenes Services
 import { BackendService } from './services/backend.service';
 import { ResultfilterService } from './services/resultfilter.service';
-import { JsondataService } from './services/jsondata.service';
 
 //eigenes Pipes
 import { ModeFilterPipe } from './pipes/mode-filter.pipe';
@@ -82,7 +81,6 @@ import { HighlightDirective } from './directives/highlight.directive';
   providers: [
     BackendService,
     ResultfilterService,
-    JsondataService,
     ModeFilterPipe,
     SearchFilterPipe,
     OrderByPipe
