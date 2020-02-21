@@ -19,10 +19,9 @@ async function main() {
     let server_video_path = "/var/www/html/" + base_href;
 
     //Projekt bauen
-    const util = require('util');
-    const exec = util.promisify(require('child_process').exec);
     console.log("start build");
-    await exec("ng build -c=" + targetMachine + " --base-href=/" + base_href + "/");
+    const execSync = require('child_process').execSync;
+    execSync("ng build -c=" + targetMachine + " --base-href=/" + base_href + "/", { stdio: 'inherit' });
     console.log("build done");
 
     //Assets (=JSON-Configs) loeschen, die nicht zu dieser App gehoeren (z.B. json von marlen loeschen, wenn pw json deployed wird)
