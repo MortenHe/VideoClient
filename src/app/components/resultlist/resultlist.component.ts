@@ -57,16 +57,22 @@ export class ResultlistComponent {
 
   //pruefen ob Item in Playlist ist
   isInPlaylist(item) {
-    return (this.files.some(e => e.file === item.file));
+    return (this.files.some(e => this.mode + "/" + item.mode + "/" + e.file === item.file));
   }
 
   //einzelnes Item abspielen
   addToPlaylist(item, startPlayback) {
 
+    //doppeltes Einfuege verhindern
+    if (this.isInPlaylist(item)) {
+      console.log("item already in playlist");
+      return;
+    }
+
     //Video-Playback starten oder neuen Titel enquen
     this.bs.sendMessage({
       type: "add-to-video-playlist", value: {
-        "file": item.file,
+        "file": this.mode + "/" + item.mode + "/" + item.file,
         "name": item.name,
         "length": item.length,
         "startPlayback": startPlayback

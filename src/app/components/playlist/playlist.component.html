@@ -3,10 +3,10 @@
      (update)=sortDone($event)
      (filter)=eventInsideSort($event)>
 
-  <!-- nur Items nach der aktuellen Position sortierbar-->
-  <div *ngFor="let file of files, index as i, first as first"
-       class="row no-gutters item pl-3"
-       [ngClass]="{
+    <!-- nur Items nach der aktuellen Position sortierbar-->
+    <div *ngFor="let file of files, index as i, first as first"
+         class="row no-gutters item pl-3"
+         [ngClass]="{
        'opacity-50': i < position,
        'drag': i > position,
        'waiting': i === jumpPosition,
@@ -14,67 +14,67 @@
        'first': first
      }">
 
-    <!-- Play-/ Spiner-Symbol-->
-    <div *ngIf="i === position || i === jumpPosition"
-         class="fa fa-fw"
-         [ngClass]="{
+        <!-- Play-/ Spiner-Symbol-->
+        <div *ngIf="i === position || i === jumpPosition"
+             class="fa fa-fw"
+             [ngClass]="{
         'fa-play': i === position,
         'fa-spinner fa-spin': i === jumpPosition
          }">
-    </div>
+        </div>
 
-    <!-- Jump To (vor sort Bereich) -->
-    <i *ngIf="i < position && i !== jumpPosition"
-       (click)="jumpTo(i)"
-       class="fa fa-fw fa-play opacity-50"></i>
+        <!-- Jump To (vor sort Bereich) -->
+        <i *ngIf="i < position && i !== jumpPosition"
+           (click)="jumpTo(i)"
+           class="fa fa-fw fa-play opacity-50"></i>
 
-    <!-- Jump To (im Sortbereich) -->
-    <i *ngIf="i > position && i !== jumpPosition"
-       data-func="jump"
-       [attr.data-index]="i"
-       class="fa fa-fw fa-play ignore-sort opacity-50"></i>
+        <!-- Jump To (im Sortbereich) -->
+        <i *ngIf="i > position && i !== jumpPosition"
+           data-func="jump"
+           [attr.data-index]="i"
+           class="fa fa-fw fa-play ignore-sort opacity-50"></i>
 
-    <!-- Name des Videos. Klick startet video -->
-    <div class="col ml-3 mr-3"
-         [ngClass]="{
+        <!-- Name des Videos. Klick startet video -->
+        <div class="col ml-3 mr-3"
+             [ngClass]="{
       'sort-handle': draggable(i),
       'font-weight-bold': i === position
     }">{{file.name|fileName}}</div>
 
-    <!-- Titel aus Playlist loeschen, nur Titel nach aktueller Position sind loeschbar -->
-    <button [class.invisible]="i <= position"
-            data-func="remove"
-            class="button-clean add-item ignore-sort opacity-50"><i class="fa fa-minus"></i></button>
+        <!-- Titel aus Playlist loeschen, nur Titel nach aktueller Position sind loeschbar -->
+        <button [class.invisible]="i <= position"
+                data-func="remove"
+                class="button-clean add-item ignore-sort opacity-50"><i class="fa fa-minus"></i></button>
 
-    <!-- Zeitinfo des Videos -->
-    <div class="item-length text-right mr-1">
+        <!-- Zeitinfo des Videos -->
+        <div class="item-length text-right mr-1">
 
-      <!-- Video wurde schon gespielt. Restzeit 0:00 -->
-      <ng-container *ngIf="i < position">0:00</ng-container>
+            <!-- Video wurde schon gespielt. Restzeit 0:00 -->
+            <ng-container *ngIf="i < position">0:00</ng-container>
 
-      <!-- Aktuelles Video (runterlaufende Zeit) -->
-      <ng-container *ngIf="i === position && time !== ''">{{time|timeformatter}}</ng-container>
+            <!-- Aktuelles Video (runterlaufende Zeit) -->
+            <ng-container *ngIf="i === position">{{time|timeformatter}}</ng-container>
 
-      <!-- Videos nach aktueller Playlistposition (Gesamtlaufzeit des Videos) -->
-      <ng-container *ngIf="i > position">{{file.length|timeformatter}}</ng-container>
+            <!-- Videos nach aktueller Playlistposition (Gesamtlaufzeit des Videos) -->
+            <ng-container *ngIf="i > position">{{file.length|timeformatter}}</ng-container>
+        </div>
     </div>
-  </div>
 </div>
 
 <!-- 2. Zeile: Playlist starten-Button und Gesamtlaenge der Playlist-Countdown -->
 <div *ngIf="(files.length && position + 1 < files.length)"
      class="start-playlist pl-3 pr-2 d-flex">
 
-  <!-- Playlist starten -->
-  <div class="font-weight-bold cursor-pointer text-info"
-       *ngIf="files.length && position < 0"
-       (click)="jumpTo(0)">
-    <i class="fa fa-fw fa-play"></i>
-    <span class="ml-3">Playlist starten</span>
-  </div>
+    <!-- Playlist starten -->
+    <div class="font-weight-bold cursor-pointer text-info"
+         *ngIf="files.length && position < 0"
+         (click)="jumpTo(0)">
+        <i class="fa fa-fw fa-play"></i>
+        <span class="ml-3">Playlist starten</span>
+    </div>
 
-  <!-- Laenge der Playlist -->
-  <div class="ml-auto"
-       *ngIf="files.length > 1">{{filesTotalTime | timeformatter}}
-  </div>
+    <!-- Laenge der Playlist -->
+    <div class="ml-auto"
+         *ngIf="files.length > 1">{{filesTotalTime | timeformatter}}
+    </div>
 </div>
