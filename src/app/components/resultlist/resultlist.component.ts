@@ -57,13 +57,15 @@ export class ResultlistComponent {
 
   //pruefen ob Item in Playlist ist
   isInPlaylist(item) {
-    return (this.files.some(e => this.mode + "/" + item.mode + "/" + e.file === item.file));
+    return (this.files.some(e => {
+      return e.file === this.mode + "/" + item.mode + "/" + item.file;
+    }));
   }
 
   //einzelnes Item abspielen
   addToPlaylist(item, startPlayback) {
 
-    //doppeltes Einfuege verhindern
+    //doppeltes Einfuegen verhindern
     if (this.isInPlaylist(item)) {
       console.log("item already in playlist");
       return;
