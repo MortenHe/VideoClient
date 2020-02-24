@@ -44,7 +44,7 @@ async function main() {
     //JSON-Folder zippen
     const zipFolder = require('zip-a-folder');
     console.log("zip json data");
-    await zipFolder.zip('../../MyAssets', '../../myJson.zip');
+    await zipFolder.zip('../../myAssets', '../../myJson.zip');
 
     //SSH-Verbindung um Shell-Befehle auszufuehren (unzip, chmod,...)
     const SSH2Promise = require('ssh2-promise');
