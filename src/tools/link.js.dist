@@ -1,4 +1,10 @@
 module.exports = {
+
+    //welches Betriebssystem
+    os: "windows|linux",
+
+    //Wohin werden files heruntergeladen und
+    mediaDir: "C:/Users/Martin/Desktop/media",
      
     //Wo liegt das Video ("zdf", "wdr", "dm")
     source: "wdr",

@@ -6,11 +6,14 @@
 //Connection laden
 const connection = require("./connection.js");
 
+//Modus laden
+const link = require("./link.js");
+
 //Woher und wohin files hochgeladen?
 const targetMachine = process.argv[2] || "pw";
 
 //Dort liegen / dorthin kommen die Dateien
-const localvideoDir = "C:/Users/Martin/Desktop/media/done/video" + targetMachine.toUpperCase();
+const localvideoDir = link.mediaDir + "/done/video" + targetMachine.toUpperCase();
 const remotevideoDir = "/media/pi/usb_red/video";
 
 console.log("upload video files from " + localvideoDir);

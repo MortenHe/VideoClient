@@ -832,5 +832,53 @@
         "file": "maus-honigfass.mp4",
         "length": "00:00:35",
         "active": true
+    },
+    {
+        "name": "Die Maus - Hula-Hupp",
+        "file": "maus-hula-hupp.mp4",
+        "length": "00:00:39",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Igel",
+        "file": "maus-igel.mp4",
+        "length": "00:00:38",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Insel",
+        "file": "maus-insel.mp4",
+        "length": "00:00:37",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Jonglieren",
+        "file": "maus-jonglieren.mp4",
+        "length": "00:00:41",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Kaffeewärmer",
+        "file": "maus-kaffeewaermer.mp4",
+        "length": "00:00:38",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Kakaoautomat",
+        "file": "maus-kakaoautomat.mp4",
+        "length": "00:00:53",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Kaminkehrer",
+        "file": "maus-kaminkehrer.mp4",
+        "length": "00:00:50",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Kanufahrt",
+        "file": "maus-kanufahrt.mp4",
+        "length": "00:00:38",
+        "active": true
     }
 ]

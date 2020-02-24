@@ -12,7 +12,7 @@ const padStart = require('lodash.padstart');
 const { execSync } = require('child_process');
 
 //Wo sollen Videos gespeichert werden
-const mediaDir = "C:/Users/Martin/Desktop/media";
+const mediaDir = link.mediaDir;
 const downloadDir = mediaDir + "/videoDownload";
 const doneDir = mediaDir + "/done/videoPW";
 
@@ -88,8 +88,20 @@ async function downloadVideo(video) {
     console.log("download done");
 
     //in Download-Verzeichnis gehen und ts Dateien zu einer ts-Datei zusammenfuehren
-    execSync("cd " + downloadDir + " && copy /b *.ts joined_files.ts");
-    console.log("putting single files together done");
+    switch (link.os) {
+
+        //Befehl unter Windows
+        case "windows":
+            execSync("cd " + downloadDir + " && copy /b *.ts joined_files.ts");
+            console.log("putting single files together done");
+            break;
+
+        //Befehl unter Linux
+        case "linux":
+            console.log("linux")
+            execSync("cd " + downloadDir + " && cat *.ts > joined_files.ts");
+            console.log("putting single files together done");
+    }
 
     //ts-Datei nach mp4 konvertieren
     execSync("ffmpeg -loglevel panic -i " + downloadDir + "/joined_files.ts -acodec copy -vcodec copy " + doneDir + "/" + link.mode + "-" + video[0] + ".mp4");
