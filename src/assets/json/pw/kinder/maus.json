@@ -880,5 +880,53 @@
         "file": "maus-kanufahrt.mp4",
         "length": "00:00:38",
         "active": true
+    },
+    {
+        "name": "Die Maus - Kartenhaus",
+        "file": "maus-kartenhaus.mp4",
+        "length": "00:01:20",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Kartonhaus",
+        "file": "maus-kartonhaus.mp4",
+        "length": "00:00:46",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Kastanie",
+        "file": "maus-kastanie.mp4",
+        "length": "00:00:41",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Kaugummi-Hängebrücke",
+        "file": "maus-kaugummi-haengebruecke.mp4",
+        "length": "00:01:01",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Kerze",
+        "file": "maus-kerze.mp4",
+        "length": "00:00:43",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Kippende Linie",
+        "file": "maus-kippende-linie.mp4",
+        "length": "00:01:06",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Kipptreppe",
+        "file": "maus-kipptreppe.mp4",
+        "length": "00:00:58",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Klavier",
+        "file": "maus-klavier.mp4",
+        "length": "00:01:05",
+        "active": true
     }
 ]
