@@ -426,7 +426,7 @@
         "active": true
     },
     {
-        "name": "Die Maus - Eis Beim Fußball",
+        "name": "Die Maus - Eis beim Fußball",
         "file": "maus-eis-beim-fussball.mp4",
         "length": "00:00:32",
         "active": true
@@ -927,6 +927,54 @@
         "name": "Die Maus - Klavier",
         "file": "maus-klavier.mp4",
         "length": "00:01:05",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Klavierkonzert",
+        "file": "maus-klavierkonzert.mp4",
+        "length": "00:00:54",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Koffer",
+        "file": "maus-koffer.mp4",
+        "length": "00:00:49",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Kofferlandschaft",
+        "file": "maus-kofferlandschaft.mp4",
+        "length": "00:01:06",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Kopfrechnen",
+        "file": "maus-kopfrechnen.mp4",
+        "length": "00:00:52",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Kopierer",
+        "file": "maus-kopierer.mp4",
+        "length": "00:01:07",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Kostümfest",
+        "file": "maus-kostuemfest.mp4",
+        "length": "00:00:38",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Kuchenmaschine",
+        "file": "maus-kuchenmaschine.mp4",
+        "length": "00:01:18",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Kürbis",
+        "file": "maus-kuerbis.mp4",
+        "length": "00:00:36",
         "active": true
     }
 ]

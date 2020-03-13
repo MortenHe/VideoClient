@@ -228,8 +228,14 @@
         "active": true
     },
     {
-        "name": "Bibi Blocksberg - Geht's auch phne Hexerei? (16)",
+        "name": "Bibi Blocksberg - Geht's auch ohne Hexerei? (16)",
         "file": "bibi-auch-ohne-hexerei.mp4",
+        "length": "00:25:12",
+        "active": true
+    },
+    {
+        "name": "Bibi Blocksberg - Die Schlossgespenster (24)",
+        "file": "bibi-schlossgespenster.mp4",
         "length": "00:25:12",
         "active": true
     }
