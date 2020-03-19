@@ -976,5 +976,53 @@
         "file": "maus-kuerbis.mp4",
         "length": "00:00:36",
         "active": true
+    },
+    {
+        "name": "Die Maus - Kugel",
+        "file": "maus-kugel.mp4",
+        "length": "00:00:38",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Kuh",
+        "file": "maus-kuh.mp4",
+        "length": "00:00:27",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Kunstmaler",
+        "file": "maus-kunstmaler.mp4",
+        "length": "00:00:56",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Labyrinth 1",
+        "file": "maus-labyrinth1.mp4",
+        "length": "00:00:39",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Labyrinth 2",
+        "file": "maus-labyrinth2.mp4",
+        "length": "00:01:09",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Lampenschirm",
+        "file": "maus-lampenschirm.mp4",
+        "length": "00:00:39",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Laternenzauber",
+        "file": "maus-laternenzauber.mp4",
+        "length": "00:00:59",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Laufhut",
+        "file": "maus-laufhut.mp4",
+        "length": "00:01:01",
+        "active": true
     }
 ]
