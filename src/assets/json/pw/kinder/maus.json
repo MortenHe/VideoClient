@@ -1072,5 +1072,65 @@
         "file": "maus-mausbeat.mp4",
         "length": "00:01:11",
         "active": true
+    },
+    {
+        "name": "Die Maus - Maustralien",
+        "file": "maus-maustralien.mp4",
+        "length": "00:00:35",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Memory",
+        "file": "maus-memory.mp4",
+        "length": "00:00:44",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Milchkanne",
+        "file": "maus-milchkanne.mp4",
+        "length": "00:00:42",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Mixer",
+        "file": "maus-mixer.mp4",
+        "length": "00:00:33",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Mondbett",
+        "file": "maus-mondbett.mp4",
+        "length": "00:00:54",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Mond putzen",
+        "file": "maus-mondputzen.mp4",
+        "length": "00:00:38",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Morast",
+        "file": "maus-morast.mp4",
+        "length": "00:01:15",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Mücke",
+        "file": "maus-muecke.mp4",
+        "length": "00:01:01",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Müllschlucker",
+        "file": "maus-muellschlucker.mp4",
+        "length": "00:00:44",
+        "active": true
+    },
+    {
+        "name": "Die Maus - Murmelbär",
+        "file": "maus-murmelbaer.mp4",
+        "length": "00:00:48",
+        "active": true
     }
 ]
