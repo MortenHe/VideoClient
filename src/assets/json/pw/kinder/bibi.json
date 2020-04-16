@@ -238,5 +238,17 @@
         "file": "bibi-schlossgespenster.mp4",
         "length": "00:25:12",
         "active": true
+    },
+    {
+        "name": "Bibi Blocksberg - Die neue Schule (12)",
+        "file": "bibi-neue-schule.mp4",
+        "length": "00:26:14",
+        "active": true
+    },
+    {
+        "name": "Bibi Blocksberg - Reise in die Vergangenheit (46)",
+        "file": "bibi-reise-vergangenheit.mp4",
+        "length": "00:25:12",
+        "active": true
     }
 ]
