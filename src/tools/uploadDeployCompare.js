@@ -2,6 +2,9 @@
 //Skript ruft einzelne Unterskripte auf
 //node .\uploadDeployCompare.js pw | marlen | vb
 
+console.log("DEPRECATED");
+return;
+
 //Auf welche Maschine sollen die Daten uebertragen werden?
 const targetMachine = process.argv[2] || "pw";
 

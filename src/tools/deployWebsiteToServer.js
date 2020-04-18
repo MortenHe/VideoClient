@@ -24,21 +24,9 @@ async function main() {
     execSync("ng build -c=" + targetMachine + " --base-href=/" + base_href + "/", { stdio: 'inherit' });
     console.log("build done");
 
-    //Assets (=JSON-Configs) loeschen, die nicht zu dieser App gehoeren (z.B. json von marlen loeschen, wenn pw json deployed wird)
-    //versch. environments koennen gemeinsame assets nutzen
-    const fs = require('fs-extra');
-    console.log("delete other JSON-configs");
-    console.log("keep assets from app " + assetsId);
-    const folders = await fs.readdir("../assets/json");
-    for (const folder of folders) {
-        if (folder !== assetsId) {
-            console.log("delete assets from app " + folder);
-            await fs.remove("../../dist/assets/json/" + folder);
-        }
-    }
-
     //htaccess Schablone in dist Ordner kopieren und durch Pattern Ersetzung anpassen
     const replace = require("replace");
+    const fs = require("fs-extra");
     console.log("copy htacces");
     await fs.copy('.htaccess', '../../dist/htaccess');
 

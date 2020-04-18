@@ -1,6 +1,9 @@
 //Nur JSON-Config auf Server uebertragen
 //node .\deployJsonToServer.js pw | marlen | vb
 
+console.log("DEPRECATED");
+return;
+
 //Async Methode fuer Await Aufrufe
 async function main() {
 

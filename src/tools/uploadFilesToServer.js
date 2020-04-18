@@ -3,6 +3,9 @@
 //node .\uploadFilesToServer.js vb (= Dateien auf VB laden)
 //node .\uploadFilesToServer.js marlen (= Dateien auf Marlen Player laden)
 
+console.log("DEPRECATED");
+return;
+
 //Connection laden
 const connection = require("./connection.js");
 
