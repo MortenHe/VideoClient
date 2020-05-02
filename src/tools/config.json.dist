@@ -1,5 +1,5 @@
 {
-    "localJsonDir": "C:/Users/Martin/Desktop/Nextcloud/Raspi/files/wvp/json",
+    "localJsonDir": "D:/Nextcloud MH/Raspi/files/wvp/json/pw",
     "localVideoDir": "D:/Nextcloud MH/Raspi/files/wvp/videos",
     "remoteVideoDir": "/media/pi/usb_red/Nextcloud/Raspi/files/wvp/videos"
 }
