@@ -10,7 +10,7 @@ const { getVideoDurationInSeconds } = require('get-video-duration')
 const timelite = require('timelite');
 
 //Wo liegen die Dateien fuer die JSON Infos erzeugt werden sollen?
-const dataDir = link.mediaDir + "/done/videoPW";
+const dataDir = link.mediaDir;
 //const dataDir = "F:/Video (geschnitten)/Jahresvideo HWH + MH/2015 - Jahresvideo";
 //const dataDir = "F:/";
 
