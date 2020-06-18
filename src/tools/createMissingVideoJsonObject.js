@@ -28,6 +28,7 @@ naming["2019"] = "2019-";
 naming["pippi"] = "Pippi - ";
 naming["pumuckl"] = "Pumuckl - ";
 naming["bob"] = "Bob der Baumeister - ";
+naming["lieselotte"] = "Lieselotte - ";
 
 //Video-Infos sammeln
 outputArray = [];
@@ -42,13 +43,13 @@ for (const mp4File of mp4Files) {
 
     //kinder
     const topFolder = path.basename(path.dirname(path.dirname(mp4File)));
-    
+
     //maus
     const subFolder = path.basename(path.dirname(mp4File));
-    
+
     //maus-pauke.mp4
     const filename = path.basename(mp4File);
-    
+
     //kinder/maus/maus-pauke.mp4
     mp4VideoFiles.add(topFolder + "/" + subFolder + "/" + filename)
 }
@@ -57,17 +58,17 @@ for (const mp4File of mp4Files) {
 const jsonVideoFiles = new Set();
 const jsonFiles = glob.sync(localJsonDir + "/*/*.json");
 for (const jsonFile of jsonFiles) {
-    
+
     //kinder
     const topFolder = path.basename(path.dirname(jsonFile));
-    
+
     //maus
     const subFolder = path.basename(jsonFile, ".json");
-    
+
     //Ueber Videos in maus.json gehen
     const jsonData = fs.readJsonSync(jsonFile);
     for (const jsonObj of jsonData) {
-        
+
         //kinder/maus/maus-pauke.mp4
         jsonVideoFiles.add(topFolder + "/" + subFolder + "/" + jsonObj.file);
     }
@@ -91,7 +92,7 @@ for (missingJsonFile of missingJsonFiles) {
 
             //maus-post.mp4
             const file = path.basename(filePath);
-            
+
             //maus
             const mode = path.basename(path.dirname(filePath));
 
