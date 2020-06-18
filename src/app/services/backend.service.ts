@@ -303,6 +303,6 @@ export class BackendService {
 
     //App aktivieren = WSS starten
     activateApp() {
-        return this.http.get(this.serverUrl + "/php/activateVideoApp.php");
+        return this.http.get(this.serverUrl + "/activateVideoApp.php");
     }
 }

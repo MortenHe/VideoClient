@@ -4,7 +4,7 @@ module.exports = {
     os: "windows|linux",
 
     //Wohin werden files heruntergeladen und
-    mediaDir: "C:/Users/Martin/Desktop/media",
+    mediaDir: "C:/Users/Martin/Desktop/media/raspi/video",
      
     //Wo liegt das Video ("zdf", "wdr", "dm")
     source: "wdr",
