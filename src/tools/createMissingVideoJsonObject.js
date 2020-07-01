@@ -28,7 +28,7 @@ naming["2019"] = "2019-";
 naming["pippi"] = "Pippi - ";
 naming["pumuckl"] = "Pumuckl - ";
 naming["bob"] = "Bob der Baumeister - ";
-naming["bebl"] = "Benjamin Blümchen - ";
+naming["bebl"] = "Benjamin Blï¿½mchen - ";
 naming["lieselotte"] = "Lieselotte - ";
 
 //Video-Infos sammeln
@@ -132,7 +132,8 @@ for (missingJsonFile of missingJsonFiles) {
                 "name": name,
                 "file": file,
                 "length": timeOutputString,
-                "active": true
+                "active": true,
+                "added": new Date().toISOString().slice(0, 10)
             });
             resolve();
         });

@@ -91,7 +91,8 @@ fs.readdir(dataDir, (err, files) => {
                         "name": name,
                         "file": file,
                         "length": timeOutputString,
-                        "active": true
+                        "active": true,
+                        "added": new Date().toISOString().slice(0, 10)
                     });
                     resolve();
                 });
