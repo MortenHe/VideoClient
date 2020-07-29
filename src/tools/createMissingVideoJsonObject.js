@@ -28,7 +28,7 @@ naming["2019"] = "2019-";
 naming["pippi"] = "Pippi - ";
 naming["pumuckl"] = "Pumuckl - ";
 naming["bob"] = "Bob der Baumeister - ";
-naming["bebl"] = "Benjamin Bl�mchen - ";
+naming["bebl"] = "Benjamin Blümchen - ";
 naming["lieselotte"] = "Lieselotte - ";
 
 //Video-Infos sammeln
@@ -77,6 +77,13 @@ for (const jsonFile of jsonFiles) {
 
 //Promises bei Laenge-Ermittlung sammeln
 durationPromises = [];
+
+//Videos ausgeben, die einen JSON-Eintrag aber keine Datei im Dateisystem haben
+missingVideoFiles = [...jsonVideoFiles].filter(videoFile => !mp4VideoFiles.has(videoFile));
+if (missingVideoFiles.length) {
+    console.log("Dateien aus Config, die nicht im Dateisystem sind");
+    console.log(missingVideoFiles);
+}
 
 //Ueber Videos gehen, fuer die es noch keinen JSON-Eintrag gibt und den JSON-Eintrag erstellen
 missingJsonFiles = [...mp4VideoFiles].filter(videoFile => !jsonVideoFiles.has(videoFile));

@@ -12,7 +12,7 @@ const padStart = require('lodash.padstart');
 const { execSync } = require('child_process');
 
 //Wo sollen Videos gespeichert werden
-const mediaDir = link.mediaDir;
+const mediaDir = fs.readJSONSync("config.json").mediaDir;
 const downloadDir = mediaDir + "/download";
 const doneDir = mediaDir;
 
