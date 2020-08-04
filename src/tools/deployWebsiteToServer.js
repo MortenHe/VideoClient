@@ -1,16 +1,15 @@
 //Webseite bauen und auf Server laden
-//node .\deployWebsiteToServer.js pw | marlen | vb
+//node .\deployWebsiteToServer.js pw | marlen
+const fs = require('fs-extra');
+const config = fs.readJSONSync("config.json");
 
 //Async Methode fuer Await Aufrufe
 async function main() {
 
-    //Connection laden
-    const connection = require("./connection.js");
-
-    //Welche Website (pw / marlen / vb) wohin deployen (pw / marlen / vb)
+    //Welche Website (pw / marlen) wohin deployen (pw / marlen)
     const targetMachine = process.argv[2] || "pw";
-    assetsId = connection[targetMachine].assetId;
-    console.log("build and deploy video (" + assetsId + ") to server " + targetMachine + ": " + connection[targetMachine].host);
+    assetsId = config["connections"][targetMachine].assetId;
+    console.log("build and deploy video (" + assetsId + ") to server " + targetMachine + ": " + config["connections"][targetMachine].host);
 
     //Unter welchem Unterpfad wird die App auf dem Server laufen?
     const base_href = "wvp";

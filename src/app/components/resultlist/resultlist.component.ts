@@ -19,7 +19,7 @@ export class ResultlistComponent {
   items$: Observable<Item[]>;
 
   //Flag ob Tracks angezeigt werden sollen
-  showTracks$: Observable<boolean>;
+  showTracks: boolean;
 
   //Aktuelle Playlist (kommt von Server)
   files: any[] = [];
@@ -40,7 +40,7 @@ export class ResultlistComponent {
     this.items$ = this.bs.getFilteredItemlist();
 
     //flag ob Tracks angezeigt werden abbonieren
-    this.showTracks$ = this.fs.getShowTracks();
+    this.fs.getShowTracks().subscribe(showTracks => this.showTracks = showTracks);
 
     //Modus abbonieren
     this.bs.getMode().subscribe(mode => this.mode = mode);
@@ -73,7 +73,8 @@ export class ResultlistComponent {
 
     //Video-Playback starten oder neuen Titel enquen
     this.bs.sendMessage({
-      type: "add-to-video-playlist", value: {
+      type: "add-to-video-playlist",
+      value: {
         "file": this.mode + "/" + item.mode + "/" + item.file,
         "name": item.name,
         "length": item.length,

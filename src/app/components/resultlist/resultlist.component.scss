@@ -1,9 +1,13 @@
 @import '~scss/variables.scss';
 
+.result-line-height {
+    height: 32px;
+}
+
 .box {
     border: none;
     border-top: 1px solid $color-light-border-grey;
-    padding: 5px;
+    //padding: 5px;
     background: $color-light-bg;
     width: 100%;
 
@@ -35,7 +39,7 @@
 
     ul {
         margin-bottom: 0;
-        padding-left: 21px;
+        padding-left: 32px;
 
         li {
             text-align: left;

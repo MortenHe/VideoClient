@@ -1,37 +1,44 @@
 <!-- Ueber Items-Array gehen und die bereits gefilterte und sortierte Liste ausgeben -->
 <button *ngFor="let item of items$ | async"
-        class="row no-gutters items pl-3 box"
+        class="d-flex align-items-stretch row no-gutters items box p-0"
         [disabled]="isInPlaylist(item)">
 
-  <!-- Links: Direktes Abspielen-Symbol -->
-  <i class="fa fa-fw fa-play mr-3 align-self-center opacity-50"
-     [class.invisible]="isInPlaylist(item)"
-     (click)="addToPlaylist(item, true)"></i>
+  <!-- Zeile 1: Play-Button + Titel-Info -->
+  <div class="d-flex w-100 result-line-height">
 
-  <!-- Rechts: [Titel, Dauer] darunter Info -->
-  <div class="col no-gutters"
-       (click)="addToPlaylist(item, false)">
+    <!-- Links: Direktes Abspielen-Symbol -->
+    <i class="d-flex align-items-center justify-content-center fa fa-fw fa-play px-3 opacity-50"
+       [class.invisible]="isInPlaylist(item)"
+       (click)="addToPlaylist(item, true)">
+    </i>
 
-    <!-- Name des Titels und Laenge -->
-    <div class="col row no-gutters">
+    <!-- Rechts: [Titel, Dauer] darunter Info -->
+    <div class="col no-gutters d-flex align-items-center justify-content-center p-0"
+         (click)="addToPlaylist(item, false)">
 
-      <!-- gekuerzter Itemname mit Highlight -->
-      <span class="col text-left"
-            [highlight]="searchTerm">{{item.name|fileName:modeFilter}}</span>
+      <!-- Name des Titels und Laenge -->
+      <div class="col row no-gutters">
 
-      <!-- formattierte Laenge des Items -->
-      <div class="item-length item-length-video text-right ml-1 mr-1">
-        {{item.length | timeformatter}}
+        <!-- gekuerzter Itemname mit Highlight -->
+        <span class="col text-left"
+              [highlight]="searchTerm">{{item.name|fileName:modeFilter}}</span>
+
+        <!-- formattierte Laenge des Items -->
+        <div class="item-length item-length-video text-right ml-1 mr-2">
+          {{item.length | timeformatter}}
+        </div>
       </div>
     </div>
-
-    <!-- Wenn Tracks angezeigt werden sollen, Tracks ausgeben (mit Highlight) -->
-    <ul *ngIf="showTracks$ | async">
-      <li *ngFor="let track of item.tracks"
-          class="mr-1"
-          [highlight]="searchTerm">
-        {{track}}
-      </li>
-    </ul>
   </div>
+
+  <!-- Zeile 2: Track-Info: Wenn Tracks angezeigt werden sollen, Tracks ausgeben (mit Highlight) -->
+  <ul *ngIf="showTracks && item.tracks?.length"
+      class="mb-1 w-100"
+      (click)="addToPlaylist(item, false)">
+    <li *ngFor="let track of item.tracks"
+        class="mr-1"
+        [highlight]="searchTerm">
+      {{track}}
+    </li>
+  </ul>
 </button>

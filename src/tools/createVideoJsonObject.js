@@ -1,6 +1,3 @@
-//Modus laden
-const link = require("./link.js");
-
 //libraries laden fuer Dateizugriff
 //ffprobe.exe muss vorhanden und im Path sein (z.B. im ffmpeg-bundle)
 const fs = require('fs-extra')
@@ -9,8 +6,10 @@ const { getVideoDurationInSeconds } = require('get-video-duration')
 //Zeit Formattierung laden: [5, 13, 22] => 05:13:22
 const timelite = require('timelite');
 
-//Wo liegen die Dateien fuer die JSON Infos erzeugt werden sollen?
-const dataDir = fs.readJSONSync("config.json").mediaDir;
+//Wo liegen die Dateien fuer die JSON Infos erzeugt werden sollen und welcher Modus soll ausgewertet werden?
+const config = fs.readJSONSync("config.json");
+const dataDir = config.mediaDir;
+const mode = config.mode;
 
 //Benennung des Titels
 naming = [];
@@ -46,7 +45,7 @@ fs.readdir(dataDir, (err, files) => {
 
         //Wenn es eine Datei ist und zum aktuellen Modus gehoert
         let stat = fs.statSync(dataDir + "/" + file);
-        if (stat && stat.isFile() && file.startsWith(link.mode)) {
+        if (stat && stat.isFile() && file.startsWith(config.mode)) {
 
             //Promises sammeln, da Zeit-Ermittlung asynchron laeuft
             durationPromises.push(new Promise((resolve, reject) => {
@@ -70,14 +69,14 @@ fs.readdir(dataDir, (err, files) => {
                     let timeOutputString = timelite.time.str(timeOutput);
 
                     //bibi-mamis-neuer-besen.mp4 -> mamis-neuer-besen
-                    let name = file.replace(link.mode + "-", "");
+                    let name = file.replace(mode + "-", "");
                     name = name.replace(".mp4", "");
 
                     //mamis-neuer-besen -> mamis neuer besen
                     name = name.replace(/-/g, ' ');
 
                     //mamis neuer besen -> Bibi Blocksberg - mamis neuer besen
-                    name = naming[link.mode] ? naming[link.mode] + name : " - ";
+                    name = naming[mode] ? naming[mode] + name : " - ";
 
                     //Bibi Blocksberg - mamis neuer besen -> Bibi Blocksberg - Mamis Neuer Besen
                     name = name.replace(/\b[a-z]/g, (chr) => {

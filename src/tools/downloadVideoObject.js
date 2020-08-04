@@ -1,6 +1,4 @@
-//Link laden
-const link = require("./link.js");
-
+//Video von Url herunterladen
 //libraries laden fuer Dateizugriff
 const fs = require('fs-extra');
 const download = require('download');
@@ -12,9 +10,11 @@ const padStart = require('lodash.padstart');
 const { execSync } = require('child_process');
 
 //Wo sollen Videos gespeichert werden
-const mediaDir = fs.readJSONSync("config.json").mediaDir;
+const config = fs.readJSONSync("config.json");
+const mediaDir = config.mediaDir;
 const downloadDir = mediaDir + "/download";
 const doneDir = mediaDir;
+const source = config.source;
 
 //Dir anlegen, wo fertiges Video liegen soll, falls es nicht existiert
 if (!fs.existsSync(doneDir)) {
@@ -26,7 +26,7 @@ main();
 
 //Ueber Liste der files gehen, die heruntergeladen werden sollen
 async function main() {
-    for (video of link.urls) {
+    for (video of config.urls) {
         await downloadVideo(video);
     }
 }
@@ -40,7 +40,7 @@ async function downloadVideo(video) {
         zdf: (video[1]).split(/segment\d{1,}/),
         wdr: (video[1]).split(/segment\d{1,}/),
         dm: (video[1]).split(/frag\(\d{1,}/)
-    }[link.source];
+    }[source];
 
     //Video-Promises sammeln
     videoPromises = [];
@@ -53,7 +53,7 @@ async function downloadVideo(video) {
         zdf: 165,
         wdr: 12,
         dm: 500
-    }[link.source];
+    }[source];
 
     //Einzelne Teile herunterladen
     for (let i = 1; i <= limit; i++) {
@@ -66,7 +66,7 @@ async function downloadVideo(video) {
                 zdf: urlSplit[0] + "segment" + i + urlSplit[1],
                 wdr: urlSplit[0] + "segment" + i + urlSplit[1],
                 dm: urlSplit[0] + "frag(" + i + urlSplit[1]
-            }[link.source];
+            }[source];
 
             //Download
             download(partUrl).then(data => {
@@ -88,7 +88,7 @@ async function downloadVideo(video) {
     console.log("download done");
 
     //in Download-Verzeichnis gehen und ts Dateien zu einer ts-Datei zusammenfuehren
-    switch (link.os) {
+    switch (config.os) {
 
         //Befehl unter Windows
         case "windows":
@@ -104,7 +104,7 @@ async function downloadVideo(video) {
     }
 
     //ts-Datei nach mp4 konvertieren
-    execSync("ffmpeg -loglevel panic -i " + downloadDir + "/joined_files.ts -acodec copy -vcodec copy " + doneDir + "/" + link.mode + "-" + video[0] + ".mp4");
+    execSync("ffmpeg -loglevel panic -i " + downloadDir + "/joined_files.ts -acodec copy -vcodec copy " + doneDir + "/" + config.mode + "-" + video[0] + ".mp4");
     console.log("creating mp4 file done");
 
     //Download-Dir leeren

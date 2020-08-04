@@ -2,4 +2,25 @@
     "mediaDir": "C:/Users/Martin/Desktop/media/raspi/video",
     "localJsonDir": "D:/Nextcloud MH/Raspi/files/wvp/json/pw",
     "localVideoDir": "D:/Nextcloud MH/Raspi/files/wvp/videos",
+    "connections": {
+            "pw": {
+            "host": "",
+            "user": "root",
+            "password": "",
+            "assetId": "pw"
+        },
+        "marlen": {
+            "host": "",
+            "user": "root",
+            "password": "",
+            "assetId": "marlen"
+        }
+    },
+    "os": "windows|linux",
+    "source": "zdf|wdr|dm",
+    "mode": "maus|conni|bibi",
+    "urls": [
+        ["anglerglueck", "https://..."],
+        ["apfelbaum", "https://..."]
+    ]
 }
