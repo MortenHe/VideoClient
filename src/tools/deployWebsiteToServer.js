@@ -8,8 +8,8 @@ async function main() {
 
     //Welche Website (pw / marlen) wohin deployen (pw / marlen)
     const targetMachine = process.argv[2] || "pw";
-    assetsId = config["connections"][targetMachine].assetId;
-    console.log("build and deploy video (" + assetsId + ") to server " + targetMachine + ": " + config["connections"][targetMachine].host);
+    const connection = config["connections"][targetMachine];
+    console.log("build and deploy video (" + connection.assetId + ") to server " + targetMachine + ": " + connection.host);
 
     //Unter welchem Unterpfad wird die App auf dem Server laufen?
     const base_href = "wvp";
@@ -46,19 +46,19 @@ async function main() {
     //SSH-Verbindung um Shell-Befehle auszufuehren (unzip, chmod,...)
     const SSH2Promise = require('ssh2-promise');
     const ssh = new SSH2Promise({
-        host: connection[targetMachine].host,
-        username: connection[targetMachine].user,
-        password: connection[targetMachine].password
+        host: connection.host,
+        username: connection.user,
+        password: connection.password
     });
 
     //sftp-Verbindung um Webseiten-Dateien hochzuladen
     const Client = require('ssh2-sftp-client');
     const sftp = new Client();
     await sftp.connect({
-        host: connection[targetMachine].host,
+        host: connection.host,
         port: '22',
-        username: connection[targetMachine].user,
-        password: connection[targetMachine].password
+        username: connection.user,
+        password: connection.password
     });
 
     //gibt es schon einen Ordner (wvp)
