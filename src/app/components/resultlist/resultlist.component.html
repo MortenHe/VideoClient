@@ -1,6 +1,6 @@
 <!-- Ueber Items-Array gehen und die bereits gefilterte und sortierte Liste ausgeben -->
 <button *ngFor="let item of items$ | async"
-        class="d-flex align-items-stretch row no-gutters items box p-0"
+        class="d-flex align-items-stretch row no-gutters box"
         [disabled]="isInPlaylist(item)">
 
   <!-- Zeile 1: Play-Button + Titel-Info -->
@@ -13,7 +13,7 @@
     </i>
 
     <!-- Rechts: [Titel, Dauer] darunter Info -->
-    <div class="col no-gutters d-flex align-items-center justify-content-center p-0"
+    <div class="col no-gutters d-flex align-items-center justify-content-center box-padding"
          (click)="addToPlaylist(item, false)">
 
       <!-- Name des Titels und Laenge -->
@@ -24,7 +24,7 @@
               [highlight]="searchTerm">{{item.name|fileName:modeFilter}}</span>
 
         <!-- formattierte Laenge des Items -->
-        <div class="item-length item-length-video text-right ml-1 mr-2">
+        <div class="item-length item-length-video text-right ml-1 mr-0">
           {{item.length | timeformatter}}
         </div>
       </div>

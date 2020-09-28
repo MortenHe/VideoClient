@@ -1,7 +1,7 @@
 @import '~scss/variables.scss';
 
 .result-line-height {
-    height: 32px;
+    //height: 32px;
 }
 
 .box {
@@ -47,6 +47,10 @@
             color: $color-light-grey;
         }
     }
+}
+
+.box-padding {
+    padding: 5px;
 }
 
 @media (hover: none) {

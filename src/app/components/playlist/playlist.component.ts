@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BackendService } from '../../services/backend.service';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'playlist',
@@ -35,34 +36,15 @@ export class PlaylistComponent implements OnInit {
   }
 
   //Wenn Sortiervorgang abgeschlossen ist, Server ueber neue Sortierung informieren
-  sortDone(event: any) {
+  drop(event: CdkDragDrop<string[]>) {
+    moveItemInArray(this.files, event.previousIndex + 1, event.currentIndex + 1);
     this.bs.sendMessage({
       type: "sort-playlist", value: {
-        from: event.oldIndex,
-        to: event.newIndex
+        from: event.previousIndex,
+        to: event.currentIndex
       }
     });
   };
-
-  //Events, die innerhalb einer Sortierliste liegen auswerten
-  eventInsideSort(event: any) {
-
-    //Funktion ist im data-Attribute hinterlegt
-    const dataset = (event.target as HTMLElement).dataset;
-    switch (dataset.func) {
-
-      //Titel aus Playlist entfernen
-      case "remove":
-        const removeIndex = event.oldIndex;
-        this.removeItemFromPlaylist(removeIndex);
-        break;
-
-      //Zu gewissem Titel springen
-      case "jump":
-        const jumpIndex = Number(dataset.index)
-        this.jumpTo(jumpIndex);
-    }
-  }
 
   //beim Init
   ngOnInit() {

@@ -4,8 +4,8 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-//Sortable JS
-import { SortablejsModule } from 'ngx-sortablejs'
+//Sortierbare Playlist
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 //eigenes Services
 import { BackendService } from './services/backend.service';
@@ -37,6 +37,7 @@ import { VolumeControlComponent } from './components/volume-control/volume-contr
 import { ConnectionComponent } from './components/connection/connection.component';
 import { CountdownComponent } from './components/countdown/countdown.component';
 import { HighlightDirective } from './directives/highlight.directive';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -66,17 +67,12 @@ import { HighlightDirective } from './directives/highlight.directive';
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
-    SortablejsModule.forRoot({
-      animation: 350,
-      draggable: '.drag',
-      handle: '.sort-handle',
-      filter: ".ignore-sort",
-      chosenClass: "sortable-chosen"
-    }),
     RouterModule.forRoot([
       { path: 'search/:mode', component: SearchComponent },
       { path: '**', redirectTo: '/search/default', pathMatch: 'full' }
     ]),
+    BrowserAnimationsModule,
+    DragDropModule
   ],
   providers: [
     BackendService,
