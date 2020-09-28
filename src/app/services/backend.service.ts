@@ -1,16 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { Observable } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 import { ResultfilterService } from './resultfilter.service';
 import { ModeFilterPipe } from '../pipes/mode-filter.pipe';
 import { SearchFilterPipe } from '../pipes/search-filter.pipe';
 import { OrderByPipe } from '../pipes/order-by.pipe';
 import { environment } from '../../environments/environment';
-import { Subject } from 'rxjs/Subject';
-import { Observer } from 'rxjs/Observer';
-import 'rxjs/add/operator/switchMap';
+import { Subject } from 'rxjs';
+import { Observer } from 'rxjs';
 
 @Injectable()
 export class BackendService {

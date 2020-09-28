@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Item } from '../../config/main-config';
 import { BackendService } from '../../services/backend.service';
 import { ResultfilterService } from '../../services/resultfilter.service';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'resultlist',
