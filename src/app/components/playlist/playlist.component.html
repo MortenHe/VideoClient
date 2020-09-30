@@ -2,42 +2,37 @@
 <div cdkDropList
      class="sort-list"
      (cdkDropListDropped)="drop($event)">
-
-     <!-- nur Items nach der aktuellen Position sortierbar-->
      <div *ngFor="let file of files, index as i, first as first"
           cdkDrag
           class="row no-gutters item pl-2"
           [ngClass]="{
        'opacity-50': i < position,
-       'drag': i > position,
        'waiting': i === jumpPosition,
        'playing': i === position,
        'first': first
      }">
-
-          <!-- Play-/ Spiner-Symbol-->
-          <div *ngIf="i === position || i === jumpPosition"
-               class="fa fa-fw cursor-pointer"
-               [ngClass]="{
-        'fa-play': i === position,
-        'fa-spinner fa-spin': i === jumpPosition
-         }">
-          </div>
 
           <!-- Sortierhandle -->
           <i cdkDragHandle
              class="fa fa-bars fa-fw px-1 opacity-50 mr-2 cursor-move"
              cdkDragHandle></i>
 
-          <!-- Jump To (vor sort Bereich) -->
-          <i (click)="jumpTo(i)"
-             class="fa fa-fw fa-play opacity-50 cursor-pointer"></i>
+          <!-- Spiner-Symbol, waehrend Laden des neuen Videos -->
+          <div *ngIf="i === jumpPosition"
+               class="fa fa-fw cursor-pointer"
+               [ngClass]="{
+                     'fa-spinner fa-spin': i === jumpPosition}"></div>
 
-          <!-- Name des Videos. Klick startet video -->
+          <!-- Player-Symbol (Jump to) -->
+          <i *ngIf="i !== jumpPosition"
+             (click)="jumpTo(i)"
+             class="fa fa-fw fa-play opacity-50 cursor-pointer"
+             [class.opacity-50]="i !== position"></i>
+
+          <!-- Name des Videos -->
           <div class="col ml-2 mr-1"
                [ngClass]="{
-      'font-weight-bold': i === position
-    }">{{file.name|fileName}}</div>
+      'font-weight-bold': i === position}">{{file.name|fileName}}</div>
 
           <!-- Titel aus Playlist loeschen, nur Titel nach aktueller Position sind loeschbar -->
           <button [class.invisible]="i <= position"
