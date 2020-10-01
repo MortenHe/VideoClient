@@ -1,7 +1,8 @@
 <!-- sortierbare Playlist -->
 <div cdkDropList
-     class="sort-list"
-     (cdkDropListDropped)="drop($event)">
+     [cdkDropListDisabled]="files.length < 2"
+     (cdkDropListDropped)="drop($event)"
+     class="sort-list">
      <div *ngFor="let file of files, index as i, first as first"
           cdkDrag
           class="row no-gutters item pl-2"
@@ -14,8 +15,8 @@
 
           <!-- Sortierhandle -->
           <i cdkDragHandle
-             class="fa fa-bars fa-fw px-1 opacity-50 mr-2 cursor-move"
-             cdkDragHandle></i>
+             [class.invisible]="files.length < 2"
+             class="fa fa-bars fa-fw px-1 opacity-50 mr-2 cursor-move"></i>
 
           <!-- Spiner-Symbol, waehrend Laden des neuen Videos -->
           <div *ngIf="i === jumpPosition"

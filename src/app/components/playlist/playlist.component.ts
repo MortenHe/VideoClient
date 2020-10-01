@@ -78,6 +78,25 @@ export class PlaylistComponent implements OnInit {
     //lokale Daten sortieren
     moveItemInArray(this.files, event.previousIndex, event.currentIndex);
 
+    //ggf. position (=aktives Video) anpassen, wenn gerade ein Video laeuft
+    if (this.position > -1) {
+
+      //aktives Video wurde verschoben -> Endposition als neues aktives Video
+      if (event.previousIndex === this.position) {
+        this.position = event.currentIndex;
+      }
+
+      //Video vor akt. Video wurde auf Position des akt. Videos oder dahinter geschoben -> akt. Video rueckt eins nach oben
+      else if (event.previousIndex < this.position && event.currentIndex >= this.position) {
+        this.position--;
+      }
+
+      //Video hinter akt. Video wurde auf Position des akt. Videos oder davor geschoben -> akt. Video rueckt eins nach unten
+      else if (event.previousIndex > this.position && event.currentIndex <= this.position) {
+        this.position++;
+      }
+    }
+
     //Server informieren
     this.bs.sendMessage({
       type: "sort-playlist", value: {
