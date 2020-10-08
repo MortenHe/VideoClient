@@ -30,14 +30,8 @@
                [ngClass]="{
       'font-weight-bold': i === position}">{{file.name|fileName}}</div>
 
-          <!-- Titel aus Playlist loeschen, nur Titel nach aktueller Position sind loeschbar -->
-          <button [class.invisible]="i <= position"
-                  (click)="removeItemFromPlaylist(index)"
-                  data-func="remove"
-                  class="button-clean add-item ignore-sort opacity-50"><i class="fa fa-trash"></i></button>
-
           <!-- Zeitinfo des Videos -->
-          <div class="item-length text-right mr-2">
+          <div class="item-length text-right">
 
                <!-- Video wurde schon gespielt. Restzeit 0:00 -->
                <ng-container *ngIf="i < position">0:00</ng-container>
@@ -49,10 +43,16 @@
                <ng-container *ngIf="i > position">{{file.length|timeformatter}}</ng-container>
           </div>
 
+          <!-- Titel aus Playlist loeschen, nur Titel nach aktueller Position sind loeschbar -->
+          <button [class.invisible]="i <= position"
+                  (click)="removeItemFromPlaylist(index)"
+                  data-func="remove"
+                  class="button-clean add-item ignore-sort opacity-50 ml-2"><i class="fa fa-trash"></i></button>
+
           <!-- Sortierhandle -->
           <i cdkDragHandle
              [class.invisible]="files.length < 2"
-             class="fa fa-bars fa-fw px-1 opacity-50 mr-2 cursor-move"></i>
+             class="fa fa-bars fa-fw px-1 opacity-50 mr-1 cursor-move ml-1"></i>
      </div>
 </div>
 
