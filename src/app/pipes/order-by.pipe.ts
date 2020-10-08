@@ -14,6 +14,35 @@ export class OrderByPipe implements PipeTransform {
     //Items soriteren, dazu immer 2 Elemente vergleichen
     items.sort((a: Item, b: Item) => {
 
+      //Wenn nach Hinzufuege-Datum sortiert wird
+      if (orderField === 'added') {
+
+        //Wenn beide Items kein "added"-Merkmal haben -> nach Name sortieren
+        if (a.added === undefined && b.added === undefined) {
+          return a.name.localeCompare(b.name);
+        }
+
+        //Wenn 1. Item kein "added-Merkmal hat" => 2. Feld
+        if (a.added === undefined) {
+          return 1;
+        }
+
+        //Wenn 2. Item kein "added-Merkmal hat" => 1. Feld
+        if (b.added === undefined) {
+          return -1;
+        }
+
+        //Wenn sich "added"-Werte untescheiden -> nach added sortieren (absteigend)
+        if (a.added !== b.added) {
+          return b.added.localeCompare(a.added);
+        }
+
+        //bei gleichen "added"-Werten nach Name sortieren
+        else {
+          return a.name.localeCompare(b.name);
+        }
+      }
+
       //Wenn nach Name sortiert wird
       if (orderField === 'name') {
 

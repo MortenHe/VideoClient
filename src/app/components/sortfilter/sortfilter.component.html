@@ -2,16 +2,17 @@
 <div class="tag d-flex align-items-center justify-content-center"
      (click)="setNextOrder()">
 
-  <!-- Sortiersymbol (Buchstaben, Uhr) -->
-  <i class="fa"
-     [ngClass]="{
+   <!-- Sortiersymbol (Buchstaben, Uhr) -->
+   <i class="fa"
+      [ngClass]="{
+    'fa-calendar': orderField === 'added',
     'fa-font': orderField === 'name',
     'fa-clock-o': orderField === 'length'
   }"></i>
 
-  <!-- Aufsteigend / Absteigend sortieren Symbol -->
-  <i class="ml-1 fa"
-     [ngClass]="{
+   <!-- Aufsteigend / Absteigend sortieren Symbol -->
+   <i class="ml-1 fa"
+      [ngClass]="{
         'fa-sort-up': !reverseOrder,
         'fa-sort-down': reverseOrder
       }"></i>

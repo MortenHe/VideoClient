@@ -13,11 +13,6 @@
        'first': first
      }">
 
-          <!-- Sortierhandle -->
-          <i cdkDragHandle
-             [class.invisible]="files.length < 2"
-             class="fa fa-bars fa-fw px-1 opacity-50 mr-2 cursor-move"></i>
-
           <!-- Spiner-Symbol, waehrend Laden des neuen Videos -->
           <div *ngIf="i === jumpPosition"
                class="fa fa-fw cursor-pointer"
@@ -39,7 +34,7 @@
           <button [class.invisible]="i <= position"
                   (click)="removeItemFromPlaylist(index)"
                   data-func="remove"
-                  class="button-clean add-item ignore-sort opacity-50"><i class="fa fa-minus"></i></button>
+                  class="button-clean add-item ignore-sort opacity-50"><i class="fa fa-trash"></i></button>
 
           <!-- Zeitinfo des Videos -->
           <div class="item-length text-right mr-2">
@@ -53,12 +48,17 @@
                <!-- Videos nach aktueller Playlistposition (Gesamtlaufzeit des Videos) -->
                <ng-container *ngIf="i > position">{{file.length|timeformatter}}</ng-container>
           </div>
+
+          <!-- Sortierhandle -->
+          <i cdkDragHandle
+             [class.invisible]="files.length < 2"
+             class="fa fa-bars fa-fw px-1 opacity-50 mr-2 cursor-move"></i>
      </div>
 </div>
 
 <!-- 2. Zeile: Playlist starten-Button und Gesamtlaenge der Playlist-Countdown -->
 <div *ngIf="(files.length && position + 1 < files.length)"
-     class="start-playlist pl-2 pr-2 d-flex py-2">
+     class="start-playlist align-items-center pl-2 pr-2 d-flex py-2">
 
      <!-- Playlist starten -->
      <div class="font-weight-bold cursor-pointer btn btn-sm btn-info"

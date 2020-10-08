@@ -9,10 +9,12 @@ import { ResultfilterService } from '../../services/resultfilter.service';
 
 export class SortfilterComponent implements OnInit {
 
-  //Sortier-Optionen
   sortOptions = [{
     orderField: "name",
     reverseOrder: false
+  }, {
+    orderField: "added",
+    reverseOrder: true
   }, {
     orderField: "length",
     reverseOrder: true
