@@ -101,6 +101,7 @@ async function main() {
 
     //Programm beenden
     console.log("build process done");
+    await ssh.close();
     await sftp.end();
     process.exit();
 }
