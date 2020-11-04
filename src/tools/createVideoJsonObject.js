@@ -100,7 +100,7 @@ fs.readdir(dataDir, (err, files) => {
     //warten bis alle Promises abgeschlossen sind
     Promise.all(durationPromises).then(() => {
 
-        //Liste nach Dateiname (pippi-01-fest.avi, pippi-02-freunde.avi) sortieren, da Promises unterschiedlich schnell zureuckkommen koennen
+        //Liste nach Dateiname (pippi-01-fest.mp4, pippi-02-freunde.mp4) sortieren, da Promises unterschiedlich schnell zureuckkommen koennen
         outputArray.sort((a, b) => a.file.localeCompare(b.file));
 
         //Video-Array ausgeben

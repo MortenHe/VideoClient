@@ -10,6 +10,7 @@ const { execSync } = require('child_process');
 const dataDir = fs.readJSONSync("config.json").mediaDir;
 glob(dataDir + "/*.webm", (err, files) => {
     for (const inputPath of files) {
+        console.log("Convert " + inputPath + " to .mp4");
         const outputPath = dataDir + "/" + path.basename(inputPath, '.webm') + ".mp4";
         execSync("ffmpeg -i " + inputPath + " " + outputPath);
     }
