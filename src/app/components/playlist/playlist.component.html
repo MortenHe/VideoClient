@@ -45,7 +45,7 @@
 
           <!-- Titel aus Playlist loeschen, nur Titel nach aktueller Position sind loeschbar -->
           <button [class.invisible]="i <= position"
-                  (click)="removeItemFromPlaylist(index)"
+                  (click)="removeItemFromPlaylist(i)"
                   data-func="remove"
                   class="button-clean add-item ignore-sort opacity-50 ml-2"><i class="fa fa-trash"></i></button>
 
