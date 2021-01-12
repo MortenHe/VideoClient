@@ -39,6 +39,7 @@ async function downloadVideo(video) {
     const urlSplit = {
         zdf: (video[1]).split(/segment\d{1,}/),
         wdr: (video[1]).split(/segment\d{1,}/),
+        ard: (video[1]).split(/segment\d{1,}/),
         dm: (video[1]).split(/frag\(\d{1,}/)
     }[source];
 
@@ -52,6 +53,7 @@ async function downloadVideo(video) {
     const limit = {
         zdf: 165,
         wdr: 12,
+        ard: 45,
         dm: 500
     }[source];
 
@@ -65,6 +67,7 @@ async function downloadVideo(video) {
             let partUrl = {
                 zdf: urlSplit[0] + "segment" + i + urlSplit[1],
                 wdr: urlSplit[0] + "segment" + i + urlSplit[1],
+                ard: urlSplit[0] + "segment" + i + urlSplit[1],
                 dm: urlSplit[0] + "frag(" + i + urlSplit[1]
             }[source];
 

@@ -25,6 +25,7 @@ naming["2019"] = "2019-";
 naming["pippi"] = "Pippi - ";
 naming["pumuckl"] = "Pumuckl - ";
 naming["lieselotte"] = "Lieselotte - ";
+naming["bobo"] = "Bobo - ";
 
 //Video-Infos sammeln
 outputArray = [];

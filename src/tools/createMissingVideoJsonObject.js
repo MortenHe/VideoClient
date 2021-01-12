@@ -30,6 +30,8 @@ naming["pumuckl"] = "Pumuckl - ";
 naming["bob"] = "Bob der Baumeister - ";
 naming["bebl"] = "Benjamin Blümchen - ";
 naming["lieselotte"] = "Lieselotte - ";
+naming["sachgeschichten"] = "Sachgeschichten - ";
+naming["bobo"] = "Bobo - ";
 
 //Video-Infos sammeln
 outputArray = [];
