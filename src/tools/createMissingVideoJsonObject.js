@@ -156,7 +156,7 @@ Promise.all(durationPromises).then(() => {
     outputArray.sort((a, b) => a.file.localeCompare(b.file));
 
     //Video-Array ausgeben
-    console.log(JSON.stringify(outputArray, null, 2));
+    console.log(JSON.stringify(outputArray, null, 4));
 }).catch((err) => {
     console.log('error:', err);
 });
