@@ -1,7 +1,7 @@
 {
-    "mediaDir": "C:/Users/Martin/Desktop/media/raspi/video",
-    "localJsonDir": "D:/Nextcloud MH/Raspi/files/wvp/json/pw",
-    "localVideoDir": "D:/Nextcloud MH/Raspi/files/wvp/videos",
+    "mediaDir": "/mnt/c/Users/Martin/Desktop/media/raspi/video",
+    "localJsonDir": "/mnt/d/Nextcloud MH/Raspi/files/wvp/json/pw",
+    "localVideoDir": "/mnt/d/Nextcloud MH/Raspi/files/wvp/videos",
     "connections": {
             "pw": {
             "host": "",
@@ -17,7 +17,7 @@
         }
     },
     "os": "windows|linux",
-    "source": "zdf|wdr|dm",
+    "source": "ard|zdf|wdr|dm",
     "mode": "maus|conni|bibi",
     "urls": [
         ["anglerglueck", "https://..."],
