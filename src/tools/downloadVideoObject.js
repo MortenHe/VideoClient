@@ -101,7 +101,6 @@ async function downloadVideo(video) {
 
         //Befehl unter Linux
         case "linux":
-            console.log("linux")
             execSync("cd " + downloadDir + " && cat *.ts > joined_files.ts");
             console.log("putting single files together done");
     }
