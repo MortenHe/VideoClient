@@ -35,17 +35,17 @@ export class SearchFilterPipe implements PipeTransform {
         }
 
         //durchsuchten String und Suchstring als lowercase: "Bobo Drache" -> "bobo drache"
-        let haystackLower = haystack.toLowerCase();
-        let searchStringLower = searchString.toLowerCase();
+        const haystackLower = haystack.toLowerCase();
+        const searchStringLower = searchString.toLowerCase();
 
         //Suchstring in einzelne Terme aufteilen: "bobo drache" -> ["bobo", "drache"]
-        let searchStringArray = searchStringLower.split(" ");
+        const searchStringArray = searchStringLower.split(" ");
 
         //davon ausgehen, dass Suche gefunden wird
         let containsSubstrings = true;
 
         //Alle Terme des Suchstrings pruefen, ob sie im durchsuchten String enthalten sind
-        for (let searchStringValue of searchStringArray) {
+        for (const searchStringValue of searchStringArray) {
 
           //Nur nicht-leere Terme ansehen
           if (searchStringValue.trim() != "") {
