@@ -6,7 +6,6 @@ import { ResultfilterService } from './resultfilter.service';
 import { ModeFilterPipe } from '../pipes/mode-filter.pipe';
 import { SearchFilterPipe } from '../pipes/search-filter.pipe';
 import { OrderByPipe } from '../pipes/order-by.pipe';
-import { environment } from '../../environments/environment';
 import { Subject } from 'rxjs';
 import { Observer } from 'rxjs';
 
@@ -14,10 +13,10 @@ import { Observer } from 'rxjs';
 export class BackendService {
 
     //URL fuer Server (um App zu aktivieren)
-    serverUrl = environment.serverUrl;
+    serverUrl: string;
 
     //URL fuer WebSocketServer
-    wssUrl = environment.wssUrl;
+    wssUrl: string;
 
     //WebSocket
     socket: Subject<any>;
@@ -78,6 +77,15 @@ export class BackendService {
 
     //Websocket erstellen, von dort erhaelt man die JSON-Infos ueber verfuegbare Items
     constructor(private http: HttpClient, private fs: ResultfilterService, private modeFilterPipe: ModeFilterPipe, private searchFilterPipe: SearchFilterPipe, private orderByPipe: OrderByPipe) {
+
+        //IP-Adresse des Servers ermittln und daraus Links zu WSS und PHP-Skript erstellen
+        const host = window.location.hostname;
+        this.serverUrl = 'http://' + host + '/php';
+        this.wssUrl = 'ws://' + host + ':8080';
+
+        //WebSocket-Verbindung aufbauen
+        this.createWebsocket();
+
         this.createWebsocket();
     }
 

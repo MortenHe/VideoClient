@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
 import { BackendService } from '../../services/backend.service';
 import { Router } from '@angular/router';
-import { environment } from '../../../environments/environment';
+import { domainModes } from '../../share/domainModes';
 
 @Component({
   selector: 'selectmode',
@@ -14,17 +13,14 @@ export class SelectmodeComponent implements OnInit {
   //aktiver Modus
   activeMode: string;
 
-  //Liste der Modes (kindervideo, jahresvideo)
-  modes: any[];
+  //Liste der Modes (Serien, Kindervideos)
+  modes: any[] = domainModes;
 
   //Services injecten
   constructor(private bs: BackendService, private router: Router) { }
 
   //beim Init
   ngOnInit() {
-
-    //Modes aus Config laden
-    this.modes = environment.domainModes;
 
     //1. Modus als aktiv setzen
     this.activeMode = this.modes[0];

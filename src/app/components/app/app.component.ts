@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -10,9 +9,6 @@ import { environment } from '../../../environments/environment';
 
 export class AppComponent {
 
-  //App-Name aus Config holen
-  envName = environment.envName;
-
   //Service injecten
   public constructor(private titleService: Title) { }
 
@@ -20,6 +16,6 @@ export class AppComponent {
   ngOnInit() {
 
     //HTML-Page-Title setzen
-    this.titleService.setTitle(this.envName);
+    this.titleService.setTitle("Video");
   }
 }

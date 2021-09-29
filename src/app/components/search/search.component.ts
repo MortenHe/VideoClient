@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { BackendService } from '../../services/backend.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { environment } from '../../../environments/environment'
+import { domainModes } from '../../share/domainModes';
 
 @Component({
   selector: 'app-search',
@@ -33,13 +33,13 @@ export class SearchComponent {
       let mode = params.get('mode');
 
       //Modes, die es in der der Config gibt
-      let domainModes = environment.domainModes.map(domainMode => { return domainMode.id });
+      let modes = domainModes.map(domainMode => { return domainMode.id });
 
       //Wenn es diesen Modus nicht gibt
-      if (domainModes.indexOf(mode) === -1) {
+      if (modes.indexOf(mode) === -1) {
 
         //zu 1. Modus aus Config navigieren
-        this.router.navigate(['/search', environment.domainModes[0].id]);
+        this.router.navigate(['/search', domainModes[0].id]);
       }
 
       //Modus per Service setzen
