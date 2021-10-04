@@ -1,31 +1,31 @@
 <!--Container fuer Elemte, wenn Anwendung laeuft -->
 <div *ngIf="!(shutdown$ | async); else shutdownTemp"
-     class="app-content container no-gutters p-0 shadow">
+     class="app-content container g-0 p-0 shadow">
 
   <!-- 1. Zeile: Modes, Connection und Shutdown -->
-  <div class="header row no-gutters align-items-center py-1 px-2">
+  <div class="header row g-0 align-items-center py-1 px-2">
 
     <!-- Liste der Modes (Kindervideos vs. Jahresvideos) -->
     <selectmode class="col"></selectmode>
 
     <!-- Countdown -->
-    <countdown></countdown>
+    <countdown class="w-auto"></countdown>
 
     <!-- Zustand der WSS-Verbindung -->
-    <connection></connection>
+    <connection class="w-auto"></connection>
 
     <!-- Shutdown -->
-    <picontrol></picontrol>
+    <picontrol class="w-auto"></picontrol>
   </div>
 
   <!-- 2. Zeile: Steuerelemente -->
-  <div class="row no-gutters py-1 px-2 justify-content-center player-controls">
+  <div class="row g-0 py-1 px-2 justify-content-center player-controls">
 
     <!-- Play, Pause, Stop, Seek  -->
-    <playercontrol class="col-8 control-content row no-gutters"></playercontrol>
+    <playercontrol class="col-8 control-content row g-0"></playercontrol>
 
     <!-- Lautstaerke -->
-    <volume-control class="col row no-gutters justify-content-end"></volume-control>
+    <volume-control class="col row g-0 justify-content-end"></volume-control>
   </div>
 
   <!-- 3. Zeile: Playlist -->
@@ -36,13 +36,13 @@
               class="d-flex mx-2 mt-3"></modefilter>
 
   <!-- 5. Zeile: Suchfeld Info-Button, Sortier-Button -->
-  <div class="d-flex no-gutters mx-2 mt-3">
+  <div class="d-flex g-0 mx-2 mt-3">
 
     <!-- Suchfeld fuer Trefferliste -->
-    <searchfilter class="col mr-2"></searchfilter>
+    <searchfilter class="col me-2"></searchfilter>
 
     <!-- Ansicht der Infos zu toggeln -->
-    <toggletrackview class="d-flex mr-2"></toggletrackview>
+    <toggletrackview class="d-flex me-2"></toggletrackview>
 
     <!-- Sortierbuttons der Trefferliste -->
     <sortfilter class="d-block"></sortfilter>
@@ -54,7 +54,7 @@
 
 <!-- Anzeigen, wenn Pi heruntergefahren wurde -->
 <ng-template #shutdownTemp>
-  <div class="container mr-0 ml-0 no-gutters text-center">
+  <div class="container me-0 ms-0 g-0 text-center">
     Der Player wurde beendet.
   </div>
 </ng-template>

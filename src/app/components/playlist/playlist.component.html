@@ -5,7 +5,7 @@
      class="sort-list">
      <div *ngFor="let file of files, index as i, first as first"
           cdkDrag
-          class="row no-gutters item pl-2"
+          class="row g-0 item ps-2"
           [ngClass]="{
        'opacity-50': i < position,
        'waiting': i === jumpPosition,
@@ -26,12 +26,12 @@
              [class.opacity-50]="i !== position"></i>
 
           <!-- Name des Videos -->
-          <div class="col ml-2 mr-1"
+          <div class="col ms-2 me-1"
                [ngClass]="{
-      'font-weight-bold': i === position}">{{file.name|fileName}}</div>
+      'fw-bold': i === position}">{{file.name|fileName}}</div>
 
           <!-- Zeitinfo des Videos -->
-          <div class="item-length text-right">
+          <div class="item-length text-end w-auto">
 
                <!-- Video wurde schon gespielt. Restzeit 0:00 -->
                <ng-container *ngIf="i < position">0:00</ng-container>
@@ -47,29 +47,30 @@
           <button [class.invisible]="i <= position"
                   (click)="removeItemFromPlaylist(i)"
                   data-func="remove"
-                  class="button-clean add-item ignore-sort opacity-50 ml-2"><i class="fa fa-trash"></i></button>
+                  class="button-clean add-item ignore-sort opacity-50 ms-2 w-auto d-flex"><i
+                  class="fa fa-trash"></i></button>
 
           <!-- Sortierhandle -->
           <i cdkDragHandle
              [class.invisible]="files.length < 2"
-             class="fa fa-bars fa-fw px-1 opacity-50 mr-1 cursor-move ml-1"></i>
+             class="fa fa-bars fa-fw px-1 opacity-50 me-1 cursor-move ms-1 w-auto"></i>
      </div>
 </div>
 
 <!-- 2. Zeile: Playlist starten-Button und Gesamtlaenge der Playlist-Countdown -->
 <div *ngIf="(files.length && position + 1 < files.length)"
-     class="start-playlist align-items-center pl-2 pr-2 d-flex py-2">
+     class="start-playlist align-items-center ps-2 pe-2 d-flex py-2">
 
      <!-- Playlist starten -->
-     <div class="font-weight-bold cursor-pointer btn btn-sm btn-info"
+     <div class="fw-bold cursor-pointer btn btn-sm btn-info d-flex align-items-center text-light"
           *ngIf="files.length && position < 0"
           (click)="jumpTo(0)">
           <i class="fa fa-fw fa-play"></i>
-          <span class="ml-1">Playlist starten</span>
+          <span class="ms-1">Playlist starten</span>
      </div>
 
      <!-- Laenge der Playlist -->
-     <div class="ml-auto mr-1"
+     <div class="ms-auto me-1"
           *ngIf="files.length > 1">{{filesTotalTime | timeformatter}}
      </div>
 </div>
